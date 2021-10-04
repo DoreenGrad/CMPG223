@@ -1,0 +1,122 @@
+﻿
+namespace GUI_Prototype02
+{
+    partial class MainMenuForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.menuStripMainMenu = new System.Windows.Forms.MenuStrip();
+            this.productsTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.menuStripMainMenu.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // menuStripMainMenu
+            // 
+            this.menuStripMainMenu.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.productsTool,
+            this.reportTool,
+            this.helpTool});
+            this.menuStripMainMenu.Location = new System.Drawing.Point(0, 0);
+            this.menuStripMainMenu.Name = "menuStripMainMenu";
+            this.menuStripMainMenu.Size = new System.Drawing.Size(1384, 26);
+            this.menuStripMainMenu.TabIndex = 0;
+            this.menuStripMainMenu.Text = "Menu";
+            // 
+            // productsTool
+            // 
+            this.productsTool.ForeColor = System.Drawing.Color.Purple;
+            this.productsTool.Name = "productsTool";
+            this.productsTool.Size = new System.Drawing.Size(98, 22);
+            this.productsTool.Text = "Products";
+            this.productsTool.Click += new System.EventHandler(this.productsTool_Click);
+            // 
+            // reportTool
+            // 
+            this.reportTool.ForeColor = System.Drawing.Color.Purple;
+            this.reportTool.Name = "reportTool";
+            this.reportTool.Size = new System.Drawing.Size(81, 22);
+            this.reportTool.Text = "Report";
+            this.reportTool.Click += new System.EventHandler(this.reportTool_Click);
+            // 
+            // helpTool
+            // 
+            this.helpTool.ForeColor = System.Drawing.Color.Purple;
+            this.helpTool.Name = "helpTool";
+            this.helpTool.Size = new System.Drawing.Size(59, 22);
+            this.helpTool.Text = "Help";
+            this.helpTool.Click += new System.EventHandler(this.helpTool_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.btnExit.FlatAppearance.BorderSize = 2;
+            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.Purple;
+            this.btnExit.Location = new System.Drawing.Point(12, 724);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(200, 50);
+            this.btnExit.TabIndex = 5;
+            this.btnExit.Text = "EXIT";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // MainMenuForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(1384, 786);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.menuStripMainMenu);
+            this.MainMenuStrip = this.menuStripMainMenu;
+            this.Name = "MainMenuForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Main Menu";
+            this.Load += new System.EventHandler(this.MainMenuForm_Load);
+            this.menuStripMainMenu.ResumeLayout(false);
+            this.menuStripMainMenu.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.MenuStrip menuStripMainMenu;
+        private System.Windows.Forms.ToolStripMenuItem productsTool;
+        private System.Windows.Forms.ToolStripMenuItem reportTool;
+        private System.Windows.Forms.ToolStripMenuItem helpTool;
+        private System.Windows.Forms.Button btnExit;
+    }
+}
