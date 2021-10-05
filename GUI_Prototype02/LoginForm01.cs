@@ -17,7 +17,6 @@ namespace GUI_Prototype02
 
         private const string USERNAME = "admin", PASSWORD = "admin";
         private string username, password;
-        private double ticks = 0;
 
         public LoginForm01()
         {
@@ -79,25 +78,11 @@ namespace GUI_Prototype02
             if (checkBoxPasswordShow.Checked == true)
             {
                 txtBPassword.UseSystemPasswordChar = false;
-
-                //timerPasswordShow.Start();
             }
             else
             {
                 txtBPassword.UseSystemPasswordChar = true;
             }
-        }
-
-        private void timerPasswordShow_Tick(object sender, EventArgs e)
-        {
-           /* ticks += 0.5;
-
-            if (ticks == 1.0)
-            {
-                checkBoxPasswordShow.Checked = false;
-                timerPasswordShow.Stop();                
-                ticks = 0;
-            }*/
         }
 
         private void txtBUsername_Click(object sender, EventArgs e)
