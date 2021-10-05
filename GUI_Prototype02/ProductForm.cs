@@ -33,7 +33,7 @@ namespace GUI_Prototype02
         private void ProductForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dbProductsDataSet.tableProductsCurrent' table. You can move, or remove it, as needed.
-            this.tableProductsCurrentTableAdapter.Fill(this.dbProductsDataSet.tableProductsCurrent);
+            //this.tableProductsCurrentTableAdapter.Fill(this.dbProductsDataSet.tableProductsCurrent);
 
             string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Desktop\GUI_Prototype02_Anja\GUI_Prototype02\dbProducts.mdf;Integrated Security=True";
 

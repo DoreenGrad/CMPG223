@@ -43,7 +43,6 @@ namespace GUI_Prototype02
             this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableProductsCurrentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dbProductsDataSet = new GUI_Prototype02.dbProductsDataSet();
             this.btnSearchUpdate = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.tabPageInsert = new System.Windows.Forms.TabPage();
@@ -96,7 +95,6 @@ namespace GUI_Prototype02
             this.label7 = new System.Windows.Forms.Label();
             this.btnViewUpdate = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tableProductsCurrentTableAdapter = new GUI_Prototype02.dbProductsDataSetTableAdapters.tableProductsCurrentTableAdapter();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -150,7 +148,6 @@ namespace GUI_Prototype02
             this.tabSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableProductsCurrentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbProductsDataSet)).BeginInit();
             this.tabPageInsert.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSearchAndDelete)).BeginInit();
             this.groupBoxUnitInformation.SuspendLayout();
@@ -276,16 +273,6 @@ namespace GUI_Prototype02
             this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
             this.dataGridViewTextBoxColumn41.ReadOnly = true;
             this.dataGridViewTextBoxColumn41.Width = 97;
-            // 
-            // tableProductsCurrentBindingSource
-            // 
-            this.tableProductsCurrentBindingSource.DataMember = "tableProductsCurrent";
-            this.tableProductsCurrentBindingSource.DataSource = this.dbProductsDataSet;
-            // 
-            // dbProductsDataSet
-            // 
-            this.dbProductsDataSet.DataSetName = "dbProductsDataSet";
-            this.dbProductsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnSearchUpdate
             // 
@@ -911,10 +898,6 @@ namespace GUI_Prototype02
             this.tabPage1.TabIndex = 4;
             this.tabPage1.Text = "Sales";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tableProductsCurrentTableAdapter
-            // 
-            this.tableProductsCurrentTableAdapter.ClearBeforeFill = true;
             // 
             // groupBox4
             // 
@@ -1575,7 +1558,6 @@ namespace GUI_Prototype02
             this.tabSearch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableProductsCurrentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbProductsDataSet)).EndInit();
             this.tabPageInsert.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSearchAndDelete)).EndInit();
             this.groupBoxUnitInformation.ResumeLayout(false);
@@ -1657,9 +1639,7 @@ namespace GUI_Prototype02
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.TextBox txtBStock;
         private System.Windows.Forms.Label lblStock;
-        private dbProductsDataSet dbProductsDataSet;
         private System.Windows.Forms.BindingSource tableProductsCurrentBindingSource;
-        private dbProductsDataSetTableAdapters.tableProductsCurrentTableAdapter tableProductsCurrentTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
