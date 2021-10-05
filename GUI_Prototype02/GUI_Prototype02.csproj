@@ -73,23 +73,41 @@
     <Compile Include="LoginForm01.Designer.cs">
       <DependentUpon>LoginForm01.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm02.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginForm02.Designer.cs">
-      <DependentUpon>LoginForm02.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainMenuForm.Designer.cs">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProductForm.cs">
+    <Compile Include="Order Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProductForm.Designer.cs">
-      <DependentUpon>ProductForm.cs</DependentUpon>
+    <Compile Include="Order Form.Designer.cs">
+      <DependentUpon>Order Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order Maintenance Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order Maintenance Form.Designer.cs">
+      <DependentUpon>Order Maintenance Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Request Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Request Report.Designer.cs">
+      <DependentUpon>Request Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sell Products Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sell Products Form.Designer.cs">
+      <DependentUpon>Sell Products Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock Item Maintenance Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock Item Maintenance Form.Designer.cs">
+      <DependentUpon>Stock Item Maintenance Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -105,14 +123,17 @@
     <EmbeddedResource Include="LoginForm01.resx">
       <DependentUpon>LoginForm01.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm02.resx">
-      <DependentUpon>LoginForm02.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductForm.resx">
-      <DependentUpon>ProductForm.cs</DependentUpon>
+    <EmbeddedResource Include="Order Form.resx">
+      <DependentUpon>Order Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order Maintenance Form.resx">
+      <DependentUpon>Order Maintenance Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock Item Maintenance Form.resx">
+      <DependentUpon>Stock Item Maintenance Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

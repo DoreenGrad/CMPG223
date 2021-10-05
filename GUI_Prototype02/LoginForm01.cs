@@ -14,8 +14,6 @@ namespace GUI_Prototype02
     public partial class LoginForm01 : Form
     {
         SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\marce\Documents\GitHub\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security=True");
-
-        private const string USERNAME = "admin", PASSWORD = "admin";
         private string username, password;
 
         public LoginForm01()

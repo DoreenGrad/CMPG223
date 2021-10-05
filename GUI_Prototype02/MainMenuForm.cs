@@ -26,8 +26,8 @@ namespace GUI_Prototype02
         {
             this.Visible = false;
 
-            LoginForm02 myLogin02 = new LoginForm02();
-            myLogin02.ShowDialog();
+
+   
 
             this.Visible = true;
         }
