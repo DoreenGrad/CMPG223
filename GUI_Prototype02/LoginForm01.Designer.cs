@@ -55,7 +55,7 @@ namespace GUI_Prototype02
             this.panelWindow.Location = new System.Drawing.Point(87, 120);
             this.panelWindow.Name = "panelWindow";
             this.panelWindow.Padding = new System.Windows.Forms.Padding(5);
-            this.panelWindow.Size = new System.Drawing.Size(900, 325);
+            this.panelWindow.Size = new System.Drawing.Size(843, 287);
             this.panelWindow.TabIndex = 0;
             // 
             // checkBoxPasswordShow
@@ -166,7 +166,7 @@ namespace GUI_Prototype02
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Purple;
-            this.ClientSize = new System.Drawing.Size(1075, 500);
+            this.ClientSize = new System.Drawing.Size(973, 447);
             this.Controls.Add(this.panelWindow);
             this.Controls.Add(this.panelControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;

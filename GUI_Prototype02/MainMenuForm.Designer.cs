@@ -46,7 +46,7 @@ namespace GUI_Prototype02
             this.helpTool});
             this.menuStripMainMenu.Location = new System.Drawing.Point(0, 0);
             this.menuStripMainMenu.Name = "menuStripMainMenu";
-            this.menuStripMainMenu.Size = new System.Drawing.Size(1384, 26);
+            this.menuStripMainMenu.Size = new System.Drawing.Size(756, 26);
             this.menuStripMainMenu.TabIndex = 0;
             this.menuStripMainMenu.Text = "Menu";
             // 
@@ -96,7 +96,7 @@ namespace GUI_Prototype02
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1384, 786);
+            this.ClientSize = new System.Drawing.Size(756, 343);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.menuStripMainMenu);
             this.MainMenuStrip = this.menuStripMainMenu;
