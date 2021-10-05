@@ -132,6 +132,9 @@
     <EmbeddedResource Include="Order Maintenance Form.resx">
       <DependentUpon>Order Maintenance Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sell Products Form.resx">
+      <DependentUpon>Sell Products Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Stock Item Maintenance Form.resx">
       <DependentUpon>Stock Item Maintenance Form.cs</DependentUpon>
     </EmbeddedResource>

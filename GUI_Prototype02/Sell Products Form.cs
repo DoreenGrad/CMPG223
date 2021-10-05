@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace GUI_Prototype02
 {
-    public partial class Sell_Products_Form : Form
+    public partial class Sale_Products_Form : Form
     {
-        public Sell_Products_Form()
+        public Sale_Products_Form()
         {
             InitializeComponent();
+        }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
