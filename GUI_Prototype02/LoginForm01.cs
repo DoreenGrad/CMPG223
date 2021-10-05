@@ -58,6 +58,8 @@ namespace GUI_Prototype02
                 MainMenuForm myMainMenu = new MainMenuForm();
                 myMainMenu.ShowDialog();
 
+                MessageBox.Show("Toets github");
+
                 this.Close();
             }
             else
