@@ -91,11 +91,23 @@
     <Compile Include="Order Maintenance Form.Designer.cs">
       <DependentUpon>Order Maintenance Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrderInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderInsert.Designer.cs">
+      <DependentUpon>OrderInsert.cs</DependentUpon>
+    </Compile>
     <Compile Include="Request Report.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Request Report.Designer.cs">
       <DependentUpon>Request Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaleInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaleInsert.Designer.cs">
+      <DependentUpon>SaleInsert.cs</DependentUpon>
     </Compile>
     <Compile Include="Sell Products Form.cs">
       <SubType>Form</SubType>
@@ -131,6 +143,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Order Maintenance Form.resx">
       <DependentUpon>Order Maintenance Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderInsert.resx">
+      <DependentUpon>OrderInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaleInsert.resx">
+      <DependentUpon>SaleInsert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sell Products Form.resx">
       <DependentUpon>Sell Products Form.cs</DependentUpon>

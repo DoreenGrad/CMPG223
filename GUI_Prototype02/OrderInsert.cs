@@ -10,23 +10,18 @@ using System.Windows.Forms;
 
 namespace GUI_Prototype02
 {
-    public partial class Order_Form : Form
+    public partial class OrderInsert : Form
     {
-        public Order_Form()
+        public OrderInsert()
         {
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            OrderInsert insert = new OrderInsert();
-
-            insert.Show();
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
-           
+            //Dialog box
+            //tik user die product key in
+            //dan kan jy daai product key update
         }
     }
 }
