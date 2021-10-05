@@ -54,7 +54,7 @@ namespace GUI_Prototype02
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }
