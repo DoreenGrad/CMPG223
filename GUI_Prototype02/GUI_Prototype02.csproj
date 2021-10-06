@@ -109,6 +109,12 @@
     <Compile Include="Sell Products Form.Designer.cs">
       <DependentUpon>Sell Products Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Stock Insert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock Insert.Designer.cs">
+      <DependentUpon>Stock Insert.cs</DependentUpon>
+    </Compile>
     <Compile Include="Stock Item Maintenance Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sell Products Form.resx">
       <DependentUpon>Sell Products Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock Insert.resx">
+      <DependentUpon>Stock Insert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stock Item Maintenance Form.resx">
       <DependentUpon>Stock Item Maintenance Form.cs</DependentUpon>
