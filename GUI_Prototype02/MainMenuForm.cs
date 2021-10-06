@@ -59,7 +59,7 @@ namespace GUI_Prototype02
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            OrderForm orders = new OrderForm();
+            Order_Form orders = new Order_Form();
 
             orders.Show();
         }

@@ -23,9 +23,7 @@ namespace GUI_Prototype02
         {
             sqlCon.Open();
 
-            string viewData = "SELECT O.Order_ID, O.User_ID, O.Date_Ordered, O.Date_Received" +
-                "D.Order_Detail_ID, D.Stock_ID, D.Qty_Ordered, D.Price_per_KG, D.Price_per_Unit " +
-                "FROM ORDERS O, Order_Detail D";
+            string viewData = "SELECT O.Order_ID, O.User_ID, O.Date_Ordered, O.Date_Received, D.Order_Detail_ID, D.Stock_ID, D.Qty_Ordered, D.Price_per_KG, D.Price_per_Unit FROM ORDERS O, Order_Detail D";
 
             SqlCommand sqlCom = new SqlCommand(viewData, sqlCon);
             SqlDataAdapter sqlDA = new SqlDataAdapter();
