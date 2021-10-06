@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
+            this.tbWeight_per_Unit = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtStockID = new System.Windows.Forms.TextBox();
-            this.txtOrderID = new System.Windows.Forms.TextBox();
+            this.tbStock_Desc = new System.Windows.Forms.TextBox();
+            this.tbStock_Key = new System.Windows.Forms.TextBox();
             this.stockKeyLb = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.btnInsert = new System.Windows.Forms.Button();
+            this.tbQty_on_Hand = new System.Windows.Forms.TextBox();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox1);
-            this.groupBox5.Controls.Add(this.hScrollBar1);
+            this.groupBox5.Controls.Add(this.tbQty_on_Hand);
+            this.groupBox5.Controls.Add(this.tbWeight_per_Unit);
             this.groupBox5.Controls.Add(this.label2);
             this.groupBox5.Controls.Add(this.label1);
-            this.groupBox5.Controls.Add(this.txtStockID);
-            this.groupBox5.Controls.Add(this.txtOrderID);
+            this.groupBox5.Controls.Add(this.tbStock_Desc);
+            this.groupBox5.Controls.Add(this.tbStock_Key);
             this.groupBox5.Controls.Add(this.stockKeyLb);
             this.groupBox5.Controls.Add(this.label14);
             this.groupBox5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
@@ -60,20 +60,13 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Stock";
             // 
-            // textBox1
+            // tbWeight_per_Unit
             // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 11F);
-            this.textBox1.Location = new System.Drawing.Point(212, 121);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 25);
-            this.textBox1.TabIndex = 9;
-            // 
-            // hScrollBar1
-            // 
-            this.hScrollBar1.Location = new System.Drawing.Point(212, 155);
-            this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(182, 17);
-            this.hScrollBar1.TabIndex = 8;
+            this.tbWeight_per_Unit.Font = new System.Drawing.Font("Verdana", 11F);
+            this.tbWeight_per_Unit.Location = new System.Drawing.Point(212, 121);
+            this.tbWeight_per_Unit.Name = "tbWeight_per_Unit";
+            this.tbWeight_per_Unit.Size = new System.Drawing.Size(182, 25);
+            this.tbWeight_per_Unit.TabIndex = 9;
             // 
             // label2
             // 
@@ -97,21 +90,21 @@
             this.label1.Text = "Weight per unit (kg):";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtStockID
+            // tbStock_Desc
             // 
-            this.txtStockID.Font = new System.Drawing.Font("Verdana", 11F);
-            this.txtStockID.Location = new System.Drawing.Point(212, 86);
-            this.txtStockID.Name = "txtStockID";
-            this.txtStockID.Size = new System.Drawing.Size(182, 25);
-            this.txtStockID.TabIndex = 5;
+            this.tbStock_Desc.Font = new System.Drawing.Font("Verdana", 11F);
+            this.tbStock_Desc.Location = new System.Drawing.Point(212, 86);
+            this.tbStock_Desc.Name = "tbStock_Desc";
+            this.tbStock_Desc.Size = new System.Drawing.Size(182, 25);
+            this.tbStock_Desc.TabIndex = 5;
             // 
-            // txtOrderID
+            // tbStock_Key
             // 
-            this.txtOrderID.Font = new System.Drawing.Font("Verdana", 11F);
-            this.txtOrderID.Location = new System.Drawing.Point(212, 46);
-            this.txtOrderID.Name = "txtOrderID";
-            this.txtOrderID.Size = new System.Drawing.Size(182, 25);
-            this.txtOrderID.TabIndex = 4;
+            this.tbStock_Key.Font = new System.Drawing.Font("Verdana", 11F);
+            this.tbStock_Key.Location = new System.Drawing.Point(212, 46);
+            this.tbStock_Key.Name = "tbStock_Key";
+            this.tbStock_Key.Size = new System.Drawing.Size(182, 25);
+            this.tbStock_Key.TabIndex = 4;
             // 
             // stockKeyLb
             // 
@@ -150,6 +143,15 @@
             this.btnInsert.TabIndex = 13;
             this.btnInsert.Text = "INSERT";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            // 
+            // tbQty_on_Hand
+            // 
+            this.tbQty_on_Hand.Font = new System.Drawing.Font("Verdana", 11F);
+            this.tbQty_on_Hand.Location = new System.Drawing.Point(212, 152);
+            this.tbQty_on_Hand.Name = "tbQty_on_Hand";
+            this.tbQty_on_Hand.Size = new System.Drawing.Size(182, 25);
+            this.tbQty_on_Hand.TabIndex = 10;
             // 
             // Stock_Insert
             // 
@@ -169,14 +171,14 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.HScrollBar hScrollBar1;
+        private System.Windows.Forms.TextBox tbWeight_per_Unit;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtStockID;
-        private System.Windows.Forms.TextBox txtOrderID;
+        private System.Windows.Forms.TextBox tbStock_Desc;
+        private System.Windows.Forms.TextBox tbStock_Key;
         private System.Windows.Forms.Label stockKeyLb;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.TextBox tbQty_on_Hand;
     }
 }
