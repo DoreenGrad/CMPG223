@@ -79,12 +79,6 @@
     <Compile Include="MainMenuForm.Designer.cs">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Order Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Order Form.Designer.cs">
-      <DependentUpon>Order Form.cs</DependentUpon>
-    </Compile>
     <Compile Include="Order Maintenance Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,9 +131,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Order Form.resx">
-      <DependentUpon>Order Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Order Maintenance Form.resx">
       <DependentUpon>Order Maintenance Form.cs</DependentUpon>

@@ -43,49 +43,49 @@
             this.tabPageControlProducts = new System.Windows.Forms.TabControl();
             this.tabSearch = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtStockID = new System.Windows.Forms.TextBox();
+            this.txtSaleID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.mtbSale_Detail = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
+            this.dtgDel = new System.Windows.Forms.DataGridView();
+            this.btnDel = new System.Windows.Forms.Button();
             this.tabPageView = new System.Windows.Forms.TabPage();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnInsert = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.rbDelivered = new System.Windows.Forms.RadioButton();
+            this.rbPaid = new System.Windows.Forms.RadioButton();
+            this.rbOrdered = new System.Windows.Forms.RadioButton();
+            this.dtgSearchInUpdate = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.cmbQuantity = new System.Windows.Forms.ComboBox();
+            this.cmbPrice = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbSale_Detail = new System.Windows.Forms.ComboBox();
+            this.cmbStockID = new System.Windows.Forms.ComboBox();
+            this.cmbSaleID = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.btnViewUpdate = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPageControlProducts.SuspendLayout();
             this.tabSearch.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDel)).BeginInit();
             this.tabPageView.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgSearchInUpdate)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.SuspendLayout();
@@ -258,8 +258,8 @@
             // 
             this.tabSearch.Controls.Add(this.groupBox4);
             this.tabSearch.Controls.Add(this.groupBox1);
-            this.tabSearch.Controls.Add(this.dataGridView2);
-            this.tabSearch.Controls.Add(this.button2);
+            this.tabSearch.Controls.Add(this.dtgDel);
+            this.tabSearch.Controls.Add(this.btnDel);
             this.tabSearch.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabSearch.Location = new System.Drawing.Point(4, 27);
             this.tabSearch.Name = "tabSearch";
@@ -271,8 +271,8 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBox2);
-            this.groupBox4.Controls.Add(this.textBox4);
+            this.groupBox4.Controls.Add(this.txtQuantity);
+            this.groupBox4.Controls.Add(this.txtPrice);
             this.groupBox4.Controls.Add(this.label9);
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
@@ -284,25 +284,25 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Unit Information";
             // 
-            // textBox2
+            // txtQuantity
             // 
-            this.textBox2.Font = new System.Drawing.Font("Verdana", 11F);
-            this.textBox2.Location = new System.Drawing.Point(212, 87);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 25);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.Text = "0";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtQuantity.Font = new System.Drawing.Font("Verdana", 11F);
+            this.txtQuantity.Location = new System.Drawing.Point(212, 87);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(100, 25);
+            this.txtQuantity.TabIndex = 5;
+            this.txtQuantity.Text = "0";
+            this.txtQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox4
+            // txtPrice
             // 
-            this.textBox4.Font = new System.Drawing.Font("Verdana", 11F);
-            this.textBox4.Location = new System.Drawing.Point(212, 47);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 25);
-            this.textBox4.TabIndex = 3;
-            this.textBox4.Text = "0";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPrice.Font = new System.Drawing.Font("Verdana", 11F);
+            this.txtPrice.Location = new System.Drawing.Point(212, 47);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(100, 25);
+            this.txtPrice.TabIndex = 3;
+            this.txtPrice.Text = "0";
+            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label9
             // 
@@ -328,10 +328,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.txtStockID);
+            this.groupBox1.Controls.Add(this.txtSaleID);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.maskedTextBox2);
+            this.groupBox1.Controls.Add(this.mtbSale_Detail);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
@@ -343,21 +343,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sale Information";
             // 
-            // textBox1
+            // txtStockID
             // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 11F);
-            this.textBox1.Location = new System.Drawing.Point(212, 117);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 25);
-            this.textBox1.TabIndex = 5;
+            this.txtStockID.Font = new System.Drawing.Font("Verdana", 11F);
+            this.txtStockID.Location = new System.Drawing.Point(212, 117);
+            this.txtStockID.Name = "txtStockID";
+            this.txtStockID.Size = new System.Drawing.Size(182, 25);
+            this.txtStockID.TabIndex = 5;
             // 
-            // textBox7
+            // txtSaleID
             // 
-            this.textBox7.Font = new System.Drawing.Font("Verdana", 11F);
-            this.textBox7.Location = new System.Drawing.Point(212, 82);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(182, 25);
-            this.textBox7.TabIndex = 4;
+            this.txtSaleID.Font = new System.Drawing.Font("Verdana", 11F);
+            this.txtSaleID.Location = new System.Drawing.Point(212, 82);
+            this.txtSaleID.Name = "txtSaleID";
+            this.txtSaleID.Size = new System.Drawing.Size(182, 25);
+            this.txtSaleID.TabIndex = 4;
             // 
             // label1
             // 
@@ -370,14 +370,14 @@
             this.label1.Text = "Sale Detail ID:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // maskedTextBox2
+            // mtbSale_Detail
             // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Verdana", 11F);
-            this.maskedTextBox2.Location = new System.Drawing.Point(212, 47);
-            this.maskedTextBox2.Mask = ">LLLL0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(100, 25);
-            this.maskedTextBox2.TabIndex = 3;
+            this.mtbSale_Detail.Font = new System.Drawing.Font("Verdana", 11F);
+            this.mtbSale_Detail.Location = new System.Drawing.Point(212, 47);
+            this.mtbSale_Detail.Mask = ">LLLL0000";
+            this.mtbSale_Detail.Name = "mtbSale_Detail";
+            this.mtbSale_Detail.Size = new System.Drawing.Size(100, 25);
+            this.mtbSale_Detail.TabIndex = 3;
             // 
             // label2
             // 
@@ -401,44 +401,44 @@
             this.label3.Text = "Stock ID:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // dataGridView2
+            // dtgDel
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Menu;
-            this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.GridColor = System.Drawing.Color.Purple;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 197);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(1018, 219);
-            this.dataGridView2.TabIndex = 8;
+            this.dtgDel.AllowUserToAddRows = false;
+            this.dtgDel.AllowUserToDeleteRows = false;
+            this.dtgDel.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.dtgDel.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dtgDel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDel.GridColor = System.Drawing.Color.Purple;
+            this.dtgDel.Location = new System.Drawing.Point(6, 197);
+            this.dtgDel.Name = "dtgDel";
+            this.dtgDel.ReadOnly = true;
+            this.dtgDel.Size = new System.Drawing.Size(1341, 519);
+            this.dtgDel.TabIndex = 8;
             // 
-            // button2
+            // btnDel
             // 
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Purple;
-            this.button2.Location = new System.Drawing.Point(830, 141);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(194, 50);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "DELETE";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDel.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.btnDel.FlatAppearance.BorderSize = 2;
+            this.btnDel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.ForeColor = System.Drawing.Color.Purple;
+            this.btnDel.Location = new System.Drawing.Point(1142, 141);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(194, 50);
+            this.btnDel.TabIndex = 6;
+            this.btnDel.Text = "DELETE";
+            this.btnDel.UseVisualStyleBackColor = true;
             // 
             // tabPageView
             // 
-            this.tabPageView.Controls.Add(this.button5);
+            this.tabPageView.Controls.Add(this.btnInsert);
             this.tabPageView.Controls.Add(this.groupBox3);
-            this.tabPageView.Controls.Add(this.dataGridView3);
+            this.tabPageView.Controls.Add(this.dtgSearchInUpdate);
             this.tabPageView.Controls.Add(this.groupBox2);
             this.tabPageView.Controls.Add(this.groupBox6);
-            this.tabPageView.Controls.Add(this.btnViewUpdate);
+            this.tabPageView.Controls.Add(this.btnUpdate);
             this.tabPageView.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageView.Location = new System.Drawing.Point(4, 27);
             this.tabPageView.Name = "tabPageView";
@@ -448,27 +448,27 @@
             this.tabPageView.Text = "Search, Insert and Update";
             this.tabPageView.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnInsert
             // 
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
-            this.button5.FlatAppearance.BorderSize = 2;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Purple;
-            this.button5.Location = new System.Drawing.Point(940, 675);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(200, 50);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "INSERT";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnInsert.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.btnInsert.FlatAppearance.BorderSize = 2;
+            this.btnInsert.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnInsert.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsert.ForeColor = System.Drawing.Color.Purple;
+            this.btnInsert.Location = new System.Drawing.Point(940, 675);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(200, 50);
+            this.btnInsert.TabIndex = 10;
+            this.btnInsert.Text = "INSERT";
+            this.btnInsert.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.radioButton3);
-            this.groupBox3.Controls.Add(this.radioButton2);
-            this.groupBox3.Controls.Add(this.radioButton1);
+            this.groupBox3.Controls.Add(this.rbDelivered);
+            this.groupBox3.Controls.Add(this.rbPaid);
+            this.groupBox3.Controls.Add(this.rbOrdered);
             this.groupBox3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
             this.groupBox3.ForeColor = System.Drawing.Color.Purple;
             this.groupBox3.Location = new System.Drawing.Point(844, 29);
@@ -478,63 +478,63 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Procurement Information";
             // 
-            // radioButton3
+            // rbDelivered
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Verdana", 11F);
-            this.radioButton3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radioButton3.Location = new System.Drawing.Point(158, 48);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(94, 22);
-            this.radioButton3.TabIndex = 12;
-            this.radioButton3.Text = "Delivered";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbDelivered.AutoSize = true;
+            this.rbDelivered.Font = new System.Drawing.Font("Verdana", 11F);
+            this.rbDelivered.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.rbDelivered.Location = new System.Drawing.Point(158, 48);
+            this.rbDelivered.Name = "rbDelivered";
+            this.rbDelivered.Size = new System.Drawing.Size(94, 22);
+            this.rbDelivered.TabIndex = 12;
+            this.rbDelivered.Text = "Delivered";
+            this.rbDelivered.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbPaid
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Enabled = false;
-            this.radioButton2.Font = new System.Drawing.Font("Verdana", 11F);
-            this.radioButton2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radioButton2.Location = new System.Drawing.Point(158, 76);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(56, 22);
-            this.radioButton2.TabIndex = 11;
-            this.radioButton2.Text = "Paid";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbPaid.AutoSize = true;
+            this.rbPaid.Enabled = false;
+            this.rbPaid.Font = new System.Drawing.Font("Verdana", 11F);
+            this.rbPaid.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.rbPaid.Location = new System.Drawing.Point(158, 76);
+            this.rbPaid.Name = "rbPaid";
+            this.rbPaid.Size = new System.Drawing.Size(56, 22);
+            this.rbPaid.TabIndex = 11;
+            this.rbPaid.Text = "Paid";
+            this.rbPaid.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbOrdered
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Font = new System.Drawing.Font("Verdana", 11F);
-            this.radioButton1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radioButton1.Location = new System.Drawing.Point(6, 48);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(86, 22);
-            this.radioButton1.TabIndex = 10;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Ordered";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbOrdered.AutoSize = true;
+            this.rbOrdered.Checked = true;
+            this.rbOrdered.Font = new System.Drawing.Font("Verdana", 11F);
+            this.rbOrdered.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.rbOrdered.Location = new System.Drawing.Point(6, 48);
+            this.rbOrdered.Name = "rbOrdered";
+            this.rbOrdered.Size = new System.Drawing.Size(86, 22);
+            this.rbOrdered.TabIndex = 10;
+            this.rbOrdered.TabStop = true;
+            this.rbOrdered.Text = "Ordered";
+            this.rbOrdered.UseVisualStyleBackColor = true;
             // 
-            // dataGridView3
+            // dtgSearchInUpdate
             // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.Menu;
-            this.dataGridView3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.GridColor = System.Drawing.Color.Purple;
-            this.dataGridView3.Location = new System.Drawing.Point(6, 235);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.Size = new System.Drawing.Size(1340, 434);
-            this.dataGridView3.TabIndex = 9;
+            this.dtgSearchInUpdate.AllowUserToAddRows = false;
+            this.dtgSearchInUpdate.AllowUserToDeleteRows = false;
+            this.dtgSearchInUpdate.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.dtgSearchInUpdate.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dtgSearchInUpdate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgSearchInUpdate.GridColor = System.Drawing.Color.Purple;
+            this.dtgSearchInUpdate.Location = new System.Drawing.Point(6, 235);
+            this.dtgSearchInUpdate.Name = "dtgSearchInUpdate";
+            this.dtgSearchInUpdate.ReadOnly = true;
+            this.dtgSearchInUpdate.Size = new System.Drawing.Size(1340, 434);
+            this.dtgSearchInUpdate.TabIndex = 9;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.comboBox5);
-            this.groupBox2.Controls.Add(this.comboBox7);
+            this.groupBox2.Controls.Add(this.cmbQuantity);
+            this.groupBox2.Controls.Add(this.cmbPrice);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
@@ -546,39 +546,39 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Unit Information";
             // 
-            // comboBox5
+            // cmbQuantity
             // 
-            this.comboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox5.Font = new System.Drawing.Font("Verdana", 12F);
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.cmbQuantity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbQuantity.Font = new System.Drawing.Font("Verdana", 12F);
+            this.cmbQuantity.FormattingEnabled = true;
+            this.cmbQuantity.Items.AddRange(new object[] {
             "32,5",
             "65",
             "27,5",
             "30",
             "37,5",
             "75"});
-            this.comboBox5.Location = new System.Drawing.Point(212, 86);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(182, 26);
-            this.comboBox5.TabIndex = 14;
+            this.cmbQuantity.Location = new System.Drawing.Point(212, 86);
+            this.cmbQuantity.Name = "cmbQuantity";
+            this.cmbQuantity.Size = new System.Drawing.Size(182, 26);
+            this.cmbQuantity.TabIndex = 14;
             // 
-            // comboBox7
+            // cmbPrice
             // 
-            this.comboBox7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox7.Font = new System.Drawing.Font("Verdana", 12F);
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
+            this.cmbPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbPrice.Font = new System.Drawing.Font("Verdana", 12F);
+            this.cmbPrice.FormattingEnabled = true;
+            this.cmbPrice.Items.AddRange(new object[] {
             "0,5",
             "1",
             "0,5",
             "0,5",
             "0,5",
             "1"});
-            this.comboBox7.Location = new System.Drawing.Point(212, 47);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(182, 26);
-            this.comboBox7.TabIndex = 12;
+            this.cmbPrice.Location = new System.Drawing.Point(212, 47);
+            this.cmbPrice.Name = "cmbPrice";
+            this.cmbPrice.Size = new System.Drawing.Size(182, 26);
+            this.cmbPrice.TabIndex = 12;
             // 
             // label4
             // 
@@ -604,9 +604,9 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.comboBox1);
-            this.groupBox6.Controls.Add(this.comboBox2);
-            this.groupBox6.Controls.Add(this.comboBox3);
+            this.groupBox6.Controls.Add(this.cmbSale_Detail);
+            this.groupBox6.Controls.Add(this.cmbStockID);
+            this.groupBox6.Controls.Add(this.cmbSaleID);
             this.groupBox6.Controls.Add(this.label7);
             this.groupBox6.Controls.Add(this.label8);
             this.groupBox6.Controls.Add(this.label15);
@@ -619,56 +619,56 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Sale Information";
             // 
-            // comboBox1
+            // cmbSale_Detail
             // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Verdana", 12F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbSale_Detail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbSale_Detail.Font = new System.Drawing.Font("Verdana", 12F);
+            this.cmbSale_Detail.FormattingEnabled = true;
+            this.cmbSale_Detail.Items.AddRange(new object[] {
             "MNCE0011",
             "MNCE0012",
             "MNCE0021",
             "WORS0011",
             "WORS0021",
             "WORS0022"});
-            this.comboBox1.Location = new System.Drawing.Point(212, 47);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(182, 26);
-            this.comboBox1.TabIndex = 11;
+            this.cmbSale_Detail.Location = new System.Drawing.Point(212, 47);
+            this.cmbSale_Detail.Name = "cmbSale_Detail";
+            this.cmbSale_Detail.Size = new System.Drawing.Size(182, 26);
+            this.cmbSale_Detail.TabIndex = 11;
             // 
-            // comboBox2
+            // cmbStockID
             // 
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Verdana", 12F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmbStockID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbStockID.Font = new System.Drawing.Font("Verdana", 12F);
+            this.cmbStockID.FormattingEnabled = true;
+            this.cmbStockID.Items.AddRange(new object[] {
             "Curry Mince",
             "Curry Mince",
             "Beef Mince",
             "Boerewors",
             "Kaaswors",
             "Kaaswors"});
-            this.comboBox2.Location = new System.Drawing.Point(212, 117);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(182, 26);
-            this.comboBox2.TabIndex = 10;
+            this.cmbStockID.Location = new System.Drawing.Point(212, 117);
+            this.cmbStockID.Name = "cmbStockID";
+            this.cmbStockID.Size = new System.Drawing.Size(182, 26);
+            this.cmbStockID.TabIndex = 10;
             // 
-            // comboBox3
+            // cmbSaleID
             // 
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Verdana", 12F);
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cmbSaleID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbSaleID.Font = new System.Drawing.Font("Verdana", 12F);
+            this.cmbSaleID.FormattingEnabled = true;
+            this.cmbSaleID.Items.AddRange(new object[] {
             "Mince",
             "Mince",
             "Mince",
             "Wors",
             "Wors",
             "Wors"});
-            this.comboBox3.Location = new System.Drawing.Point(212, 82);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(182, 26);
-            this.comboBox3.TabIndex = 9;
+            this.cmbSaleID.Location = new System.Drawing.Point(212, 82);
+            this.cmbSaleID.Name = "cmbSaleID";
+            this.cmbSaleID.Size = new System.Drawing.Size(182, 26);
+            this.cmbSaleID.TabIndex = 9;
             // 
             // label7
             // 
@@ -703,27 +703,27 @@
             this.label15.Text = "Stock ID:";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnViewUpdate
+            // btnUpdate
             // 
-            this.btnViewUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
-            this.btnViewUpdate.FlatAppearance.BorderSize = 2;
-            this.btnViewUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnViewUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnViewUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewUpdate.ForeColor = System.Drawing.Color.Purple;
-            this.btnViewUpdate.Location = new System.Drawing.Point(1146, 675);
-            this.btnViewUpdate.Name = "btnViewUpdate";
-            this.btnViewUpdate.Size = new System.Drawing.Size(200, 50);
-            this.btnViewUpdate.TabIndex = 4;
-            this.btnViewUpdate.Text = "UPDATE";
-            this.btnViewUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.btnUpdate.FlatAppearance.BorderSize = 2;
+            this.btnUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.Purple;
+            this.btnUpdate.Location = new System.Drawing.Point(1146, 675);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(200, 50);
+            this.btnUpdate.TabIndex = 4;
+            this.btnUpdate.Text = "UPDATE";
+            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // Sale_Products_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1090, 490);
+            this.ClientSize = new System.Drawing.Size(1375, 783);
             this.Controls.Add(this.tabPageControlProducts);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.button1);
@@ -742,11 +742,11 @@
             this.groupBox4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDel)).EndInit();
             this.tabPageView.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgSearchInUpdate)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -770,38 +770,38 @@
         private System.Windows.Forms.TabControl tabPageControlProducts;
         private System.Windows.Forms.TabPage tabSearch;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtQuantity;
+        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtStockID;
+        private System.Windows.Forms.TextBox txtSaleID;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox mtbSale_Detail;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dtgDel;
+        private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.TabPage tabPageView;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.RadioButton rbDelivered;
+        private System.Windows.Forms.RadioButton rbPaid;
+        private System.Windows.Forms.RadioButton rbOrdered;
+        private System.Windows.Forms.DataGridView dtgSearchInUpdate;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox cmbQuantity;
+        private System.Windows.Forms.ComboBox cmbPrice;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbSale_Detail;
+        private System.Windows.Forms.ComboBox cmbStockID;
+        private System.Windows.Forms.ComboBox cmbSaleID;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button btnViewUpdate;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
