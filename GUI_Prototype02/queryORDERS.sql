@@ -1,6 +1,7 @@
 ﻿CREATE TABLE ORDERS(
-	Order_ID int IDENTITY (1,1) PRIMARY KEY,
-	User_ID int FOREIGN KEY REFERENCES USERS(User_ID), 
+	Order_ID int IDENTITY(1,1) PRIMARY KEY,
+	User_ID int not null, 
 	Date_Ordered date,
-	Date_Received date
+	Date_Received date,
+	FOREIGN KEY(User_ID) REFERENCES USERS(User_ID)
 );

@@ -23,19 +23,19 @@ namespace GUI_Prototype02
         {
             sqlCon.Open();
 
-            string viewData = "SELECT O.Order_ID, O.User_ID, O.Date_Ordered, O.Date_Received, D.Order_Detail_ID, D.Stock_ID, D.Qty_Ordered, D.Price_per_KG, D.Price_per_Unit FROM ORDERS O, Order_Detail D";
-
+            //string viewData = "SELECT O.Order_ID, O.User_ID, O.Date_Ordered, O.Date_Received, D.Order_Detail_ID, D.Stock_ID, D.Qty_Ordered, D.Price_per_KG, D.Price_per_Unit FROM ORDERS O, ORDER_DETAIL D";
+            string viewData = "SELECT * FROM ORDERS, ORDER_DETAIL";
             SqlCommand sqlCom = new SqlCommand(viewData, sqlCon);
             SqlDataAdapter sqlDA = new SqlDataAdapter();
             DataSet DA = new DataSet();
 
             sqlDA.SelectCommand = sqlCom;
             sqlDA.Fill(DA, "ORDERS");
-            sqlDA.Fill(DA, "Order_Detail");
+            sqlDA.Fill(DA, "ORDER_DETAIL");
 
             dgView.DataSource = DA;
             dgView.DataMember = "ORDERS";
-            dgView.DataMember = "Order_Detail";
+            dgView.DataMember = "ORDER_DETAIL";
 
             sqlCon.Close();
         }
@@ -59,7 +59,7 @@ namespace GUI_Prototype02
 
                 sqlCon.Open();
 
-                string insertData2 = "INSERT INTO Order_Detail(Qty_Ordered, Price_per_KG, Price_per_Unit) VALUES(@qty, @kg, @unit)";
+                string insertData2 = "INSERT INTO ORDER_DETAIL(Qty_Ordered, Price_per_KG, Price_per_Unit) VALUES(@qty, @kg, @unit)";
                 SqlCommand sqlCom2 = new SqlCommand(insertData2, sqlCon);
                 sqlCom2.Parameters.AddWithValue("@qty", insert.iQty_Ordered);
                 sqlCom2.Parameters.AddWithValue("@kg", insert.dPrice_per_Kg);

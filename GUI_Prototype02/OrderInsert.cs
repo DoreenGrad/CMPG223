@@ -19,8 +19,8 @@ namespace GUI_Prototype02
         }
 
         //public variables to access on the main form
-        public string sDate_Ordered;
-        public string sDate_Received;
+        public DateTime sDate_Ordered;
+        public DateTime sDate_Received;
         public int iQty_Ordered;
         public double dPrice_per_Kg;
         public double dPrice_per_Unit;
@@ -34,10 +34,23 @@ namespace GUI_Prototype02
                 {
                     if (double.TryParse(tbPrice_per_Unit.Text, out dPrice_per_Unit))
                     {
-                        sDate_Ordered = tbDate_Ordered.Text;
-                        sDate_Received = tbDate_Received.Text;
-
-                        this.Close();
+                        if (DateTime.TryParse(tbDate_Ordered.Text, out sDate_Ordered))
+                        {
+                            if (DateTime.TryParse(tbDate_Received.Text, out sDate_Received))
+                            {
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Date received must be a date");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Date ordered must be a date");
+                        
+                        }
+                        
                     }
                     else
                     {
