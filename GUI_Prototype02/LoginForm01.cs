@@ -8,17 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.IO;
 
 namespace GUI_Prototype02
 {
     public partial class LoginForm01 : Form
     {
-        static string dir = Directory.GetCurrentDirectory() + @"\projectQueries.mdf";
-        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + dir + ";Integrated Security=True");
+        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\marce\Documents\GitHub\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security=True");
 
-        private string username, password;
-        public int userID;
+        public string sUsername;
+        public string sPassword;
+
         public LoginForm01()
         {
             InitializeComponent();
@@ -37,32 +36,20 @@ namespace GUI_Prototype02
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            username = "";
-            password = "";
-
-            username = txtBUsername.Text;
-            password = txtBPassword.Text;
+            sUsername = txtBUsername.Text;
+            sPassword = txtBPassword.Text;
             
             sqlCon.Open();
             string query = "SELECT COUNT(1) FROM USERS WHERE Username=@username AND Password=@password";
-            string query1 = "SELECT User_ID FROM USERS WHERE Username=@username and Password=@password";
 
             SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
-            sqlCmd.Parameters.AddWithValue("@username", username.Trim()); //trim is for white spaces
-            sqlCmd.Parameters.AddWithValue("@password", password.Trim());
-            int count = Convert.ToInt32(sqlCmd.ExecuteScalar().ToString()); //return 1 or 0, 1 is valid, 0 is invalid
-
-            SqlCommand sqlCmd1 = new SqlCommand(query1, sqlCon);
-            sqlCmd1.Parameters.AddWithValue("@username", username.Trim()); //trim is for white spaces
-            sqlCmd1.Parameters.AddWithValue("@password", password.Trim());
-            userID = int.Parse(sqlCmd1.ExecuteScalar().ToString());
-            sqlCon.Close();
+            sqlCmd.Parameters.AddWithValue("@username", sUsername.Trim()); //trim is for white spaces
+            sqlCmd.Parameters.AddWithValue("@password", sPassword.Trim());
+            int count = Convert.ToInt32(sqlCmd.ExecuteScalar().ToString()); //return 1 or 0, 1 is valid, 0 is invalid     
 
             if (count == 1)
             {
-                this.Visible = false;
-                MessageBox.Show(userID.ToString());
-                
+                this.Visible = false;          
                 MainMenuForm myMainMenu = new MainMenuForm();
                 myMainMenu.ShowDialog();
                 this.Close();

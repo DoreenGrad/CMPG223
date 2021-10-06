@@ -48,8 +48,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,6 +70,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Authentication Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authentication Form.Designer.cs">
+      <DependentUpon>Authentication Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="HelpForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,11 +100,11 @@
     <Compile Include="Order Form.Designer.cs">
       <DependentUpon>Order Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderInsert.cs">
+    <Compile Include="Order Insert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrderInsert.Designer.cs">
-      <DependentUpon>OrderInsert.cs</DependentUpon>
+    <Compile Include="Order Insert.Designer.cs">
+      <DependentUpon>Order Insert.cs</DependentUpon>
     </Compile>
     <Compile Include="Request Report.cs">
       <SubType>Form</SubType>
@@ -97,17 +112,17 @@
     <Compile Include="Request Report.Designer.cs">
       <DependentUpon>Request Report.cs</DependentUpon>
     </Compile>
-    <Compile Include="SaleInsert.cs">
+    <Compile Include="Sale Insert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SaleInsert.Designer.cs">
-      <DependentUpon>SaleInsert.cs</DependentUpon>
+    <Compile Include="Sale Insert.Designer.cs">
+      <DependentUpon>Sale Insert.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sell Products Form.cs">
+    <Compile Include="Sale Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sell Products Form.Designer.cs">
-      <DependentUpon>Sell Products Form.cs</DependentUpon>
+    <Compile Include="Sale Form.Designer.cs">
+      <DependentUpon>Sale Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Stock Insert.cs">
       <SubType>Form</SubType>
@@ -115,11 +130,11 @@
     <Compile Include="Stock Insert.Designer.cs">
       <DependentUpon>Stock Insert.cs</DependentUpon>
     </Compile>
-    <Compile Include="Stock Item Maintenance Form.cs">
+    <Compile Include="Stock Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Stock Item Maintenance Form.Designer.cs">
-      <DependentUpon>Stock Item Maintenance Form.cs</DependentUpon>
+    <Compile Include="Stock Form.Designer.cs">
+      <DependentUpon>Stock Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -129,6 +144,9 @@
     <Compile Include="ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Authentication Form.resx">
+      <DependentUpon>Authentication Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HelpForm.resx">
       <DependentUpon>HelpForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,20 +159,20 @@
     <EmbeddedResource Include="Order Form.resx">
       <DependentUpon>Order Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrderInsert.resx">
-      <DependentUpon>OrderInsert.cs</DependentUpon>
+    <EmbeddedResource Include="Order Insert.resx">
+      <DependentUpon>Order Insert.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SaleInsert.resx">
-      <DependentUpon>SaleInsert.cs</DependentUpon>
+    <EmbeddedResource Include="Sale Insert.resx">
+      <DependentUpon>Sale Insert.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sell Products Form.resx">
-      <DependentUpon>Sell Products Form.cs</DependentUpon>
+    <EmbeddedResource Include="Sale Form.resx">
+      <DependentUpon>Sale Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stock Insert.resx">
       <DependentUpon>Stock Insert.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Stock Item Maintenance Form.resx">
-      <DependentUpon>Stock Item Maintenance Form.cs</DependentUpon>
+    <EmbeddedResource Include="Stock Form.resx">
+      <DependentUpon>Stock Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -169,6 +187,7 @@
     <EmbeddedResource Include="ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -202,6 +221,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>projectQueries.mdf</DependentUpon>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

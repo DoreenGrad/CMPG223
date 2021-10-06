@@ -60,16 +60,26 @@ namespace GUI_Prototype02
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Order_Form orders = new Order_Form();
-
-            orders.Show();
+            this.Visible = false;
+            Order_Form myMainMenu = new Order_Form();
+            myMainMenu.ShowDialog();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ProductForm stock = new ProductForm();
+            this.Visible = false;
+            Stock_Form myMainMenu = new Stock_Form();
+            myMainMenu.ShowDialog();
+            this.Close();
+        }
 
-            stock.Show();
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            salesForm myMainMenu = new salesForm();
+            myMainMenu.ShowDialog();
+            this.Close();
         }
     }
 }

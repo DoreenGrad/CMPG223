@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI_Prototype02
 {
-    public partial class Stock_Insert : Form
+    public partial class StocInsertUpdateForm : Form
     {
-        public Stock_Insert()
+        public StocInsertUpdateForm()
         {
             InitializeComponent();
         }
@@ -31,6 +31,7 @@ namespace GUI_Prototype02
                 {
                     sStock_key = tbStock_Key.Text;
                     sStock_Desc = tbStock_Desc.Text;
+                    this.Close();
                 }
                 else
                 {

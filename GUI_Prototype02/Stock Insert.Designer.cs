@@ -1,6 +1,6 @@
 ﻿namespace GUI_Prototype02
 {
-    partial class Stock_Insert
+    partial class StocInsertUpdateForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.tbQty_on_Hand = new System.Windows.Forms.TextBox();
             this.tbWeight_per_Unit = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,7 +38,6 @@
             this.stockKeyLb = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.btnInsert = new System.Windows.Forms.Button();
-            this.tbQty_on_Hand = new System.Windows.Forms.TextBox();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +59,14 @@
             this.groupBox5.TabIndex = 11;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Stock";
+            // 
+            // tbQty_on_Hand
+            // 
+            this.tbQty_on_Hand.Font = new System.Drawing.Font("Verdana", 11F);
+            this.tbQty_on_Hand.Location = new System.Drawing.Point(212, 152);
+            this.tbQty_on_Hand.Name = "tbQty_on_Hand";
+            this.tbQty_on_Hand.Size = new System.Drawing.Size(182, 25);
+            this.tbQty_on_Hand.TabIndex = 10;
             // 
             // tbWeight_per_Unit
             // 
@@ -145,22 +153,14 @@
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
-            // tbQty_on_Hand
-            // 
-            this.tbQty_on_Hand.Font = new System.Drawing.Font("Verdana", 11F);
-            this.tbQty_on_Hand.Location = new System.Drawing.Point(212, 152);
-            this.tbQty_on_Hand.Name = "tbQty_on_Hand";
-            this.tbQty_on_Hand.Size = new System.Drawing.Size(182, 25);
-            this.tbQty_on_Hand.TabIndex = 10;
-            // 
-            // Stock_Insert
+            // StocInsertUpdateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(498, 388);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.groupBox5);
-            this.Name = "Stock_Insert";
+            this.Name = "StocInsertUpdateForm";
             this.Text = "Insert Stock";
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
