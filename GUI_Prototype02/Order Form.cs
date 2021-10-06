@@ -18,7 +18,7 @@ namespace GUI_Prototype02
             InitializeComponent();
         }
 
-        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\marce\Documents\GitHub\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security=True");
+        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\24361879\Not School\Documents\GitHub\NEWClone\GUI_Prototype02\projectQueries.mdf;Integrated Security=True");
         public void funcView()
         {
             sqlCon.Open();
