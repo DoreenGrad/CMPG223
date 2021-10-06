@@ -1,6 +1,6 @@
 ﻿namespace GUI_Prototype02
 {
-    partial class Order_Form
+    partial class OrderForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgView = new System.Windows.Forms.DataGridView();
+            this.tableProductsCurrentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnSearchUpdate = new System.Windows.Forms.Button();
             this.tabSearch = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -44,39 +52,31 @@
             this.btnInsert = new System.Windows.Forms.Button();
             this.txtBProductType = new System.Windows.Forms.TextBox();
             this.lblProductKey = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.tableProductsCurrentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableProductsCurrentBindingSource)).BeginInit();
             this.tabSearch.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.tabPageControlProducts.SuspendLayout();
             this.Receive_Orders.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSearchAndDelete)).BeginInit();
             this.groupBoxProductInformation.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tableProductsCurrentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Menu;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.tableProductsCurrentBindingSource;
-            this.dataGridView1.GridColor = System.Drawing.Color.Purple;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 235);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1340, 490);
-            this.dataGridView1.TabIndex = 8;
+            this.dgView.AllowUserToAddRows = false;
+            this.dgView.AllowUserToDeleteRows = false;
+            this.dgView.AutoGenerateColumns = false;
+            this.dgView.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.dgView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgView.DataSource = this.tableProductsCurrentBindingSource;
+            this.dgView.GridColor = System.Drawing.Color.Purple;
+            this.dgView.Location = new System.Drawing.Point(6, 235);
+            this.dgView.Name = "dgView";
+            this.dgView.ReadOnly = true;
+            this.dgView.Size = new System.Drawing.Size(1340, 490);
+            this.dgView.TabIndex = 8;
             // 
             // btnSearchUpdate
             // 
@@ -100,7 +100,7 @@
             this.tabSearch.Controls.Add(this.button1);
             this.tabSearch.Controls.Add(this.button4);
             this.tabSearch.Controls.Add(this.button3);
-            this.tabSearch.Controls.Add(this.dataGridView1);
+            this.tabSearch.Controls.Add(this.dgView);
             this.tabSearch.Controls.Add(this.btnSearchUpdate);
             this.tabSearch.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabSearch.Location = new System.Drawing.Point(4, 27);
@@ -110,6 +110,81 @@
             this.tabSearch.TabIndex = 0;
             this.tabSearch.Text = "Maintain Order";
             this.tabSearch.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.textBox5);
+            this.groupBox5.Controls.Add(this.textBox6);
+            this.groupBox5.Controls.Add(this.label12);
+            this.groupBox5.Controls.Add(this.maskedTextBox1);
+            this.groupBox5.Controls.Add(this.label13);
+            this.groupBox5.Controls.Add(this.label14);
+            this.groupBox5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
+            this.groupBox5.ForeColor = System.Drawing.Color.Purple;
+            this.groupBox5.Location = new System.Drawing.Point(6, 6);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(400, 200);
+            this.groupBox5.TabIndex = 17;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Search: Product Information";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Verdana", 11F);
+            this.textBox5.Location = new System.Drawing.Point(212, 117);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(182, 25);
+            this.textBox5.TabIndex = 5;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Verdana", 11F);
+            this.textBox6.Location = new System.Drawing.Point(212, 82);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(182, 25);
+            this.textBox6.TabIndex = 4;
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label12.Location = new System.Drawing.Point(6, 42);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(200, 35);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Product Key:";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Font = new System.Drawing.Font("Verdana", 11F);
+            this.maskedTextBox1.Location = new System.Drawing.Point(212, 47);
+            this.maskedTextBox1.Mask = ">LLLL0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 25);
+            this.maskedTextBox1.TabIndex = 3;
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label13.Location = new System.Drawing.Point(6, 77);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(200, 35);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Product Type:";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label14.Location = new System.Drawing.Point(6, 112);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(200, 35);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Product Description:";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // button1
             // 
@@ -272,105 +347,31 @@
             this.lblProductKey.Text = "Date:";
             this.lblProductKey.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.textBox5);
-            this.groupBox5.Controls.Add(this.textBox6);
-            this.groupBox5.Controls.Add(this.label12);
-            this.groupBox5.Controls.Add(this.maskedTextBox1);
-            this.groupBox5.Controls.Add(this.label13);
-            this.groupBox5.Controls.Add(this.label14);
-            this.groupBox5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
-            this.groupBox5.ForeColor = System.Drawing.Color.Purple;
-            this.groupBox5.Location = new System.Drawing.Point(6, 6);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(400, 200);
-            this.groupBox5.TabIndex = 17;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Search: Product Information";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Verdana", 11F);
-            this.textBox5.Location = new System.Drawing.Point(212, 117);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(182, 25);
-            this.textBox5.TabIndex = 5;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Verdana", 11F);
-            this.textBox6.Location = new System.Drawing.Point(212, 82);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(182, 25);
-            this.textBox6.TabIndex = 4;
-            // 
-            // label12
-            // 
-            this.label12.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label12.Location = new System.Drawing.Point(6, 42);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(200, 35);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Product Key:";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Verdana", 11F);
-            this.maskedTextBox1.Location = new System.Drawing.Point(212, 47);
-            this.maskedTextBox1.Mask = ">LLLL0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 25);
-            this.maskedTextBox1.TabIndex = 3;
-            // 
-            // label13
-            // 
-            this.label13.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label13.Location = new System.Drawing.Point(6, 77);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(200, 35);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "Product Type:";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label14
-            // 
-            this.label14.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label14.Location = new System.Drawing.Point(6, 112);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(200, 35);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "Product Description:";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // Order_Form
+            // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1304, 550);
             this.Controls.Add(this.tabPageControlProducts);
-            this.Name = "Order_Form";
+            this.Name = "OrderForm";
             this.Text = "Order";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.OrderForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableProductsCurrentBindingSource)).EndInit();
             this.tabSearch.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.tabPageControlProducts.ResumeLayout(false);
             this.Receive_Orders.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSearchAndDelete)).EndInit();
             this.groupBoxProductInformation.ResumeLayout(false);
             this.groupBoxProductInformation.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tableProductsCurrentBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgView;
         private System.Windows.Forms.BindingSource tableProductsCurrentBindingSource;
         private System.Windows.Forms.Button btnSearchUpdate;
         private System.Windows.Forms.TabPage tabSearch;

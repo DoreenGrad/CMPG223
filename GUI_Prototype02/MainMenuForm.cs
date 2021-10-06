@@ -56,5 +56,12 @@ namespace GUI_Prototype02
         {
             Close();//Testing
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            OrderForm orders = new OrderForm();
+
+            orders.Show();
+        }
     }
 }
