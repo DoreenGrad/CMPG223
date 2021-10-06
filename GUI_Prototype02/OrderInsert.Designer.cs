@@ -1,6 +1,6 @@
 ﻿namespace GUI_Prototype02
 {
-    partial class OrderInsertForm
+    partial class OrderInsertUpdateForm
     {
         /// <summary>
         /// Required designer variable.
@@ -37,10 +37,10 @@
             this.lblPricePerUnit = new System.Windows.Forms.Label();
             this.btnInsert = new System.Windows.Forms.Button();
             this.groupBoxProductInformation = new System.Windows.Forms.GroupBox();
+            this.tbDate_Ordered = new System.Windows.Forms.TextBox();
             this.tbDate_Received = new System.Windows.Forms.TextBox();
             this.lblProductKey = new System.Windows.Forms.Label();
             this.lblProductType = new System.Windows.Forms.Label();
-            this.tbDate_Ordered = new System.Windows.Forms.TextBox();
             this.groupBoxUnitInformation.SuspendLayout();
             this.groupBoxProductInformation.SuspendLayout();
             this.SuspendLayout();
@@ -157,6 +157,14 @@
             this.groupBoxProductInformation.TabStop = false;
             this.groupBoxProductInformation.Text = "Order";
             // 
+            // tbDate_Ordered
+            // 
+            this.tbDate_Ordered.Font = new System.Drawing.Font("Verdana", 11F);
+            this.tbDate_Ordered.Location = new System.Drawing.Point(212, 47);
+            this.tbDate_Ordered.Name = "tbDate_Ordered";
+            this.tbDate_Ordered.Size = new System.Drawing.Size(182, 25);
+            this.tbDate_Ordered.TabIndex = 5;
+            // 
             // tbDate_Received
             // 
             this.tbDate_Received.Font = new System.Drawing.Font("Verdana", 11F);
@@ -187,15 +195,7 @@
             this.lblProductType.Text = "Date Received";
             this.lblProductType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // tbDate_Ordered
-            // 
-            this.tbDate_Ordered.Font = new System.Drawing.Font("Verdana", 11F);
-            this.tbDate_Ordered.Location = new System.Drawing.Point(212, 47);
-            this.tbDate_Ordered.Name = "tbDate_Ordered";
-            this.tbDate_Ordered.Size = new System.Drawing.Size(182, 25);
-            this.tbDate_Ordered.TabIndex = 5;
-            // 
-            // OrderInsertForm
+            // OrderInsertUpdateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -203,8 +203,8 @@
             this.Controls.Add(this.groupBoxUnitInformation);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.groupBoxProductInformation);
-            this.Name = "OrderInsertForm";
-            this.Text = "Order Insert";
+            this.Name = "OrderInsertUpdateForm";
+            this.Text = "Order Insert/Update";
             this.groupBoxUnitInformation.ResumeLayout(false);
             this.groupBoxUnitInformation.PerformLayout();
             this.groupBoxProductInformation.ResumeLayout(false);

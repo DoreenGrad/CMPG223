@@ -1,6 +1,6 @@
 ﻿namespace GUI_Prototype02
 {
-    partial class OrderForm
+    partial class Order_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,121 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dgView = new System.Windows.Forms.DataGridView();
-            this.tableProductsCurrentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnSearchUpdate = new System.Windows.Forms.Button();
-            this.tabSearch = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtStockID = new System.Windows.Forms.TextBox();
+            this.txtOrderID = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mtbOrder_Detail = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.tabPageControlProducts = new System.Windows.Forms.TabControl();
-            this.Receive_Orders = new System.Windows.Forms.TabPage();
-            this.dataGridSearchAndDelete = new System.Windows.Forms.DataGridView();
-            this.groupBoxProductInformation = new System.Windows.Forms.GroupBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.lblLogin = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnInsert = new System.Windows.Forms.Button();
-            this.txtBProductType = new System.Windows.Forms.TextBox();
-            this.lblProductKey = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableProductsCurrentBindingSource)).BeginInit();
-            this.tabSearch.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.tabPageControlProducts.SuspendLayout();
-            this.Receive_Orders.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridSearchAndDelete)).BeginInit();
-            this.groupBoxProductInformation.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgView
             // 
             this.dgView.AllowUserToAddRows = false;
             this.dgView.AllowUserToDeleteRows = false;
-            this.dgView.AutoGenerateColumns = false;
             this.dgView.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.dgView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgView.DataSource = this.tableProductsCurrentBindingSource;
             this.dgView.GridColor = System.Drawing.Color.Purple;
-            this.dgView.Location = new System.Drawing.Point(6, 235);
+            this.dgView.Location = new System.Drawing.Point(13, 284);
             this.dgView.Name = "dgView";
             this.dgView.ReadOnly = true;
-            this.dgView.Size = new System.Drawing.Size(1340, 490);
-            this.dgView.TabIndex = 8;
-            // 
-            // btnSearchUpdate
-            // 
-            this.btnSearchUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
-            this.btnSearchUpdate.FlatAppearance.BorderSize = 2;
-            this.btnSearchUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSearchUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSearchUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchUpdate.ForeColor = System.Drawing.Color.Purple;
-            this.btnSearchUpdate.Location = new System.Drawing.Point(618, 68);
-            this.btnSearchUpdate.Name = "btnSearchUpdate";
-            this.btnSearchUpdate.Size = new System.Drawing.Size(200, 50);
-            this.btnSearchUpdate.TabIndex = 6;
-            this.btnSearchUpdate.Text = "DELETE";
-            this.btnSearchUpdate.UseVisualStyleBackColor = true;
-            // 
-            // tabSearch
-            // 
-            this.tabSearch.Controls.Add(this.groupBox5);
-            this.tabSearch.Controls.Add(this.button1);
-            this.tabSearch.Controls.Add(this.button4);
-            this.tabSearch.Controls.Add(this.button3);
-            this.tabSearch.Controls.Add(this.dgView);
-            this.tabSearch.Controls.Add(this.btnSearchUpdate);
-            this.tabSearch.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabSearch.Location = new System.Drawing.Point(4, 27);
-            this.tabSearch.Name = "tabSearch";
-            this.tabSearch.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSearch.Size = new System.Drawing.Size(1352, 731);
-            this.tabSearch.TabIndex = 0;
-            this.tabSearch.Text = "Maintain Order";
-            this.tabSearch.UseVisualStyleBackColor = true;
+            this.dgView.Size = new System.Drawing.Size(1018, 219);
+            this.dgView.TabIndex = 9;
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox5);
-            this.groupBox5.Controls.Add(this.textBox6);
+            this.groupBox5.Controls.Add(this.txtStockID);
+            this.groupBox5.Controls.Add(this.txtOrderID);
             this.groupBox5.Controls.Add(this.label12);
-            this.groupBox5.Controls.Add(this.maskedTextBox1);
+            this.groupBox5.Controls.Add(this.mtbOrder_Detail);
             this.groupBox5.Controls.Add(this.label13);
             this.groupBox5.Controls.Add(this.label14);
             this.groupBox5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
             this.groupBox5.ForeColor = System.Drawing.Color.Purple;
-            this.groupBox5.Location = new System.Drawing.Point(6, 6);
+            this.groupBox5.Location = new System.Drawing.Point(13, 65);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(400, 200);
-            this.groupBox5.TabIndex = 17;
+            this.groupBox5.Size = new System.Drawing.Size(400, 162);
+            this.groupBox5.TabIndex = 10;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Search: Product Information";
+            this.groupBox5.Text = "Search by: ";
             // 
-            // textBox5
+            // txtStockID
             // 
-            this.textBox5.Font = new System.Drawing.Font("Verdana", 11F);
-            this.textBox5.Location = new System.Drawing.Point(212, 117);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(182, 25);
-            this.textBox5.TabIndex = 5;
+            this.txtStockID.Font = new System.Drawing.Font("Verdana", 11F);
+            this.txtStockID.Location = new System.Drawing.Point(212, 117);
+            this.txtStockID.Name = "txtStockID";
+            this.txtStockID.Size = new System.Drawing.Size(182, 25);
+            this.txtStockID.TabIndex = 5;
             // 
-            // textBox6
+            // txtOrderID
             // 
-            this.textBox6.Font = new System.Drawing.Font("Verdana", 11F);
-            this.textBox6.Location = new System.Drawing.Point(212, 82);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(182, 25);
-            this.textBox6.TabIndex = 4;
+            this.txtOrderID.Font = new System.Drawing.Font("Verdana", 11F);
+            this.txtOrderID.Location = new System.Drawing.Point(212, 82);
+            this.txtOrderID.Name = "txtOrderID";
+            this.txtOrderID.Size = new System.Drawing.Size(182, 25);
+            this.txtOrderID.TabIndex = 4;
             // 
             // label12
             // 
@@ -152,17 +100,17 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(200, 35);
             this.label12.TabIndex = 0;
-            this.label12.Text = "Product Key:";
+            this.label12.Text = "Order Detail ID:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // maskedTextBox1
+            // mtbOrder_Detail
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Verdana", 11F);
-            this.maskedTextBox1.Location = new System.Drawing.Point(212, 47);
-            this.maskedTextBox1.Mask = ">LLLL0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 25);
-            this.maskedTextBox1.TabIndex = 3;
+            this.mtbOrder_Detail.Font = new System.Drawing.Font("Verdana", 11F);
+            this.mtbOrder_Detail.Location = new System.Drawing.Point(212, 47);
+            this.mtbOrder_Detail.Mask = ">LLLL0000";
+            this.mtbOrder_Detail.Name = "mtbOrder_Detail";
+            this.mtbOrder_Detail.Size = new System.Drawing.Size(100, 25);
+            this.mtbOrder_Detail.TabIndex = 3;
             // 
             // label13
             // 
@@ -172,7 +120,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(200, 35);
             this.label13.TabIndex = 1;
-            this.label13.Text = "Product Type:";
+            this.label13.Text = "Order ID:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label14
@@ -183,134 +131,30 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(200, 35);
             this.label14.TabIndex = 2;
-            this.label14.Text = "Product Description:";
+            this.label14.Text = "Stock ID:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button1
+            // lblLogin
             // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Purple;
-            this.button1.Location = new System.Drawing.Point(618, 16);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 50);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "FILTER";
-            this.button1.UseVisualStyleBackColor = true;
+            this.lblLogin.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.ForeColor = System.Drawing.Color.Purple;
+            this.lblLogin.Location = new System.Drawing.Point(8, 243);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(458, 38);
+            this.lblLogin.TabIndex = 11;
+            this.lblLogin.Text = "Select Order:";
+            this.lblLogin.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // button4
+            // label1
             // 
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Purple;
-            this.button4.Location = new System.Drawing.Point(412, 68);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(200, 50);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "UPDATE";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Purple;
-            this.button3.Location = new System.Drawing.Point(412, 16);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 50);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "INSERT";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // tabPageControlProducts
-            // 
-            this.tabPageControlProducts.Controls.Add(this.tabSearch);
-            this.tabPageControlProducts.Controls.Add(this.Receive_Orders);
-            this.tabPageControlProducts.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageControlProducts.Location = new System.Drawing.Point(12, 12);
-            this.tabPageControlProducts.Name = "tabPageControlProducts";
-            this.tabPageControlProducts.SelectedIndex = 0;
-            this.tabPageControlProducts.Size = new System.Drawing.Size(1360, 762);
-            this.tabPageControlProducts.TabIndex = 2;
-            // 
-            // Receive_Orders
-            // 
-            this.Receive_Orders.Controls.Add(this.dataGridSearchAndDelete);
-            this.Receive_Orders.Controls.Add(this.groupBoxProductInformation);
-            this.Receive_Orders.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Receive_Orders.Location = new System.Drawing.Point(4, 27);
-            this.Receive_Orders.Name = "Receive_Orders";
-            this.Receive_Orders.Padding = new System.Windows.Forms.Padding(3);
-            this.Receive_Orders.Size = new System.Drawing.Size(1352, 731);
-            this.Receive_Orders.TabIndex = 1;
-            this.Receive_Orders.Text = "Receive Orders";
-            this.Receive_Orders.UseVisualStyleBackColor = true;
-            // 
-            // dataGridSearchAndDelete
-            // 
-            this.dataGridSearchAndDelete.AllowUserToAddRows = false;
-            this.dataGridSearchAndDelete.AllowUserToDeleteRows = false;
-            this.dataGridSearchAndDelete.AutoGenerateColumns = false;
-            this.dataGridSearchAndDelete.BackgroundColor = System.Drawing.SystemColors.Menu;
-            this.dataGridSearchAndDelete.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridSearchAndDelete.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridSearchAndDelete.DataSource = this.tableProductsCurrentBindingSource;
-            this.dataGridSearchAndDelete.GridColor = System.Drawing.Color.Purple;
-            this.dataGridSearchAndDelete.Location = new System.Drawing.Point(6, 235);
-            this.dataGridSearchAndDelete.Name = "dataGridSearchAndDelete";
-            this.dataGridSearchAndDelete.ReadOnly = true;
-            this.dataGridSearchAndDelete.Size = new System.Drawing.Size(1340, 434);
-            this.dataGridSearchAndDelete.TabIndex = 6;
-            // 
-            // groupBoxProductInformation
-            // 
-            this.groupBoxProductInformation.Controls.Add(this.label22);
-            this.groupBoxProductInformation.Controls.Add(this.maskedTextBox2);
-            this.groupBoxProductInformation.Controls.Add(this.btnInsert);
-            this.groupBoxProductInformation.Controls.Add(this.txtBProductType);
-            this.groupBoxProductInformation.Controls.Add(this.lblProductKey);
-            this.groupBoxProductInformation.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
-            this.groupBoxProductInformation.ForeColor = System.Drawing.Color.Purple;
-            this.groupBoxProductInformation.Location = new System.Drawing.Point(6, 29);
-            this.groupBoxProductInformation.Name = "groupBoxProductInformation";
-            this.groupBoxProductInformation.Size = new System.Drawing.Size(400, 200);
-            this.groupBoxProductInformation.TabIndex = 0;
-            this.groupBoxProductInformation.TabStop = false;
-            this.groupBoxProductInformation.Text = "Insert Date";
-            // 
-            // label22
-            // 
-            this.label22.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
-            this.label22.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label22.Location = new System.Drawing.Point(9, 33);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(200, 35);
-            this.label22.TabIndex = 6;
-            this.label22.Text = "Order ID:";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Verdana", 11F);
-            this.maskedTextBox2.Location = new System.Drawing.Point(215, 38);
-            this.maskedTextBox2.Mask = ">LLLL0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(100, 25);
-            this.maskedTextBox2.TabIndex = 7;
+            this.label1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Purple;
+            this.label1.Location = new System.Drawing.Point(8, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(458, 38);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Insert new Order: ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // btnInsert
             // 
@@ -321,78 +165,82 @@
             this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsert.ForeColor = System.Drawing.Color.Purple;
-            this.btnInsert.Location = new System.Drawing.Point(9, 116);
+            this.btnInsert.Location = new System.Drawing.Point(266, 12);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(200, 50);
-            this.btnInsert.TabIndex = 5;
-            this.btnInsert.Text = "UPDATE";
+            this.btnInsert.TabIndex = 13;
+            this.btnInsert.Text = "INSERT";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
-            // txtBProductType
+            // btnUpdate
             // 
-            this.txtBProductType.Font = new System.Drawing.Font("Verdana", 11F);
-            this.txtBProductType.Location = new System.Drawing.Point(215, 69);
-            this.txtBProductType.Name = "txtBProductType";
-            this.txtBProductType.Size = new System.Drawing.Size(182, 25);
-            this.txtBProductType.TabIndex = 4;
+            this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.btnUpdate.FlatAppearance.BorderSize = 2;
+            this.btnUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.Purple;
+            this.btnUpdate.Location = new System.Drawing.Point(213, 509);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(200, 50);
+            this.btnUpdate.TabIndex = 14;
+            this.btnUpdate.Text = "UPDATE";
+            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
-            // lblProductKey
+            // btnDel
             // 
-            this.lblProductKey.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
-            this.lblProductKey.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblProductKey.Location = new System.Drawing.Point(9, 59);
-            this.lblProductKey.Name = "lblProductKey";
-            this.lblProductKey.Size = new System.Drawing.Size(200, 35);
-            this.lblProductKey.TabIndex = 0;
-            this.lblProductKey.Text = "Date:";
-            this.lblProductKey.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDel.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.btnDel.FlatAppearance.BorderSize = 2;
+            this.btnDel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.ForeColor = System.Drawing.Color.Purple;
+            this.btnDel.Location = new System.Drawing.Point(12, 509);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(194, 50);
+            this.btnDel.TabIndex = 15;
+            this.btnDel.Text = "DELETE";
+            this.btnDel.UseVisualStyleBackColor = true;
             // 
-            // OrderForm
+            // Order_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1304, 550);
-            this.Controls.Add(this.tabPageControlProducts);
-            this.Name = "OrderForm";
+            this.ClientSize = new System.Drawing.Size(1062, 646);
+            this.Controls.Add(this.btnDel);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnInsert);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblLogin);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.dgView);
+            this.Name = "Order_Form";
             this.Text = "Order";
-            this.Load += new System.EventHandler(this.OrderForm_Load);
+            this.Load += new System.EventHandler(this.Order_Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableProductsCurrentBindingSource)).EndInit();
-            this.tabSearch.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.tabPageControlProducts.ResumeLayout(false);
-            this.Receive_Orders.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridSearchAndDelete)).EndInit();
-            this.groupBoxProductInformation.ResumeLayout(false);
-            this.groupBoxProductInformation.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
         private System.Windows.Forms.DataGridView dgView;
-        private System.Windows.Forms.BindingSource tableProductsCurrentBindingSource;
-        private System.Windows.Forms.Button btnSearchUpdate;
-        private System.Windows.Forms.TabPage tabSearch;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TabControl tabPageControlProducts;
-        private System.Windows.Forms.TabPage Receive_Orders;
-        private System.Windows.Forms.DataGridView dataGridSearchAndDelete;
-        private System.Windows.Forms.GroupBox groupBoxProductInformation;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.Button btnInsert;
-        private System.Windows.Forms.TextBox txtBProductType;
-        private System.Windows.Forms.Label lblProductKey;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtStockID;
+        private System.Windows.Forms.TextBox txtOrderID;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mtbOrder_Detail;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblLogin;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnDel;
     }
 }
