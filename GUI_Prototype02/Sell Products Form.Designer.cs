@@ -1,6 +1,6 @@
 ﻿namespace GUI_Prototype02
 {
-    partial class Sale_Products_Form
+    partial class salesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -34,12 +34,12 @@
             this.lblSale = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.txtStockID = new System.Windows.Forms.TextBox();
+            this.txtStockKey = new System.Windows.Forms.TextBox();
             this.txtSaleID = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblSaleDetail = new System.Windows.Forms.Label();
             this.mtbSale_Detail = new System.Windows.Forms.MaskedTextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblSaleID = new System.Windows.Forms.Label();
+            this.lblStockKey = new System.Windows.Forms.Label();
             this.dtgView = new System.Windows.Forms.DataGridView();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgView)).BeginInit();
@@ -118,12 +118,12 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.txtStockID);
+            this.groupBox5.Controls.Add(this.txtStockKey);
             this.groupBox5.Controls.Add(this.txtSaleID);
-            this.groupBox5.Controls.Add(this.label12);
+            this.groupBox5.Controls.Add(this.lblSaleDetail);
             this.groupBox5.Controls.Add(this.mtbSale_Detail);
-            this.groupBox5.Controls.Add(this.label13);
-            this.groupBox5.Controls.Add(this.label14);
+            this.groupBox5.Controls.Add(this.lblSaleID);
+            this.groupBox5.Controls.Add(this.lblStockKey);
             this.groupBox5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
             this.groupBox5.ForeColor = System.Drawing.Color.Purple;
             this.groupBox5.Location = new System.Drawing.Point(21, 65);
@@ -133,13 +133,13 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Search by: ";
             // 
-            // txtStockID
+            // txtStockKey
             // 
-            this.txtStockID.Font = new System.Drawing.Font("Verdana", 11F);
-            this.txtStockID.Location = new System.Drawing.Point(212, 117);
-            this.txtStockID.Name = "txtStockID";
-            this.txtStockID.Size = new System.Drawing.Size(182, 25);
-            this.txtStockID.TabIndex = 5;
+            this.txtStockKey.Font = new System.Drawing.Font("Verdana", 11F);
+            this.txtStockKey.Location = new System.Drawing.Point(212, 117);
+            this.txtStockKey.Name = "txtStockKey";
+            this.txtStockKey.Size = new System.Drawing.Size(182, 25);
+            this.txtStockKey.TabIndex = 5;
             // 
             // txtSaleID
             // 
@@ -149,16 +149,16 @@
             this.txtSaleID.Size = new System.Drawing.Size(182, 25);
             this.txtSaleID.TabIndex = 4;
             // 
-            // label12
+            // lblSaleDetail
             // 
-            this.label12.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label12.Location = new System.Drawing.Point(6, 42);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(200, 35);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Sale Detail ID:";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSaleDetail.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
+            this.lblSaleDetail.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblSaleDetail.Location = new System.Drawing.Point(6, 42);
+            this.lblSaleDetail.Name = "lblSaleDetail";
+            this.lblSaleDetail.Size = new System.Drawing.Size(200, 35);
+            this.lblSaleDetail.TabIndex = 0;
+            this.lblSaleDetail.Text = "Sale Detail ID:";
+            this.lblSaleDetail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // mtbSale_Detail
             // 
@@ -169,27 +169,27 @@
             this.mtbSale_Detail.Size = new System.Drawing.Size(100, 25);
             this.mtbSale_Detail.TabIndex = 3;
             // 
-            // label13
+            // lblSaleID
             // 
-            this.label13.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label13.Location = new System.Drawing.Point(6, 77);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(200, 35);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "Sale ID:";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSaleID.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
+            this.lblSaleID.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblSaleID.Location = new System.Drawing.Point(6, 77);
+            this.lblSaleID.Name = "lblSaleID";
+            this.lblSaleID.Size = new System.Drawing.Size(200, 35);
+            this.lblSaleID.TabIndex = 1;
+            this.lblSaleID.Text = "Sale ID:";
+            this.lblSaleID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label14
+            // lblStockKey
             // 
-            this.label14.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label14.Location = new System.Drawing.Point(6, 112);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(200, 35);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "Stock ID:";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblStockKey.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
+            this.lblStockKey.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblStockKey.Location = new System.Drawing.Point(6, 112);
+            this.lblStockKey.Name = "lblStockKey";
+            this.lblStockKey.Size = new System.Drawing.Size(200, 35);
+            this.lblStockKey.TabIndex = 2;
+            this.lblStockKey.Text = "Stock Key:";
+            this.lblStockKey.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dtgView
             // 
@@ -205,7 +205,7 @@
             this.dtgView.Size = new System.Drawing.Size(1018, 219);
             this.dtgView.TabIndex = 16;
             // 
-            // Sale_Products_Form
+            // salesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -217,8 +217,8 @@
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.dtgView);
-            this.Name = "Sale_Products_Form";
-            this.Text = "Sell Products";
+            this.Name = "salesForm";
+            this.Text = "SALES";
             this.Load += new System.EventHandler(this.Sale_Products_Form_Load);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
@@ -235,12 +235,12 @@
         private System.Windows.Forms.Label lblSale;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox txtStockID;
+        private System.Windows.Forms.TextBox txtStockKey;
         private System.Windows.Forms.TextBox txtSaleID;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblSaleDetail;
         private System.Windows.Forms.MaskedTextBox mtbSale_Detail;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblSaleID;
+        private System.Windows.Forms.Label lblStockKey;
         private System.Windows.Forms.DataGridView dtgView;
     }
 }

@@ -11,14 +11,14 @@ using System.Data.SqlClient;
 
 namespace GUI_Prototype02
 {
-    public partial class Sale_Products_Form : Form
+    public partial class salesForm : Form
     {
-        public Sale_Products_Form()
+        public salesForm()
         {
             InitializeComponent();
         }
 
-        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\24361879\Not School\Documents\GitHub\NEWClone\GUI_Prototype02\projectQueries.mdf;Integrated Security=True");
+        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\24361879\Not School\Documents\GitHub\NEWClone\GUI_Prototype02\projectQueries.mdf;Integrated Security=True");
         SqlCommand command;
         SqlDataAdapter adap;
         DataSet ds;
@@ -51,7 +51,7 @@ namespace GUI_Prototype02
         {
             try
             {
-                SaleInsertForm insert = new SaleInsertForm();
+                insertSaleForm insert = new insertSaleForm();
                 insert.ShowDialog();
 
                 sqlCon.Open();

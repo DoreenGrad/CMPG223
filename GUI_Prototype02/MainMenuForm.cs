@@ -26,8 +26,9 @@ namespace GUI_Prototype02
         {
             this.Visible = false;
 
+            salesForm mySales = new salesForm();
+            mySales.ShowDialog();
 
-   
 
             this.Visible = true;
         }

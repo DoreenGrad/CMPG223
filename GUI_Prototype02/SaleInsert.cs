@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace GUI_Prototype02
 {
-    public partial class SaleInsertForm : Form
+    public partial class insertSaleForm : Form
     {
-        public SaleInsertForm()
+        public insertSaleForm()
         {
             InitializeComponent();
         }
@@ -36,7 +36,6 @@ namespace GUI_Prototype02
                     else
                     {
                         MessageBox.Show("Sale date must be a date");
-
                     }
                 }
                 else
