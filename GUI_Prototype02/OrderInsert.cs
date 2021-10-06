@@ -24,6 +24,7 @@ namespace GUI_Prototype02
         public int iQty_Ordered;
         public double dPrice_per_Kg;
         public double dPrice_per_Unit;
+        public string sStock_Key;
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
@@ -38,6 +39,7 @@ namespace GUI_Prototype02
                         {
                             if (DateTime.TryParse(tbDate_Received.Text, out sDate_Received))
                             {
+                                sStock_Key = tbStock_Key.Text;
                                 this.Close();
                             }
                             else

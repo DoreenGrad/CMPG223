@@ -41,6 +41,8 @@
             this.tbDate_Received = new System.Windows.Forms.TextBox();
             this.lblProductKey = new System.Windows.Forms.Label();
             this.lblProductType = new System.Windows.Forms.Label();
+            this.tbStock_Key = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBoxUnitInformation.SuspendLayout();
             this.groupBoxProductInformation.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +69,7 @@
             this.tbPrice_per_Unit.Font = new System.Drawing.Font("Verdana", 11F);
             this.tbPrice_per_Unit.Location = new System.Drawing.Point(212, 117);
             this.tbPrice_per_Unit.Name = "tbPrice_per_Unit";
-            this.tbPrice_per_Unit.Size = new System.Drawing.Size(100, 25);
+            this.tbPrice_per_Unit.Size = new System.Drawing.Size(100, 34);
             this.tbPrice_per_Unit.TabIndex = 5;
             this.tbPrice_per_Unit.Text = "0";
             this.tbPrice_per_Unit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -77,7 +79,7 @@
             this.tbPrice_per_Kg.Font = new System.Drawing.Font("Verdana", 11F);
             this.tbPrice_per_Kg.Location = new System.Drawing.Point(212, 82);
             this.tbPrice_per_Kg.Name = "tbPrice_per_Kg";
-            this.tbPrice_per_Kg.Size = new System.Drawing.Size(100, 25);
+            this.tbPrice_per_Kg.Size = new System.Drawing.Size(100, 34);
             this.tbPrice_per_Kg.TabIndex = 4;
             this.tbPrice_per_Kg.Text = "0";
             this.tbPrice_per_Kg.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -87,7 +89,7 @@
             this.tbQty_Ordered.Font = new System.Drawing.Font("Verdana", 11F);
             this.tbQty_Ordered.Location = new System.Drawing.Point(212, 47);
             this.tbQty_Ordered.Name = "tbQty_Ordered";
-            this.tbQty_Ordered.Size = new System.Drawing.Size(100, 25);
+            this.tbQty_Ordered.Size = new System.Drawing.Size(100, 34);
             this.tbQty_Ordered.TabIndex = 3;
             this.tbQty_Ordered.Text = "0";
             this.tbQty_Ordered.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -144,6 +146,8 @@
             // 
             // groupBoxProductInformation
             // 
+            this.groupBoxProductInformation.Controls.Add(this.tbStock_Key);
+            this.groupBoxProductInformation.Controls.Add(this.label1);
             this.groupBoxProductInformation.Controls.Add(this.tbDate_Ordered);
             this.groupBoxProductInformation.Controls.Add(this.tbDate_Received);
             this.groupBoxProductInformation.Controls.Add(this.lblProductKey);
@@ -162,7 +166,7 @@
             this.tbDate_Ordered.Font = new System.Drawing.Font("Verdana", 11F);
             this.tbDate_Ordered.Location = new System.Drawing.Point(212, 47);
             this.tbDate_Ordered.Name = "tbDate_Ordered";
-            this.tbDate_Ordered.Size = new System.Drawing.Size(182, 25);
+            this.tbDate_Ordered.Size = new System.Drawing.Size(182, 34);
             this.tbDate_Ordered.TabIndex = 5;
             // 
             // tbDate_Received
@@ -170,7 +174,7 @@
             this.tbDate_Received.Font = new System.Drawing.Font("Verdana", 11F);
             this.tbDate_Received.Location = new System.Drawing.Point(212, 82);
             this.tbDate_Received.Name = "tbDate_Received";
-            this.tbDate_Received.Size = new System.Drawing.Size(182, 25);
+            this.tbDate_Received.Size = new System.Drawing.Size(182, 34);
             this.tbDate_Received.TabIndex = 4;
             // 
             // lblProductKey
@@ -194,6 +198,25 @@
             this.lblProductType.TabIndex = 1;
             this.lblProductType.Text = "Date Received";
             this.lblProductType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tbStock_Key
+            // 
+            this.tbStock_Key.Font = new System.Drawing.Font("Verdana", 11F);
+            this.tbStock_Key.Location = new System.Drawing.Point(212, 122);
+            this.tbStock_Key.Name = "tbStock_Key";
+            this.tbStock_Key.Size = new System.Drawing.Size(182, 34);
+            this.tbStock_Key.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(6, 117);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(200, 35);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Stock key";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // OrderInsertUpdateForm
             // 
@@ -227,5 +250,7 @@
         private System.Windows.Forms.Label lblProductKey;
         private System.Windows.Forms.Label lblProductType;
         private System.Windows.Forms.TextBox tbDate_Ordered;
+        private System.Windows.Forms.TextBox tbStock_Key;
+        private System.Windows.Forms.Label label1;
     }
 }
