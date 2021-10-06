@@ -13,7 +13,7 @@ namespace GUI_Prototype02
 {
     public partial class LoginForm01 : Form
     {
-        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\24361879\Not School\Documents\GitHub\NEWClone\GUI_Prototype02\projectQueries.mdf;Integrated Security=True");
+        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\marce\Documents\GitHub\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security=True");
         private string username, password;
         public int userID;
         public LoginForm01()
@@ -58,7 +58,8 @@ namespace GUI_Prototype02
             if (count == 1)
             {
                 this.Visible = false;
- 
+                MessageBox.Show(userID.ToString());
+                
                 MainMenuForm myMainMenu = new MainMenuForm();
                 myMainMenu.ShowDialog();
                 this.Close();

@@ -3,5 +3,4 @@
 	User_ID int not null, 
 	Date_Ordered date,
 	Date_Received date,
-	FOREIGN KEY(User_ID) REFERENCES USERS(User_ID)
 );

@@ -18,7 +18,7 @@ namespace GUI_Prototype02
             InitializeComponent();
         }
 
-        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\24361879\Not School\Documents\GitHub\NEWClone\GUI_Prototype02\projectQueries.mdf;Integrated Security=True");
+        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\marce\Documents\GitHub\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security=True");
         public void funcView()
         {
             sqlCon.Open();
@@ -59,18 +59,24 @@ namespace GUI_Prototype02
 
                 sqlCon.Close();
 
-                //sqlCon.Open();
+            /*string query1 = "SELECT Order_ID FROM TableName WHERE id=(SELECT max(id) FROM TableName);";
+            SqlCommand sqlCmd1 = new SqlCommand(query1, sqlCon);
+            sqlCmd1.Parameters.AddWithValue("@username", username.Trim()); //trim is for white spaces
+            sqlCmd1.Parameters.AddWithValue("@password", password.Trim());
+            userID = int.Parse(sqlCmd1.ExecuteScalar().ToString());
 
-                /*string insertData2 = "INSERT INTO ORDERS_DETAIL(Stock_Key, Qty_Ordered, Price_per_KG, Price_per_Unit) VALUES(@qty, @kg, @unit)";
-                SqlCommand sqlCom2 = new SqlCommand(insertData2, sqlCon);
-                sqlCom2.Parameters.AddWithValue("@sk", insert.sStock_Key);
-                sqlCom2.Parameters.AddWithValue("@qty", insert.iQty_Ordered);
-                sqlCom2.Parameters.AddWithValue("@kg", insert.dPrice_per_Kg);
-                sqlCom2.Parameters.AddWithValue("@unit", insert.dPrice_per_Unit);
-                sqlCom2.ExecuteNonQuery();*/
+            sqlCon.Open();*/
 
-                //sqlCon.Close();
-                funcView();
+            /*string insertData2 = "INSERT INTO ORDERS_DETAIL(Stock_Key, Qty_Ordered, Price_per_KG, Price_per_Unit) VALUES(@qty, @kg, @unit)";
+            SqlCommand sqlCom2 = new SqlCommand(insertData2, sqlCon);
+            sqlCom2.Parameters.AddWithValue("@sk", insert.sStock_Key);
+            sqlCom2.Parameters.AddWithValue("@qty", insert.iQty_Ordered);
+            sqlCom2.Parameters.AddWithValue("@kg", insert.dPrice_per_Kg);
+            sqlCom2.Parameters.AddWithValue("@unit", insert.dPrice_per_Unit);
+            sqlCom2.ExecuteNonQuery();
+
+            sqlCon.Close();
+            funcView();*/
            // }
            // catch
            // {

@@ -151,6 +151,7 @@ namespace GUI_Prototype02
             this.btnInsert.TabIndex = 12;
             this.btnInsert.Text = "INSERT";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click_1);
             // 
             // instructLb
             // 
