@@ -1,6 +1,6 @@
 ﻿namespace GUI_Prototype02
 {
-    partial class SaleInsert
+    partial class SaleInsertForm
     {
         /// <summary>
         /// Required designer variable.
@@ -113,6 +113,7 @@
             this.btnInsert.TabIndex = 12;
             this.btnInsert.Text = "INSERT";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // groupBoxProductInformation
             // 
@@ -147,7 +148,7 @@
             this.mtbSaleDate.Size = new System.Drawing.Size(100, 25);
             this.mtbSaleDate.TabIndex = 3;
             // 
-            // SaleInsert
+            // SaleInsertForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -155,7 +156,7 @@
             this.Controls.Add(this.groupBoxUnitInformation);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.groupBoxProductInformation);
-            this.Name = "SaleInsert";
+            this.Name = "SaleInsertForm";
             this.Text = "SaleInsert";
             this.groupBoxUnitInformation.ResumeLayout(false);
             this.groupBoxUnitInformation.PerformLayout();
