@@ -31,18 +31,16 @@ namespace GUI_Prototype02
             sqlCon.Open();
 
             //string viewData = "SELECT O.Order_ID, O.User_ID, O.Date_Ordered, O.Date_Received, D.Order_Detail_ID, D.Stock_Key, D.Qty_Ordered, D.Price_per_KG, D.Price_per_Unit FROM ORDERS O, ORDERS_DETAIL D";
-            string viewData = "SELECT * FROM ORDERS";
+            string viewData = "SELECT * FROM STOCK";
             SqlCommand sqlCom = new SqlCommand(viewData, sqlCon);
             SqlDataAdapter sqlDA = new SqlDataAdapter();
             DataSet DA = new DataSet();
 
             sqlDA.SelectCommand = sqlCom;
-            sqlDA.Fill(DA, "ORDERS");
-            //sqlDA.Fill(DA, "ORDERS_DETAIL");
+            sqlDA.Fill(DA, "STOCK");
 
             dgView.DataSource = DA;
-            dgView.DataMember = "ORDERS";
-            //dgView.DataMember = "ORDERS_DETAIL";
+            dgView.DataMember = "STOCK";
 
             sqlCon.Close();
         }
@@ -116,11 +114,12 @@ namespace GUI_Prototype02
 
             sqlCon.Open();
 
-            string insertData1 = "INSERT INTO STOCK(Stock_Key, Stock_Description, Date_Received) VALUES(@ui, @d_o, @d_r)";
+            string insertData1 = "INSERT INTO STOCK(Stock_Key, Stock_Description, Weight_per_Unit, Qty_on_Hand) VALUES(@sk, @sd, @wpu, @qoh)";
             SqlCommand sqlCom1 = new SqlCommand(insertData1, sqlCon);
-            sqlCom1.Parameters.AddWithValue("@ui", user.userID);
-            sqlCom1.Parameters.AddWithValue("@d_o", insert.sDate_Ordered);
-            sqlCom1.Parameters.AddWithValue("@d_r", insert.sDate_Received);
+            sqlCom1.Parameters.AddWithValue("@sk", insert.sStock_key);
+            sqlCom1.Parameters.AddWithValue("@sd", insert.sStock_Desc);
+            sqlCom1.Parameters.AddWithValue("@wpu", insert.dWeight_per_Unit);
+            sqlCom1.Parameters.AddWithValue("@qoh", insert.iQty_on_Hand);
             sqlCom1.ExecuteNonQuery();
 
             sqlCon.Close();

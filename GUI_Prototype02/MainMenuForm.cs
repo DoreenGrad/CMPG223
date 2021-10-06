@@ -64,5 +64,12 @@ namespace GUI_Prototype02
 
             orders.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProductForm stock = new ProductForm();
+
+            stock.Show();
+        }
     }
 }

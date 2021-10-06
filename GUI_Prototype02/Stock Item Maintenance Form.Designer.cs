@@ -41,12 +41,12 @@ namespace GUI_Prototype02
             this.insertLb = new System.Windows.Forms.Label();
             this.btnInsert = new System.Windows.Forms.Button();
             this.instructLb = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgView = new System.Windows.Forms.DataGridView();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tableProductsCurrentBindingSource)).BeginInit();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgView)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox5
@@ -165,21 +165,21 @@ namespace GUI_Prototype02
             this.instructLb.TabIndex = 13;
             this.instructLb.Text = "Select Stock Item:";
             // 
-            // dataGridView1
+            // dgView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Menu;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.tableProductsCurrentBindingSource;
-            this.dataGridView1.GridColor = System.Drawing.Color.Purple;
-            this.dataGridView1.Location = new System.Drawing.Point(36, 241);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1018, 219);
-            this.dataGridView1.TabIndex = 14;
+            this.dgView.AllowUserToAddRows = false;
+            this.dgView.AllowUserToDeleteRows = false;
+            this.dgView.AutoGenerateColumns = false;
+            this.dgView.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.dgView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgView.DataSource = this.tableProductsCurrentBindingSource;
+            this.dgView.GridColor = System.Drawing.Color.Purple;
+            this.dgView.Location = new System.Drawing.Point(36, 241);
+            this.dgView.Name = "dgView";
+            this.dgView.ReadOnly = true;
+            this.dgView.Size = new System.Drawing.Size(1018, 219);
+            this.dgView.TabIndex = 14;
             // 
             // btnDel
             // 
@@ -221,7 +221,7 @@ namespace GUI_Prototype02
             this.ClientSize = new System.Drawing.Size(1384, 536);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDel);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgView);
             this.Controls.Add(this.instructLb);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.insertLb);
@@ -233,7 +233,7 @@ namespace GUI_Prototype02
             ((System.ComponentModel.ISupportInitialize)(this.tableProductsCurrentBindingSource)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,7 +307,7 @@ namespace GUI_Prototype02
         private System.Windows.Forms.Label insertLb;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Label instructLb;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgView;
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnUpdate;
     }
