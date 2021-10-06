@@ -15,7 +15,7 @@ namespace GUI_Prototype02
     {
         SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\marce\Documents\GitHub\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security=True");
         private string username, password;
-
+        public int userID;
         public LoginForm01()
         {
             InitializeComponent();
@@ -42,19 +42,25 @@ namespace GUI_Prototype02
             
             sqlCon.Open();
             string query = "SELECT COUNT(1) FROM USERS WHERE Username=@username AND Password=@password";
+            string query1 = "SELECT User_ID FROM USERS WHERE Username=@username and Password=@password";
+
             SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
             sqlCmd.Parameters.AddWithValue("@username", username.Trim()); //trim is for white spaces
             sqlCmd.Parameters.AddWithValue("@password", password.Trim());
             int count = Convert.ToInt32(sqlCmd.ExecuteScalar().ToString()); //return 1 or 0, 1 is valid, 0 is invalid
+
+            SqlCommand sqlCmd1 = new SqlCommand(query1, sqlCon);
+            sqlCmd1.Parameters.AddWithValue("@username", username.Trim()); //trim is for white spaces
+            sqlCmd1.Parameters.AddWithValue("@password", password.Trim());
+            userID = int.Parse(sqlCmd1.ExecuteScalar().ToString());
             sqlCon.Close();
 
             if (count == 1)
             {
                 this.Visible = false;
-
+ 
                 MainMenuForm myMainMenu = new MainMenuForm();
                 myMainMenu.ShowDialog();
-
                 this.Close();
             }
             else
