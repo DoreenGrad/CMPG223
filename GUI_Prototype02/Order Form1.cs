@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace GUI_Prototype02
 {
-    public partial class OrderForm : Form
+    public partial class Order_Form : Form
     {
-        public OrderForm()
+        public Order_Form()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace GUI_Prototype02
             sqlCon.Open();
 
             string viewData = "SELECT O.Order_ID, O.User_ID, O.Date_Ordered, O.Date_Received" +
-                "D.Order_Detail_ID, D.Stock_ID, D.Qty_Ordered, D.Price_per_KG, D.Price_per_Unit " +     
+                "D.Order_Detail_ID, D.Stock_ID, D.Qty_Ordered, D.Price_per_KG, D.Price_per_Unit " +
                 "FROM ORDERS O, Order_Detail D";
 
             SqlCommand sqlCom = new SqlCommand(viewData, sqlCon);
@@ -42,11 +42,11 @@ namespace GUI_Prototype02
             sqlCon.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnInsert_Click(object sender, EventArgs e)
         {
             try
             {
-                OrderInsertForm insert = new OrderInsertForm();
+                OrderInsertUpdateForm insert = new OrderInsertUpdateForm();
                 insert.ShowDialog();
 
                 sqlCon.Open();
@@ -77,12 +77,7 @@ namespace GUI_Prototype02
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void OrderForm_Load(object sender, EventArgs e)
+        private void Order_Form1_Load(object sender, EventArgs e)
         {
             funcView();
         }
