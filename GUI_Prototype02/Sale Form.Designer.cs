@@ -80,7 +80,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(82, 19);
             this.label9.TabIndex = 46;
-            this.label9.Text = "Stock_Key";
+            this.label9.Text = "Stock_ID";
             this.label9.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label8
