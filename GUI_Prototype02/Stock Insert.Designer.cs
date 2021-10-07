@@ -38,6 +38,7 @@
             this.stockKeyLb = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.btnInsert = new System.Windows.Forms.Button();
+            this.btnC = new System.Windows.Forms.Button();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +56,7 @@
             this.groupBox5.ForeColor = System.Drawing.Color.Purple;
             this.groupBox5.Location = new System.Drawing.Point(12, 39);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(453, 196);
+            this.groupBox5.Size = new System.Drawing.Size(430, 196);
             this.groupBox5.TabIndex = 11;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Stock";
@@ -145,7 +146,7 @@
             this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsert.ForeColor = System.Drawing.Color.Purple;
-            this.btnInsert.Location = new System.Drawing.Point(131, 260);
+            this.btnInsert.Location = new System.Drawing.Point(12, 253);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(194, 50);
             this.btnInsert.TabIndex = 13;
@@ -153,11 +154,29 @@
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
+            // btnC
+            // 
+            this.btnC.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.btnC.FlatAppearance.BorderSize = 2;
+            this.btnC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnC.ForeColor = System.Drawing.Color.Purple;
+            this.btnC.Location = new System.Drawing.Point(242, 253);
+            this.btnC.Name = "btnC";
+            this.btnC.Size = new System.Drawing.Size(200, 50);
+            this.btnC.TabIndex = 14;
+            this.btnC.Text = "CANCEL";
+            this.btnC.UseVisualStyleBackColor = true;
+            this.btnC.Click += new System.EventHandler(this.btnC_Click);
+            // 
             // StocInsertUpdateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 388);
+            this.ClientSize = new System.Drawing.Size(492, 334);
+            this.Controls.Add(this.btnC);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.groupBox5);
             this.Name = "StocInsertUpdateForm";
@@ -180,5 +199,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.TextBox tbQty_on_Hand;
+        private System.Windows.Forms.Button btnC;
     }
 }

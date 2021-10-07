@@ -117,7 +117,7 @@
             this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsert.ForeColor = System.Drawing.Color.Purple;
-            this.btnInsert.Location = new System.Drawing.Point(361, 22);
+            this.btnInsert.Location = new System.Drawing.Point(37, 532);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(200, 50);
             this.btnInsert.TabIndex = 13;
@@ -134,7 +134,7 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.Purple;
-            this.btnUpdate.Location = new System.Drawing.Point(361, 78);
+            this.btnUpdate.Location = new System.Drawing.Point(252, 532);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(200, 50);
             this.btnUpdate.TabIndex = 14;
@@ -151,7 +151,7 @@
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDel.ForeColor = System.Drawing.Color.Purple;
-            this.btnDel.Location = new System.Drawing.Point(361, 139);
+            this.btnDel.Location = new System.Drawing.Point(475, 532);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(200, 50);
             this.btnDel.TabIndex = 15;
@@ -163,7 +163,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Purple;
-            this.label1.Location = new System.Drawing.Point(9, 164);
+            this.label1.Location = new System.Drawing.Point(9, 118);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 19);
             this.label1.TabIndex = 17;
@@ -174,7 +174,7 @@
             // 
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Purple;
-            this.label2.Location = new System.Drawing.Point(9, 373);
+            this.label2.Location = new System.Drawing.Point(9, 318);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(458, 29);
             this.label2.TabIndex = 18;
@@ -184,7 +184,7 @@
             // lbView1
             // 
             this.lbView1.FormattingEnabled = true;
-            this.lbView1.Location = new System.Drawing.Point(12, 214);
+            this.lbView1.Location = new System.Drawing.Point(12, 168);
             this.lbView1.Name = "lbView1";
             this.lbView1.Size = new System.Drawing.Size(720, 147);
             this.lbView1.TabIndex = 19;
@@ -192,7 +192,7 @@
             // lbView2
             // 
             this.lbView2.FormattingEnabled = true;
-            this.lbView2.Location = new System.Drawing.Point(12, 440);
+            this.lbView2.Location = new System.Drawing.Point(12, 379);
             this.lbView2.Name = "lbView2";
             this.lbView2.Size = new System.Drawing.Size(720, 147);
             this.lbView2.TabIndex = 20;
@@ -201,7 +201,7 @@
             // 
             this.label3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Purple;
-            this.label3.Location = new System.Drawing.Point(9, 192);
+            this.label3.Location = new System.Drawing.Point(9, 146);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 19);
             this.label3.TabIndex = 21;
@@ -212,7 +212,7 @@
             // 
             this.label4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Purple;
-            this.label4.Location = new System.Drawing.Point(102, 192);
+            this.label4.Location = new System.Drawing.Point(99, 146);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 19);
             this.label4.TabIndex = 22;
@@ -223,7 +223,7 @@
             // 
             this.label5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Purple;
-            this.label5.Location = new System.Drawing.Point(201, 192);
+            this.label5.Location = new System.Drawing.Point(191, 146);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 19);
             this.label5.TabIndex = 23;
@@ -234,7 +234,7 @@
             // 
             this.label6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.Purple;
-            this.label6.Location = new System.Drawing.Point(393, 192);
+            this.label6.Location = new System.Drawing.Point(390, 146);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(140, 19);
             this.label6.TabIndex = 24;
@@ -245,7 +245,7 @@
             // 
             this.label7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.Purple;
-            this.label7.Location = new System.Drawing.Point(9, 418);
+            this.label7.Location = new System.Drawing.Point(9, 357);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(122, 19);
             this.label7.TabIndex = 25;
@@ -256,7 +256,7 @@
             // 
             this.label8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.Purple;
-            this.label8.Location = new System.Drawing.Point(151, 418);
+            this.label8.Location = new System.Drawing.Point(155, 357);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(82, 19);
             this.label8.TabIndex = 26;
@@ -267,7 +267,7 @@
             // 
             this.label9.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.Purple;
-            this.label9.Location = new System.Drawing.Point(247, 418);
+            this.label9.Location = new System.Drawing.Point(249, 357);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(82, 19);
             this.label9.TabIndex = 27;
@@ -278,7 +278,7 @@
             // 
             this.label10.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.Purple;
-            this.label10.Location = new System.Drawing.Point(343, 418);
+            this.label10.Location = new System.Drawing.Point(337, 357);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(113, 19);
             this.label10.TabIndex = 28;
@@ -289,7 +289,7 @@
             // 
             this.label11.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.Purple;
-            this.label11.Location = new System.Drawing.Point(489, 418);
+            this.label11.Location = new System.Drawing.Point(482, 357);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(113, 19);
             this.label11.TabIndex = 29;
@@ -300,7 +300,7 @@
             // 
             this.label14.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.Purple;
-            this.label14.Location = new System.Drawing.Point(633, 418);
+            this.label14.Location = new System.Drawing.Point(619, 357);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(113, 19);
             this.label14.TabIndex = 30;

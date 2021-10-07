@@ -70,5 +70,11 @@ namespace GUI_Prototype02
             }
 
         }
+
+        private void btnC_Click(object sender, EventArgs e)
+        {
+            //Close form
+            this.Close();
+        }
     }
 }

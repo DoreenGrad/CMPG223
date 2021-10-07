@@ -50,5 +50,11 @@ namespace GUI_Prototype02
                 MessageBox.Show("Date must be a date");
             }
         }
+
+        private void btnC_Click(object sender, EventArgs e)
+        {
+            //Close form
+            this.Close();
+        }
     }
 }
