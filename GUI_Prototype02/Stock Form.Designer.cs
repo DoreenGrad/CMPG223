@@ -50,7 +50,7 @@ namespace GUI_Prototype02
             // 
             this.label6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.Purple;
-            this.label6.Location = new System.Drawing.Point(343, 192);
+            this.label6.Location = new System.Drawing.Point(347, 145);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(140, 19);
             this.label6.TabIndex = 43;
@@ -61,7 +61,7 @@ namespace GUI_Prototype02
             // 
             this.label5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Purple;
-            this.label5.Location = new System.Drawing.Point(201, 192);
+            this.label5.Location = new System.Drawing.Point(192, 145);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 19);
             this.label5.TabIndex = 42;
@@ -72,7 +72,7 @@ namespace GUI_Prototype02
             // 
             this.label4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Purple;
-            this.label4.Location = new System.Drawing.Point(102, 192);
+            this.label4.Location = new System.Drawing.Point(100, 145);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 19);
             this.label4.TabIndex = 41;
@@ -83,7 +83,7 @@ namespace GUI_Prototype02
             // 
             this.label3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Purple;
-            this.label3.Location = new System.Drawing.Point(9, 192);
+            this.label3.Location = new System.Drawing.Point(9, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 19);
             this.label3.TabIndex = 40;
@@ -93,9 +93,9 @@ namespace GUI_Prototype02
             // lbView1
             // 
             this.lbView1.FormattingEnabled = true;
-            this.lbView1.Location = new System.Drawing.Point(12, 214);
+            this.lbView1.Location = new System.Drawing.Point(12, 167);
             this.lbView1.Name = "lbView1";
-            this.lbView1.Size = new System.Drawing.Size(720, 368);
+            this.lbView1.Size = new System.Drawing.Size(720, 303);
             this.lbView1.TabIndex = 38;
             // 
             // btnDel
@@ -107,7 +107,7 @@ namespace GUI_Prototype02
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDel.ForeColor = System.Drawing.Color.Purple;
-            this.btnDel.Location = new System.Drawing.Point(361, 139);
+            this.btnDel.Location = new System.Drawing.Point(477, 503);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(200, 50);
             this.btnDel.TabIndex = 35;
@@ -124,7 +124,7 @@ namespace GUI_Prototype02
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.Purple;
-            this.btnUpdate.Location = new System.Drawing.Point(361, 78);
+            this.btnUpdate.Location = new System.Drawing.Point(258, 503);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(200, 50);
             this.btnUpdate.TabIndex = 34;
@@ -141,7 +141,7 @@ namespace GUI_Prototype02
             this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsert.ForeColor = System.Drawing.Color.Purple;
-            this.btnInsert.Location = new System.Drawing.Point(361, 22);
+            this.btnInsert.Location = new System.Drawing.Point(22, 503);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(200, 50);
             this.btnInsert.TabIndex = 33;
@@ -208,7 +208,7 @@ namespace GUI_Prototype02
             // 
             this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Purple;
-            this.label1.Location = new System.Drawing.Point(485, 192);
+            this.label1.Location = new System.Drawing.Point(484, 145);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 19);
             this.label1.TabIndex = 44;
