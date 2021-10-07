@@ -70,7 +70,7 @@
             this.tbPrice_per_Unit.Font = new System.Drawing.Font("Verdana", 11F);
             this.tbPrice_per_Unit.Location = new System.Drawing.Point(211, 93);
             this.tbPrice_per_Unit.Name = "tbPrice_per_Unit";
-            this.tbPrice_per_Unit.Size = new System.Drawing.Size(100, 25);
+            this.tbPrice_per_Unit.Size = new System.Drawing.Size(182, 25);
             this.tbPrice_per_Unit.TabIndex = 5;
             this.tbPrice_per_Unit.Text = "0";
             this.tbPrice_per_Unit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -80,7 +80,7 @@
             this.tbPrice_per_Kg.Font = new System.Drawing.Font("Verdana", 11F);
             this.tbPrice_per_Kg.Location = new System.Drawing.Point(212, 58);
             this.tbPrice_per_Kg.Name = "tbPrice_per_Kg";
-            this.tbPrice_per_Kg.Size = new System.Drawing.Size(100, 25);
+            this.tbPrice_per_Kg.Size = new System.Drawing.Size(181, 25);
             this.tbPrice_per_Kg.TabIndex = 4;
             this.tbPrice_per_Kg.Text = "0";
             this.tbPrice_per_Kg.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -90,7 +90,7 @@
             this.tbQty_Ordered.Font = new System.Drawing.Font("Verdana", 11F);
             this.tbQty_Ordered.Location = new System.Drawing.Point(212, 23);
             this.tbQty_Ordered.Name = "tbQty_Ordered";
-            this.tbQty_Ordered.Size = new System.Drawing.Size(100, 25);
+            this.tbQty_Ordered.Size = new System.Drawing.Size(181, 25);
             this.tbQty_Ordered.TabIndex = 3;
             this.tbQty_Ordered.Text = "0";
             this.tbQty_Ordered.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;

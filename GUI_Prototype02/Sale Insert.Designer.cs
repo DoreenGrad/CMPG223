@@ -66,7 +66,7 @@
             this.tbStock_Key.Font = new System.Drawing.Font("Verdana", 11F);
             this.tbStock_Key.Location = new System.Drawing.Point(212, 113);
             this.tbStock_Key.Name = "tbStock_Key";
-            this.tbStock_Key.Size = new System.Drawing.Size(100, 25);
+            this.tbStock_Key.Size = new System.Drawing.Size(157, 25);
             this.tbStock_Key.TabIndex = 14;
             // 
             // label1
@@ -85,7 +85,7 @@
             this.tb_Qty_Sold.Font = new System.Drawing.Font("Verdana", 11F);
             this.tb_Qty_Sold.Location = new System.Drawing.Point(212, 82);
             this.tb_Qty_Sold.Name = "tb_Qty_Sold";
-            this.tb_Qty_Sold.Size = new System.Drawing.Size(100, 25);
+            this.tb_Qty_Sold.Size = new System.Drawing.Size(157, 25);
             this.tb_Qty_Sold.TabIndex = 4;
             this.tb_Qty_Sold.Text = "0";
             this.tb_Qty_Sold.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -95,7 +95,7 @@
             this.tbSale_Price_per_Unit.Font = new System.Drawing.Font("Verdana", 11F);
             this.tbSale_Price_per_Unit.Location = new System.Drawing.Point(212, 47);
             this.tbSale_Price_per_Unit.Name = "tbSale_Price_per_Unit";
-            this.tbSale_Price_per_Unit.Size = new System.Drawing.Size(100, 25);
+            this.tbSale_Price_per_Unit.Size = new System.Drawing.Size(157, 25);
             this.tbSale_Price_per_Unit.TabIndex = 3;
             this.tbSale_Price_per_Unit.Text = "0";
             this.tbSale_Price_per_Unit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -157,7 +157,7 @@
             this.tbSale_Date.Font = new System.Drawing.Font("Verdana", 11F);
             this.tbSale_Date.Location = new System.Drawing.Point(212, 42);
             this.tbSale_Date.Name = "tbSale_Date";
-            this.tbSale_Date.Size = new System.Drawing.Size(100, 25);
+            this.tbSale_Date.Size = new System.Drawing.Size(157, 25);
             this.tbSale_Date.TabIndex = 4;
             this.tbSale_Date.Text = "0";
             this.tbSale_Date.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
