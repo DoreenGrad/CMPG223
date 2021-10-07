@@ -117,4 +117,65 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="rtbOrder.Text" xml:space="preserve">
+    <value>This button takes you to the Orders form where you can add new orders or updating existing orders.
+You can also delete existing orders by typing the ID number of the order and then clicking the delete button.
+You can also search for specific orders and filter throught the list to show the desired information.
+Existing orders are shown on the form.
+</value>
+  </data>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>The stock button takes you to the stock page where you can add new stock.
+Here you can also update existing stock whether it is the type of stock or the quantity of it.
+You can delete exisitng stock by typing in the ID of the item in the text box and then clicking the delete button.
+Existing stock is shown on the form.
+</value>
+  </data>
+  <data name="richTextBox2.Text" xml:space="preserve">
+    <value>The sale button takes you to the sale page where you can see all past sales.
+You are able to search on this page for sales that happend in the past by typing in the desired sale.
+You can update sales by typing the desired sale's ID and then pressing the update button.
+You can delete a record in sales by typing the sale's ID and then pressing the delete button.
+</value>
+  </data>
+  <data name="richTextBox3.Text" xml:space="preserve">
+    <value>This button takes you to the report page where you can generate a report based between two dates you choose on the calendar.
+The print button then prints you the desired report between those two dates.
+</value>
+  </data>
+  <data name="rtxErrors.Text" xml:space="preserve">
+    <value>Most common errors are when you as the user type in the incorrect data as the input:
+
+-For Example on the Order form when you want insert or update data, you enter the values 1555/06/21 as a date value
+ the program will not know what to do since that date is out of the range of the calender we use.
+
+-Another example might be when you try and enter a word where the program expects a number like price per unit.
+
+</value>
+  </data>
+  <data name="richTextBox7.Text" xml:space="preserve">
+    <value>To view an order navigate to the orders page, by clicking on the orders button(menu option under products) on the main menu. All orders will be shown on the order form.
+To search, enter the order ID in the order ID text box, or the Order Details ID in the Order details ID textbox and the specific order will be shown.
+To see all the orders just clear the text box and everything will be shown again.
+</value>
+  </data>
+  <data name="richTextBox6.Text" xml:space="preserve">
+    <value>To delete an order navigate to the orders page, by clicking on the orders button(menu option under products) on the main menu
+The order form will be shown. To delete an order enter either the order ID or order detail ID in the correspondent text box.
+After you have entered the order ID you press the delete button to remove the order.
+</value>
+  </data>
+  <data name="richTextBox5.Text" xml:space="preserve">
+    <value>To update an order navigate to the orders page, by clicking on the orders button(menu option under products) on the main menu.
+The order form will be shown. Type in the order ID text box the order ID, or type in the order details text box the order detail ID that you want to update.To update an order click the update button.
+The button will open a new form with text boxes which has the order information that you can update.
+After the required information is filled in you click the update button.Click the cancel button if you do not want to update the order.
+</value>
+  </data>
+  <data name="richTextBox4.Text" xml:space="preserve">
+    <value>To create an order navigate to the orders page, by clicking on the orders button(menu option under products) on the main menu
+The order form will be shown. To create an order click the insert button. 
+The button will open a new form with text boxes which you need to fill in.
+After the required information is entered click the create button to create the order. Click the cancel button if you do not want to create the order.</value>
+  </data>
 </root>
