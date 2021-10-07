@@ -196,7 +196,6 @@ namespace GUI_Prototype02
         {
             if (tbSaleDetailID.Text.Length == 0)
             {
-                int userID = 0;
                 int saleID = 0;
 
                 this.Visible = false;
@@ -208,18 +207,12 @@ namespace GUI_Prototype02
 
                 sqlCon.Open();
 
-                string query1 = "SELECT User_ID FROM USERS WHERE Username=@username and Password=@password";
-                SqlCommand sqlCmd1 = new SqlCommand(query1, sqlCon);
-                sqlCmd1.Parameters.AddWithValue("@username", auth.sUsername);
-                sqlCmd1.Parameters.AddWithValue("@password", auth.sPassword);
-                userID = Convert.ToInt32(sqlCmd1.ExecuteScalar());
-
                 string updateDate1 = "UPDATE SALE SET Sale_Date = @sd WHERE Sale_ID = '"+tbSaleID.Text+"'";
                 SqlCommand sqlCom1 = new SqlCommand(updateDate1, sqlCon);
                 sqlCom1.Parameters.AddWithValue("@sd", insert.dSale_Date);
                 sqlCom1.ExecuteNonQuery();
 
-                string query2 = "SELECT TOP 1 Sale_ID FROM SALE ORDER BY Sale_ID DESC";
+                string query2 = "SELECT Sale_ID FROM SALE WHERE Sale_ID = '" + tbSaleID.Text + "'";
                 SqlCommand sqlCmd2 = new SqlCommand(query2, sqlCon);
                 saleID = Convert.ToInt32(sqlCmd2.ExecuteScalar());
 
@@ -239,7 +232,6 @@ namespace GUI_Prototype02
 
             if (tbSaleID.Text.Length == 0)
             {
-                int userID = 0;
                 int saleID = 0;
 
                 this.Visible = false;
@@ -256,24 +248,14 @@ namespace GUI_Prototype02
                 sqlTemp.Parameters.AddWithValue("@id", tbSaleDetailID.Text);
                 string temp = sqlTemp.ExecuteScalar().ToString();
 
-                string query1 = "SELECT User_ID FROM USERS WHERE Username=@username and Password=@password";
-                SqlCommand sqlCmd1 = new SqlCommand(query1, sqlCon);
-                sqlCmd1.Parameters.AddWithValue("@username", auth.sUsername);
-                sqlCmd1.Parameters.AddWithValue("@password", auth.sPassword);
-                userID = Convert.ToInt32(sqlCmd1.ExecuteScalar());
-
                 string updateDate1 = "UPDATE SALE SET Sale_Date = @sd WHERE Sale_ID = '" + temp + "'";
                 SqlCommand sqlCom1 = new SqlCommand(updateDate1, sqlCon);
                 sqlCom1.Parameters.AddWithValue("@sd", insert.dSale_Date);
                 sqlCom1.ExecuteNonQuery();
 
-                string query2 = "SELECT TOP 1 Sale_ID FROM SALE ORDER BY Sale_ID DESC";
-                SqlCommand sqlCmd2 = new SqlCommand(query2, sqlCon);
-                saleID = Convert.ToInt32(sqlCmd2.ExecuteScalar());
-
-                string updateDate2 = "UPDATE SALE_DETAIL SET Sale_ID = @si, Stock_Key = @sk, Sales_Price_per_Unit = @sppu, Qty_Sold = @qs WHERE Sale_ID = '" + tbSaleDetailID.Text + "'";
+                string updateDate2 = "UPDATE SALE_DETAIL SET Sale_ID = @si, Stock_Key = @sk, Sales_Price_per_Unit = @sppu, Qty_Sold = @qs WHERE Sale_Detail_ID = '" + tbSaleDetailID.Text + "'";
                 SqlCommand sqlCom2 = new SqlCommand(updateDate2, sqlCon);
-                sqlCom2.Parameters.AddWithValue("@si", saleID);
+                sqlCom2.Parameters.AddWithValue("@si", temp);
                 sqlCom2.Parameters.AddWithValue("@sk", insert.sStock_Key);
                 sqlCom2.Parameters.AddWithValue("@sppu", insert.dSales_Price_per_Unit);
                 sqlCom2.Parameters.AddWithValue("@qs", insert.dQty_Sold);

@@ -225,7 +225,7 @@ namespace GUI_Prototype02
                 sqlCom1.Parameters.AddWithValue("@d_r", insert.sDate_Received);
                 sqlCom1.ExecuteNonQuery();
 
-                string query2 = "SELECT TOP 1 Order_ID FROM ORDERS ORDER BY Order_ID DESC";
+                string query2 = "SELECT Order_ID FROM ORDERS WHERE Order_ID = '" + tbOrderID.Text + "'";
                 SqlCommand sqlCmd2 = new SqlCommand(query2, sqlCon);
                 orderID = Convert.ToInt32(sqlCmd2.ExecuteScalar());
 
@@ -276,13 +276,10 @@ namespace GUI_Prototype02
                 sqlCom1.Parameters.AddWithValue("@d_r", insert.sDate_Received);
                 sqlCom1.ExecuteNonQuery();
 
-                string query2 = "SELECT TOP 1 Order_ID FROM ORDERS ORDER BY Order_ID DESC";
-                SqlCommand sqlCmd2 = new SqlCommand(query2, sqlCon);
-                orderID = Convert.ToInt32(sqlCmd2.ExecuteScalar());
 
                 string updateDate2 = "UPDATE ORDERS_DETAIL SET Order_ID = @oi, Stock_Key = @sk, Qty_Ordered = @qo, Price_per_KG = @ppk, Price_per_Unit = @ppu WHERE Order_Detail_ID = '" + tbOrderDetailsID.Text + "'";
                 SqlCommand sqlCom2 = new SqlCommand(updateDate2, sqlCon);
-                sqlCom2.Parameters.AddWithValue("@oi", orderID);
+                sqlCom2.Parameters.AddWithValue("@oi", temp);
                 sqlCom2.Parameters.AddWithValue("@sk", insert.sStock_Key);
                 sqlCom2.Parameters.AddWithValue("@qo", insert.iQty_Ordered);
                 sqlCom2.Parameters.AddWithValue("@ppk", insert.dPrice_per_Kg);
