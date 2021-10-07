@@ -43,5 +43,11 @@ namespace GUI_Prototype02
                 MessageBox.Show("Weight per unit must be numeric");
             }
         }
+
+        private void btnC_Click(object sender, EventArgs e)
+        {
+            //Close form
+            this.Close();
+        }
     }
 }
