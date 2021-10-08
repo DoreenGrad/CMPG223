@@ -44,7 +44,8 @@
             this.lblProductKey = new System.Windows.Forms.Label();
             this.lblProductType = new System.Windows.Forms.Label();
             this.btnC = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dTP_Ordered = new System.Windows.Forms.DateTimePicker();
+            this.dTP_Received = new System.Windows.Forms.DateTimePicker();
             this.groupBoxUnitInformation.SuspendLayout();
             this.groupBoxProductInformation.SuspendLayout();
             this.SuspendLayout();
@@ -148,7 +149,8 @@
             // 
             // groupBoxProductInformation
             // 
-            this.groupBoxProductInformation.Controls.Add(this.dateTimePicker1);
+            this.groupBoxProductInformation.Controls.Add(this.dTP_Received);
+            this.groupBoxProductInformation.Controls.Add(this.dTP_Ordered);
             this.groupBoxProductInformation.Controls.Add(this.tbStock_Key);
             this.groupBoxProductInformation.Controls.Add(this.label1);
             this.groupBoxProductInformation.Controls.Add(this.tbDate_Ordered);
@@ -238,12 +240,19 @@
             this.btnC.UseVisualStyleBackColor = true;
             this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
-            // dateTimePicker1
+            // dTP_Ordered
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(202, 26);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 27);
-            this.dateTimePicker1.TabIndex = 8;
+            this.dTP_Ordered.Location = new System.Drawing.Point(143, 26);
+            this.dTP_Ordered.Name = "dTP_Ordered";
+            this.dTP_Ordered.Size = new System.Drawing.Size(200, 27);
+            this.dTP_Ordered.TabIndex = 8;
+            // 
+            // dTP_Received
+            // 
+            this.dTP_Received.Location = new System.Drawing.Point(143, 61);
+            this.dTP_Received.Name = "dTP_Received";
+            this.dTP_Received.Size = new System.Drawing.Size(200, 27);
+            this.dTP_Received.TabIndex = 9;
             // 
             // OrderInsertUpdateForm
             // 
@@ -281,6 +290,7 @@
         private System.Windows.Forms.TextBox tbStock_Key;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnC;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dTP_Ordered;
+        private System.Windows.Forms.DateTimePicker dTP_Received;
     }
 }
