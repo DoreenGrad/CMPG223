@@ -143,7 +143,7 @@ namespace GUI_Prototype02
             // 
             // panelControl
             // 
-            this.panelControl.BackColor = System.Drawing.SystemColors.Control;
+            this.panelControl.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panelControl.Controls.Add(this.lblName);
             this.panelControl.Location = new System.Drawing.Point(0, 0);
             this.panelControl.Name = "panelControl";

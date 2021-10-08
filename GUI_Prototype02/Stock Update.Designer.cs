@@ -244,6 +244,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(674, 357);
             this.Controls.Add(this.btnC);
             this.Controls.Add(this.btnU);
@@ -257,6 +258,7 @@
             this.Name = "Stock_Update";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Stock";
+            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Load += new System.EventHandler(this.Stock_Update_Load);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
