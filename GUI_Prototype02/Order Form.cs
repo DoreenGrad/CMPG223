@@ -19,7 +19,7 @@ namespace GUI_Prototype02
             InitializeComponent();
         }
 
-        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\Lenovo User\Documents\2021\Sem 2\CMPG 223\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security=True");
+        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Lenovo User\Documents\2021\Sem 2\CMPG 223\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security=True");
         
         public void funcViewORDERS()
         {
@@ -64,7 +64,7 @@ namespace GUI_Prototype02
             this.Visible = false;
             Authentication_Form auth = new Authentication_Form();
             auth.ShowDialog();
-            OrderInsertUpdateForm insert = new OrderInsertUpdateForm();
+            OrderInsertForm insert = new OrderInsertForm();
             insert.ShowDialog();
             this.Visible = true;
 
@@ -316,7 +316,7 @@ namespace GUI_Prototype02
                 this.Visible = false;
                 Authentication_Form auth = new Authentication_Form();
                 auth.ShowDialog();
-                OrderInsertUpdateForm insert = new OrderInsertUpdateForm();
+                OrderInsertForm insert = new OrderInsertForm();
                 insert.ShowDialog();
                 this.Visible = true;
 
@@ -406,7 +406,7 @@ namespace GUI_Prototype02
                 this.Visible = false;
                 Authentication_Form auth = new Authentication_Form();
                 auth.ShowDialog();
-                OrderInsertUpdateForm insert = new OrderInsertUpdateForm();
+                OrderInsertForm insert = new OrderInsertForm();
                 insert.ShowDialog();
                 this.Visible = true;
 

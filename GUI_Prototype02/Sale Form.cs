@@ -18,7 +18,7 @@ namespace GUI_Prototype02
             InitializeComponent();
         }
 
-        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\Lenovo User\Documents\2021\Sem 2\CMPG 223\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security=True");
+        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Lenovo User\Documents\2021\Sem 2\CMPG 223\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security=True");
 
         public void funcViewSALE()
         {

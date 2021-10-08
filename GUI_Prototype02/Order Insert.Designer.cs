@@ -1,6 +1,6 @@
 ﻿namespace GUI_Prototype02
 {
-    partial class OrderInsertUpdateForm
+    partial class OrderInsertForm
     {
         /// <summary>
         /// Required designer variable.
@@ -37,6 +37,8 @@
             this.lblPricePerUnit = new System.Windows.Forms.Label();
             this.btnInsert = new System.Windows.Forms.Button();
             this.groupBoxProductInformation = new System.Windows.Forms.GroupBox();
+            this.dTP_Received = new System.Windows.Forms.DateTimePicker();
+            this.dTP_Ordered = new System.Windows.Forms.DateTimePicker();
             this.tbStock_Key = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbDate_Ordered = new System.Windows.Forms.TextBox();
@@ -44,8 +46,6 @@
             this.lblProductKey = new System.Windows.Forms.Label();
             this.lblProductType = new System.Windows.Forms.Label();
             this.btnC = new System.Windows.Forms.Button();
-            this.dTP_Ordered = new System.Windows.Forms.DateTimePicker();
-            this.dTP_Received = new System.Windows.Forms.DateTimePicker();
             this.groupBoxUnitInformation.SuspendLayout();
             this.groupBoxProductInformation.SuspendLayout();
             this.SuspendLayout();
@@ -166,6 +166,20 @@
             this.groupBoxProductInformation.TabStop = false;
             this.groupBoxProductInformation.Text = "Order";
             // 
+            // dTP_Received
+            // 
+            this.dTP_Received.Location = new System.Drawing.Point(143, 61);
+            this.dTP_Received.Name = "dTP_Received";
+            this.dTP_Received.Size = new System.Drawing.Size(200, 27);
+            this.dTP_Received.TabIndex = 9;
+            // 
+            // dTP_Ordered
+            // 
+            this.dTP_Ordered.Location = new System.Drawing.Point(143, 26);
+            this.dTP_Ordered.Name = "dTP_Ordered";
+            this.dTP_Ordered.Size = new System.Drawing.Size(200, 27);
+            this.dTP_Ordered.TabIndex = 8;
+            // 
             // tbStock_Key
             // 
             this.tbStock_Key.Font = new System.Drawing.Font("Verdana", 11F);
@@ -240,21 +254,7 @@
             this.btnC.UseVisualStyleBackColor = true;
             this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
-            // dTP_Ordered
-            // 
-            this.dTP_Ordered.Location = new System.Drawing.Point(143, 26);
-            this.dTP_Ordered.Name = "dTP_Ordered";
-            this.dTP_Ordered.Size = new System.Drawing.Size(200, 27);
-            this.dTP_Ordered.TabIndex = 8;
-            // 
-            // dTP_Received
-            // 
-            this.dTP_Received.Location = new System.Drawing.Point(143, 61);
-            this.dTP_Received.Name = "dTP_Received";
-            this.dTP_Received.Size = new System.Drawing.Size(200, 27);
-            this.dTP_Received.TabIndex = 9;
-            // 
-            // OrderInsertUpdateForm
+            // OrderInsertForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -263,8 +263,8 @@
             this.Controls.Add(this.groupBoxUnitInformation);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.groupBoxProductInformation);
-            this.Name = "OrderInsertUpdateForm";
-            this.Text = "Order Insert/Update";
+            this.Name = "OrderInsertForm";
+            this.Text = "Order Insert";
             this.groupBoxUnitInformation.ResumeLayout(false);
             this.groupBoxUnitInformation.PerformLayout();
             this.groupBoxProductInformation.ResumeLayout(false);

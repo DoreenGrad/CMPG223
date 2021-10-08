@@ -37,10 +37,10 @@
             this.lblQuantitySold = new System.Windows.Forms.Label();
             this.btnInsert = new System.Windows.Forms.Button();
             this.groupBoxProductInformation = new System.Windows.Forms.GroupBox();
+            this.dTP_Saledate = new System.Windows.Forms.DateTimePicker();
             this.tbSale_Date = new System.Windows.Forms.TextBox();
             this.lblSaleDate = new System.Windows.Forms.Label();
             this.btnC = new System.Windows.Forms.Button();
-            this.dTP_Saledate = new System.Windows.Forms.DateTimePicker();
             this.groupBoxUnitInformation.SuspendLayout();
             this.groupBoxProductInformation.SuspendLayout();
             this.SuspendLayout();
@@ -154,6 +154,13 @@
             this.groupBoxProductInformation.TabStop = false;
             this.groupBoxProductInformation.Text = "Sale";
             // 
+            // dTP_Saledate
+            // 
+            this.dTP_Saledate.Location = new System.Drawing.Point(128, 39);
+            this.dTP_Saledate.Name = "dTP_Saledate";
+            this.dTP_Saledate.Size = new System.Drawing.Size(200, 27);
+            this.dTP_Saledate.TabIndex = 5;
+            // 
             // tbSale_Date
             // 
             this.tbSale_Date.Font = new System.Drawing.Font("Verdana", 11F);
@@ -192,13 +199,6 @@
             this.btnC.UseVisualStyleBackColor = true;
             this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
-            // dTP_Saledate
-            // 
-            this.dTP_Saledate.Location = new System.Drawing.Point(128, 39);
-            this.dTP_Saledate.Name = "dTP_Saledate";
-            this.dTP_Saledate.Size = new System.Drawing.Size(200, 27);
-            this.dTP_Saledate.TabIndex = 5;
-            // 
             // insertSaleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,7 +209,7 @@
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.groupBoxProductInformation);
             this.Name = "insertSaleForm";
-            this.Text = "INSERT SALES";
+            this.Text = "Insert Sales";
             this.groupBoxUnitInformation.ResumeLayout(false);
             this.groupBoxUnitInformation.PerformLayout();
             this.groupBoxProductInformation.ResumeLayout(false);
