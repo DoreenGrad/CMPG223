@@ -124,7 +124,7 @@ namespace GUI_Prototype02
             // 
             this.lblReport.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReport.ForeColor = System.Drawing.Color.Blue;
-            this.lblReport.Location = new System.Drawing.Point(12, 382);
+            this.lblReport.Location = new System.Drawing.Point(15, 680);
             this.lblReport.Name = "lblReport";
             this.lblReport.Size = new System.Drawing.Size(203, 22);
             this.lblReport.TabIndex = 12;
@@ -135,7 +135,7 @@ namespace GUI_Prototype02
             this.richTextBox3.BackColor = System.Drawing.SystemColors.Menu;
             this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox3.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
-            this.richTextBox3.Location = new System.Drawing.Point(15, 407);
+            this.richTextBox3.Location = new System.Drawing.Point(18, 705);
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.Size = new System.Drawing.Size(670, 68);
             this.richTextBox3.TabIndex = 13;
@@ -153,7 +153,7 @@ namespace GUI_Prototype02
             this.pnlOrders.Controls.Add(this.richTextBox5);
             this.pnlOrders.Controls.Add(this.lblCreateOr);
             this.pnlOrders.Controls.Add(this.richTextBox4);
-            this.pnlOrders.Location = new System.Drawing.Point(282, 16);
+            this.pnlOrders.Location = new System.Drawing.Point(15, 41);
             this.pnlOrders.Name = "pnlOrders";
             this.pnlOrders.Size = new System.Drawing.Size(671, 644);
             this.pnlOrders.TabIndex = 18;
@@ -253,7 +253,7 @@ namespace GUI_Prototype02
             this.pnlStock.Controls.Add(this.richTextBox10);
             this.pnlStock.Controls.Add(this.label4);
             this.pnlStock.Controls.Add(this.richTextBox11);
-            this.pnlStock.Location = new System.Drawing.Point(692, 95);
+            this.pnlStock.Location = new System.Drawing.Point(15, 66);
             this.pnlStock.Name = "pnlStock";
             this.pnlStock.Size = new System.Drawing.Size(671, 528);
             this.pnlStock.TabIndex = 19;
@@ -374,7 +374,7 @@ namespace GUI_Prototype02
             this.pnlSales.Controls.Add(this.richTextBox13);
             this.pnlSales.Controls.Add(this.label9);
             this.pnlSales.Controls.Add(this.richTextBox14);
-            this.pnlSales.Location = new System.Drawing.Point(30, 194);
+            this.pnlSales.Location = new System.Drawing.Point(15, 102);
             this.pnlSales.Name = "pnlSales";
             this.pnlSales.Size = new System.Drawing.Size(671, 528);
             this.pnlSales.TabIndex = 31;
