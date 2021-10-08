@@ -27,5 +27,10 @@ namespace GUI_Prototype02
 
             this.Close();
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

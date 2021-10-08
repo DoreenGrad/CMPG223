@@ -43,6 +43,7 @@ namespace GUI_Prototype02
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnMM = new System.Windows.Forms.Button();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -215,12 +216,30 @@ namespace GUI_Prototype02
             this.label1.Text = "Qty_On_Hand";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
+            // btnMM
+            // 
+            this.btnMM.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.btnMM.FlatAppearance.BorderSize = 2;
+            this.btnMM.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnMM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnMM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMM.ForeColor = System.Drawing.Color.Purple;
+            this.btnMM.Location = new System.Drawing.Point(528, 12);
+            this.btnMM.Name = "btnMM";
+            this.btnMM.Size = new System.Drawing.Size(200, 50);
+            this.btnMM.TabIndex = 45;
+            this.btnMM.Text = "Main Menu";
+            this.btnMM.UseVisualStyleBackColor = true;
+            this.btnMM.Click += new System.EventHandler(this.btnMM_Click);
+            // 
             // Stock_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(740, 594);
+            this.Controls.Add(this.btnMM);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -312,5 +331,6 @@ namespace GUI_Prototype02
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnMM;
     }
 }

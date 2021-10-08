@@ -16,5 +16,13 @@ namespace GUI_Prototype02
         {
             InitializeComponent();
         }
+
+        private void btnMM_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            MainMenuForm myMainMenu = new MainMenuForm();
+            myMainMenu.ShowDialog();
+            Close();
+        }
     }
 }

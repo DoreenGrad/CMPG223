@@ -19,7 +19,7 @@ namespace GUI_Prototype02
             InitializeComponent();
         }
 
-        SqlConnection sqlCon = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=C:\Users\marce\Documents\GitHub\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security = True");
+        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\Lenovo User\Documents\2021\Sem 2\CMPG 223\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security=True");
         
         public void funcViewORDERS()
         {
@@ -486,6 +486,14 @@ namespace GUI_Prototype02
                 funcViewORDERS();
                 funcViewORDERS_DETAILS();
             }
+        }
+
+        private void btnMM_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            MainMenuForm myMainMenu = new MainMenuForm();
+            myMainMenu.ShowDialog();
+            Close();
         }
     }
 }

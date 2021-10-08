@@ -27,8 +27,8 @@ namespace GUI_Prototype02
         }
 
         static string dir = Directory.GetCurrentDirectory() + @"\projectQueries.mdf";
-        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\marce\Documents\GitHub\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security=True");
-
+        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\Lenovo User\Documents\2021\Sem 2\CMPG 223\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security=True");
+    
         public void funcViewStock()
         {
             sqlCon.Open();
@@ -188,6 +188,14 @@ namespace GUI_Prototype02
                 sqlCon.Close();
                 funcViewStock();
             }
+        }
+
+        private void btnMM_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            MainMenuForm myMainMenu = new MainMenuForm();
+            myMainMenu.ShowDialog();
+            Close();
         }
     }
 }

@@ -33,7 +33,9 @@ namespace GUI_Prototype02
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.dTP_Start = new System.Windows.Forms.DateTimePicker();
+            this.dTP_End = new System.Windows.Forms.DateTimePicker();
+            this.btnMM = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,18 +81,45 @@ namespace GUI_Prototype02
             this.label2.TabIndex = 7;
             this.label2.Text = "Select End Date of Report: ";
             // 
-            // monthCalendar1
+            // dTP_Start
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(195, 45);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 8;
+            this.dTP_Start.Location = new System.Drawing.Point(217, 39);
+            this.dTP_Start.Name = "dTP_Start";
+            this.dTP_Start.Size = new System.Drawing.Size(200, 20);
+            this.dTP_Start.TabIndex = 9;
+            // 
+            // dTP_End
+            // 
+            this.dTP_End.Location = new System.Drawing.Point(217, 65);
+            this.dTP_End.Name = "dTP_End";
+            this.dTP_End.Size = new System.Drawing.Size(200, 20);
+            this.dTP_End.TabIndex = 10;
+            // 
+            // btnMM
+            // 
+            this.btnMM.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.btnMM.FlatAppearance.BorderSize = 2;
+            this.btnMM.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnMM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnMM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMM.ForeColor = System.Drawing.Color.Purple;
+            this.btnMM.Location = new System.Drawing.Point(1172, 12);
+            this.btnMM.Name = "btnMM";
+            this.btnMM.Size = new System.Drawing.Size(200, 50);
+            this.btnMM.TabIndex = 46;
+            this.btnMM.Text = "Main Menu";
+            this.btnMM.UseVisualStyleBackColor = true;
+            this.btnMM.Click += new System.EventHandler(this.btnMM_Click);
             // 
             // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1384, 677);
-            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.btnMM);
+            this.Controls.Add(this.dTP_End);
+            this.Controls.Add(this.dTP_Start);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
@@ -110,6 +139,8 @@ namespace GUI_Prototype02
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.DateTimePicker dTP_Start;
+        private System.Windows.Forms.DateTimePicker dTP_End;
+        private System.Windows.Forms.Button btnMM;
     }
 }

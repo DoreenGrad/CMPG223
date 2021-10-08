@@ -50,6 +50,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.btnMM = new System.Windows.Forms.Button();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -307,11 +308,29 @@
             this.label14.Text = "Price_per_Kg";
             this.label14.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
+            // btnMM
+            // 
+            this.btnMM.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.btnMM.FlatAppearance.BorderSize = 2;
+            this.btnMM.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnMM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnMM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMM.ForeColor = System.Drawing.Color.Purple;
+            this.btnMM.Location = new System.Drawing.Point(528, 12);
+            this.btnMM.Name = "btnMM";
+            this.btnMM.Size = new System.Drawing.Size(200, 50);
+            this.btnMM.TabIndex = 31;
+            this.btnMM.Text = "Main Menu";
+            this.btnMM.UseVisualStyleBackColor = true;
+            this.btnMM.Click += new System.EventHandler(this.btnMM_Click);
+            // 
             // Order_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(740, 594);
+            this.Controls.Add(this.btnMM);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -362,5 +381,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnMM;
     }
 }
