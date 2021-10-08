@@ -40,6 +40,7 @@
             this.tbSale_Date = new System.Windows.Forms.TextBox();
             this.lblSaleDate = new System.Windows.Forms.Label();
             this.btnC = new System.Windows.Forms.Button();
+            this.dTP_Saledate = new System.Windows.Forms.DateTimePicker();
             this.groupBoxUnitInformation.SuspendLayout();
             this.groupBoxProductInformation.SuspendLayout();
             this.SuspendLayout();
@@ -141,6 +142,7 @@
             // 
             // groupBoxProductInformation
             // 
+            this.groupBoxProductInformation.Controls.Add(this.dTP_Saledate);
             this.groupBoxProductInformation.Controls.Add(this.tbSale_Date);
             this.groupBoxProductInformation.Controls.Add(this.lblSaleDate);
             this.groupBoxProductInformation.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
@@ -190,6 +192,13 @@
             this.btnC.UseVisualStyleBackColor = true;
             this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
+            // dTP_Saledate
+            // 
+            this.dTP_Saledate.Location = new System.Drawing.Point(128, 39);
+            this.dTP_Saledate.Name = "dTP_Saledate";
+            this.dTP_Saledate.Size = new System.Drawing.Size(200, 27);
+            this.dTP_Saledate.TabIndex = 5;
+            // 
             // insertSaleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,5 +232,6 @@
         private System.Windows.Forms.TextBox tbStock_Key;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnC;
+        private System.Windows.Forms.DateTimePicker dTP_Saledate;
     }
 }
