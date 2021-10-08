@@ -116,6 +116,7 @@ namespace GUI_Prototype02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1384, 677);
             this.Controls.Add(this.btnMM);
             this.Controls.Add(this.dTP_End);

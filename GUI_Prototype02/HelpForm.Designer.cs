@@ -37,6 +37,8 @@ namespace GUI_Prototype02
             this.lblReport = new System.Windows.Forms.Label();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.pnlOrders = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.lblViewOr = new System.Windows.Forms.Label();
             this.richTextBox7 = new System.Windows.Forms.RichTextBox();
             this.lblDeleteOr = new System.Windows.Forms.Label();
@@ -46,16 +48,14 @@ namespace GUI_Prototype02
             this.lblCreateOr = new System.Windows.Forms.Label();
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
             this.pnlStock = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.richTextBox8 = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.richTextBox10 = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.richTextBox11 = new System.Windows.Forms.RichTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.pnlSales = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.richTextBox9 = new System.Windows.Forms.RichTextBox();
@@ -159,6 +159,27 @@ namespace GUI_Prototype02
             this.pnlOrders.TabIndex = 18;
             this.pnlOrders.Visible = false;
             // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label2.Location = new System.Drawing.Point(3, 576);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(182, 24);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Return to main menu";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
+            this.richTextBox1.Location = new System.Drawing.Point(6, 606);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(638, 29);
+            this.richTextBox1.TabIndex = 28;
+            this.richTextBox1.Text = "Click the main menu buton on the order page\n";
+            // 
             // lblViewOr
             // 
             this.lblViewOr.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -259,6 +280,27 @@ namespace GUI_Prototype02
             this.pnlStock.TabIndex = 19;
             this.pnlStock.Visible = false;
             // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label5.Location = new System.Drawing.Point(3, 458);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(182, 24);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Return to main menu";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox2.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
+            this.richTextBox2.Location = new System.Drawing.Point(6, 488);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(638, 29);
+            this.richTextBox2.TabIndex = 30;
+            this.richTextBox2.Text = "Click the main menu buton on the order page\n";
+            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -321,48 +363,6 @@ namespace GUI_Prototype02
             this.richTextBox11.Size = new System.Drawing.Size(638, 116);
             this.richTextBox11.TabIndex = 20;
             this.richTextBox11.Text = resources.GetString("richTextBox11.Text");
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label2.Location = new System.Drawing.Point(3, 576);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(182, 24);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Return to main menu";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.Menu;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
-            this.richTextBox1.Location = new System.Drawing.Point(6, 606);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(638, 29);
-            this.richTextBox1.TabIndex = 28;
-            this.richTextBox1.Text = "Click the main menu buton on the order page\n";
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label5.Location = new System.Drawing.Point(3, 458);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(182, 24);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Return to main menu";
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.BackColor = System.Drawing.SystemColors.Menu;
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
-            this.richTextBox2.Location = new System.Drawing.Point(6, 488);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(638, 29);
-            this.richTextBox2.TabIndex = 30;
-            this.richTextBox2.Text = "Click the main menu buton on the order page\n";
             // 
             // pnlSales
             // 
@@ -468,6 +468,7 @@ namespace GUI_Prototype02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1384, 786);
             this.Controls.Add(this.pnlSales);
             this.Controls.Add(this.pnlStock);
