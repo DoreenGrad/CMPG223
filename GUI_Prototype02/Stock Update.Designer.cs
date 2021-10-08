@@ -221,6 +221,7 @@
             this.btnU.TabIndex = 50;
             this.btnU.Text = "UPDATE";
             this.btnU.UseVisualStyleBackColor = true;
+            this.btnU.Click += new System.EventHandler(this.btnU_Click);
             // 
             // btnC
             // 
@@ -237,6 +238,7 @@
             this.btnC.TabIndex = 51;
             this.btnC.Text = "CANCEL";
             this.btnC.UseVisualStyleBackColor = true;
+            this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
             // Stock_Update
             // 
@@ -253,7 +255,9 @@
             this.Controls.Add(this.lbView1);
             this.Controls.Add(this.groupBox5);
             this.Name = "Stock_Update";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Stock";
+            this.Load += new System.EventHandler(this.Stock_Update_Load);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
@@ -263,12 +267,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox tbQty_on_Hand;
-        private System.Windows.Forms.TextBox tbWeight_per_Unit;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbStock_Desc;
-        private System.Windows.Forms.TextBox tbStock_Key;
         private System.Windows.Forms.Label stockKeyLb;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ListBox lbView1;
@@ -279,5 +279,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnU;
         private System.Windows.Forms.Button btnC;
+        public System.Windows.Forms.TextBox tbQty_on_Hand;
+        public System.Windows.Forms.TextBox tbWeight_per_Unit;
+        public System.Windows.Forms.TextBox tbStock_Desc;
+        public System.Windows.Forms.TextBox tbStock_Key;
     }
 }

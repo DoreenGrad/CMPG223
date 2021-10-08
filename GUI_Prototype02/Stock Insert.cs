@@ -46,7 +46,9 @@ namespace GUI_Prototype02
 
         private void btnC_Click(object sender, EventArgs e)
         {
-            //Close form
+            this.Visible = false;
+            Stock_Form myMainMenu = new Stock_Form();
+            myMainMenu.ShowDialog();
             this.Close();
         }
     }

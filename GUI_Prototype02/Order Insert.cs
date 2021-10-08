@@ -18,6 +18,27 @@ namespace GUI_Prototype02
             InitializeComponent();
         }
 
+        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\marce\Documents\GitHub\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security=True");
+
+        public void loadStockKeys()
+        {
+            sqlCon.Open();
+            string viewData = "SELECT Stock_Key FROM STOCK";
+            SqlCommand sqlCom = new SqlCommand(viewData, sqlCon);
+
+            SqlDataReader read = sqlCom.ExecuteReader();
+
+            comboBox1.Items.Clear();
+
+            while (read.Read())
+            {
+                comboBox1.Items.Add(read.GetValue(0));
+            }
+
+            sqlCon.Close();
+
+        }
+
         //public variables to access on the main form
         public DateTime sDate_Ordered;
         public DateTime sDate_Received;
@@ -28,7 +49,6 @@ namespace GUI_Prototype02
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            
             if(int.TryParse(tbQty_Ordered.Text, out iQty_Ordered))
             {
                 if(double.TryParse(tbPrice_per_Kg.Text, out dPrice_per_Kg))
@@ -37,7 +57,7 @@ namespace GUI_Prototype02
                     {
                         sDate_Ordered = dTP_Ordered.Value.Date;
                         sDate_Received = dTP_Received.Value.Date;
-                        sStock_Key = tbStock_Key.Text;
+                        sStock_Key = comboBox1.Text;
                         this.Close();  
                     }
                     else
@@ -54,13 +74,19 @@ namespace GUI_Prototype02
             {
                 MessageBox.Show("Quantity ordered must be numeric");
             }
-
         }
 
         private void btnC_Click(object sender, EventArgs e)
         {
-            //Close form
+            this.Visible = false;
+            Order_Form myMainMenu = new Order_Form();
+            myMainMenu.ShowDialog();
             this.Close();
+        }
+
+        private void OrderInsertForm_Load(object sender, EventArgs e)
+        {
+            loadStockKeys();
         }
     }
 }

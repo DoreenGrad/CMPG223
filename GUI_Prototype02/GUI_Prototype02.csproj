@@ -70,12 +70,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Authentication Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Authentication Form.Designer.cs">
-      <DependentUpon>Authentication Form.cs</DependentUpon>
-    </Compile>
     <Compile Include="HelpForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,9 +156,6 @@
     <Compile Include="Stock Update.Designer.cs">
       <DependentUpon>Stock Update.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Authentication Form.resx">
-      <DependentUpon>Authentication Form.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="HelpForm.resx">
       <DependentUpon>HelpForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Order Update.resx">
       <DependentUpon>Order Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Request Report.resx">
+      <DependentUpon>Request Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sale Insert.resx">
       <DependentUpon>Sale Insert.cs</DependentUpon>

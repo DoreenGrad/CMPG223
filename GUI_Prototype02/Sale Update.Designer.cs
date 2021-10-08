@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBoxProductInformation = new System.Windows.Forms.GroupBox();
-            this.dTP_Saledate = new System.Windows.Forms.DateTimePicker();
-            this.lblSaleDate = new System.Windows.Forms.Label();
             this.groupBoxUnitInformation = new System.Windows.Forms.GroupBox();
             this.tbStock_Key = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,11 +36,11 @@
             this.tbSale_Price_per_Unit = new System.Windows.Forms.TextBox();
             this.lblSalePrice = new System.Windows.Forms.Label();
             this.lblQuantitySold = new System.Windows.Forms.Label();
+            this.dTP_Saledate = new System.Windows.Forms.DateTimePicker();
+            this.lblSaleDate = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbQty_Sold = new System.Windows.Forms.TextBox();
+            this.tbSale_Price = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -54,7 +52,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbView2 = new System.Windows.Forms.ListBox();
             this.btnU = new System.Windows.Forms.Button();
             this.btnC = new System.Windows.Forms.Button();
             this.groupBoxProductInformation.SuspendLayout();
@@ -75,24 +73,6 @@
             this.groupBoxProductInformation.TabIndex = 11;
             this.groupBoxProductInformation.TabStop = false;
             this.groupBoxProductInformation.Text = "Sale";
-            // 
-            // dTP_Saledate
-            // 
-            this.dTP_Saledate.Location = new System.Drawing.Point(159, 42);
-            this.dTP_Saledate.Name = "dTP_Saledate";
-            this.dTP_Saledate.Size = new System.Drawing.Size(200, 27);
-            this.dTP_Saledate.TabIndex = 5;
-            // 
-            // lblSaleDate
-            // 
-            this.lblSaleDate.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
-            this.lblSaleDate.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblSaleDate.Location = new System.Drawing.Point(6, 42);
-            this.lblSaleDate.Name = "lblSaleDate";
-            this.lblSaleDate.Size = new System.Drawing.Size(200, 35);
-            this.lblSaleDate.TabIndex = 0;
-            this.lblSaleDate.Text = "Sale Date:";
-            this.lblSaleDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBoxUnitInformation
             // 
@@ -172,12 +152,28 @@
             this.lblQuantitySold.Text = "Quantity sold:";
             this.lblQuantitySold.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // dTP_Saledate
+            // 
+            this.dTP_Saledate.Location = new System.Drawing.Point(159, 42);
+            this.dTP_Saledate.Name = "dTP_Saledate";
+            this.dTP_Saledate.Size = new System.Drawing.Size(200, 27);
+            this.dTP_Saledate.TabIndex = 5;
+            // 
+            // lblSaleDate
+            // 
+            this.lblSaleDate.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
+            this.lblSaleDate.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblSaleDate.Location = new System.Drawing.Point(6, 42);
+            this.lblSaleDate.Name = "lblSaleDate";
+            this.lblSaleDate.Size = new System.Drawing.Size(200, 35);
+            this.lblSaleDate.TabIndex = 0;
+            this.lblSaleDate.Text = "Sale Date:";
+            this.lblSaleDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.tbQty_Sold);
+            this.groupBox1.Controls.Add(this.tbSale_Price);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
@@ -189,44 +185,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sale Detail";
             // 
-            // textBox1
+            // tbQty_Sold
             // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 11F);
-            this.textBox1.Location = new System.Drawing.Point(212, 113);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 25);
-            this.textBox1.TabIndex = 14;
+            this.tbQty_Sold.Location = new System.Drawing.Point(242, 77);
+            this.tbQty_Sold.Name = "tbQty_Sold";
+            this.tbQty_Sold.Size = new System.Drawing.Size(157, 27);
+            this.tbQty_Sold.TabIndex = 6;
             // 
-            // label2
+            // tbSale_Price
             // 
-            this.label2.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(6, 108);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(200, 35);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Stock key";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Verdana", 11F);
-            this.textBox2.Location = new System.Drawing.Point(212, 82);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(157, 25);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "0";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Verdana", 11F);
-            this.textBox3.Location = new System.Drawing.Point(212, 47);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(157, 25);
-            this.textBox3.TabIndex = 3;
-            this.textBox3.Text = "0";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbSale_Price.Location = new System.Drawing.Point(242, 42);
+            this.tbSale_Price.Name = "tbSale_Price";
+            this.tbSale_Price.Size = new System.Drawing.Size(157, 27);
+            this.tbSale_Price.TabIndex = 5;
             // 
             // label3
             // 
@@ -346,13 +317,13 @@
             this.label12.Text = "Sales Detail:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // listBox1
+            // lbView2
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 150);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(797, 43);
-            this.listBox1.TabIndex = 53;
+            this.lbView2.FormattingEnabled = true;
+            this.lbView2.Location = new System.Drawing.Point(12, 150);
+            this.lbView2.Name = "lbView2";
+            this.lbView2.Size = new System.Drawing.Size(797, 43);
+            this.lbView2.TabIndex = 53;
             // 
             // btnU
             // 
@@ -369,6 +340,7 @@
             this.btnU.TabIndex = 54;
             this.btnU.Text = "UPDATE";
             this.btnU.UseVisualStyleBackColor = true;
+            this.btnU.Click += new System.EventHandler(this.btnU_Click);
             // 
             // btnC
             // 
@@ -385,6 +357,7 @@
             this.btnC.TabIndex = 55;
             this.btnC.Text = "CANCEL";
             this.btnC.UseVisualStyleBackColor = true;
+            this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
             // Sale_Update
             // 
@@ -393,7 +366,7 @@
             this.ClientSize = new System.Drawing.Size(833, 450);
             this.Controls.Add(this.btnC);
             this.Controls.Add(this.btnU);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lbView2);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -406,7 +379,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxProductInformation);
             this.Name = "Sale_Update";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sale_Update";
+            this.Load += new System.EventHandler(this.Sale_Update_Load);
             this.groupBoxProductInformation.ResumeLayout(false);
             this.groupBoxUnitInformation.ResumeLayout(false);
             this.groupBoxUnitInformation.PerformLayout();
@@ -419,7 +394,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBoxProductInformation;
-        private System.Windows.Forms.DateTimePicker dTP_Saledate;
         private System.Windows.Forms.Label lblSaleDate;
         private System.Windows.Forms.GroupBox groupBoxUnitInformation;
         private System.Windows.Forms.TextBox tbStock_Key;
@@ -429,10 +403,6 @@
         private System.Windows.Forms.Label lblSalePrice;
         private System.Windows.Forms.Label lblQuantitySold;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -444,8 +414,11 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbView2;
         private System.Windows.Forms.Button btnU;
         private System.Windows.Forms.Button btnC;
+        public System.Windows.Forms.DateTimePicker dTP_Saledate;
+        public System.Windows.Forms.TextBox tbQty_Sold;
+        public System.Windows.Forms.TextBox tbSale_Price;
     }
 }

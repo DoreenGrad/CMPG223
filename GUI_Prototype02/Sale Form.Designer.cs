@@ -292,6 +292,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox5);
             this.Name = "salesForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SALES";
             this.Load += new System.EventHandler(this.Sale_Products_Form_Load);
             this.groupBox5.ResumeLayout(false);

@@ -197,6 +197,7 @@
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.groupBoxProductInformation);
             this.Name = "insertSaleForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "INSERT SALES";
             this.groupBoxUnitInformation.ResumeLayout(false);
             this.groupBoxUnitInformation.PerformLayout();

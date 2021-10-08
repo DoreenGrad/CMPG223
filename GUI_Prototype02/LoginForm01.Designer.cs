@@ -185,13 +185,13 @@ namespace GUI_Prototype02
 
         private System.Windows.Forms.Panel panelWindow;
         private System.Windows.Forms.Panel panelControl;
-        private System.Windows.Forms.TextBox txtBPassword;
-        private System.Windows.Forms.TextBox txtBUsername;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.CheckBox checkBoxPasswordShow;
+        public System.Windows.Forms.TextBox txtBPassword;
+        public System.Windows.Forms.TextBox txtBUsername;
     }
 }
 

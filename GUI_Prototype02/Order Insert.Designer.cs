@@ -1,6 +1,6 @@
 ﻿namespace GUI_Prototype02
 {
-    partial class OrderInsertUpdateForm
+    partial class OrderInsertForm
     {
         /// <summary>
         /// Required designer variable.
@@ -37,9 +37,9 @@
             this.lblPricePerUnit = new System.Windows.Forms.Label();
             this.btnInsert = new System.Windows.Forms.Button();
             this.groupBoxProductInformation = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dTP_Received = new System.Windows.Forms.DateTimePicker();
             this.dTP_Ordered = new System.Windows.Forms.DateTimePicker();
-            this.tbStock_Key = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblProductKey = new System.Windows.Forms.Label();
             this.lblProductType = new System.Windows.Forms.Label();
@@ -147,9 +147,9 @@
             // 
             // groupBoxProductInformation
             // 
+            this.groupBoxProductInformation.Controls.Add(this.comboBox1);
             this.groupBoxProductInformation.Controls.Add(this.dTP_Received);
             this.groupBoxProductInformation.Controls.Add(this.dTP_Ordered);
-            this.groupBoxProductInformation.Controls.Add(this.tbStock_Key);
             this.groupBoxProductInformation.Controls.Add(this.label1);
             this.groupBoxProductInformation.Controls.Add(this.lblProductKey);
             this.groupBoxProductInformation.Controls.Add(this.lblProductType);
@@ -161,6 +161,14 @@
             this.groupBoxProductInformation.TabIndex = 7;
             this.groupBoxProductInformation.TabStop = false;
             this.groupBoxProductInformation.Text = "Order";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(245, 96);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 26);
+            this.comboBox1.TabIndex = 10;
             // 
             // dTP_Received
             // 
@@ -175,14 +183,6 @@
             this.dTP_Ordered.Name = "dTP_Ordered";
             this.dTP_Ordered.Size = new System.Drawing.Size(200, 27);
             this.dTP_Ordered.TabIndex = 8;
-            // 
-            // tbStock_Key
-            // 
-            this.tbStock_Key.Font = new System.Drawing.Font("Verdana", 11F);
-            this.tbStock_Key.Location = new System.Drawing.Point(212, 93);
-            this.tbStock_Key.Name = "tbStock_Key";
-            this.tbStock_Key.Size = new System.Drawing.Size(182, 25);
-            this.tbStock_Key.TabIndex = 7;
             // 
             // label1
             // 
@@ -234,7 +234,7 @@
             this.btnC.UseVisualStyleBackColor = true;
             this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
-            // OrderInsertUpdateForm
+            // OrderInsertForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -243,12 +243,13 @@
             this.Controls.Add(this.groupBoxUnitInformation);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.groupBoxProductInformation);
-            this.Name = "OrderInsertUpdateForm";
+            this.Name = "OrderInsertForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Order Insert/Update";
+            this.Load += new System.EventHandler(this.OrderInsertForm_Load);
             this.groupBoxUnitInformation.ResumeLayout(false);
             this.groupBoxUnitInformation.PerformLayout();
             this.groupBoxProductInformation.ResumeLayout(false);
-            this.groupBoxProductInformation.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -265,10 +266,10 @@
         private System.Windows.Forms.GroupBox groupBoxProductInformation;
         private System.Windows.Forms.Label lblProductKey;
         private System.Windows.Forms.Label lblProductType;
-        private System.Windows.Forms.TextBox tbStock_Key;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnC;
         private System.Windows.Forms.DateTimePicker dTP_Ordered;
         private System.Windows.Forms.DateTimePicker dTP_Received;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

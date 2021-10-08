@@ -180,6 +180,7 @@
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.groupBox5);
             this.Name = "StocInsertUpdateForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Insert Stock";
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();

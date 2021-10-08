@@ -31,13 +31,11 @@
             this.groupBoxProductInformation = new System.Windows.Forms.GroupBox();
             this.dTP_Received = new System.Windows.Forms.DateTimePicker();
             this.dTP_Ordered = new System.Windows.Forms.DateTimePicker();
-            this.tbStock_Key = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblProductKey = new System.Windows.Forms.Label();
             this.lblProductType = new System.Windows.Forms.Label();
             this.groupBoxUnitInformation = new System.Windows.Forms.GroupBox();
             this.tbPrice_per_Unit = new System.Windows.Forms.TextBox();
-            this.tbPrice_per_Kg = new System.Windows.Forms.TextBox();
+            this.tbPrice_per_KG = new System.Windows.Forms.TextBox();
             this.tbQty_Ordered = new System.Windows.Forms.TextBox();
             this.lblWeightPerUnit = new System.Windows.Forms.Label();
             this.lblPricePerKg = new System.Windows.Forms.Label();
@@ -49,7 +47,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbView2 = new System.Windows.Forms.ListBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -66,15 +64,13 @@
             // 
             this.groupBoxProductInformation.Controls.Add(this.dTP_Received);
             this.groupBoxProductInformation.Controls.Add(this.dTP_Ordered);
-            this.groupBoxProductInformation.Controls.Add(this.tbStock_Key);
-            this.groupBoxProductInformation.Controls.Add(this.label1);
             this.groupBoxProductInformation.Controls.Add(this.lblProductKey);
             this.groupBoxProductInformation.Controls.Add(this.lblProductType);
             this.groupBoxProductInformation.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
             this.groupBoxProductInformation.ForeColor = System.Drawing.Color.Purple;
             this.groupBoxProductInformation.Location = new System.Drawing.Point(12, 224);
             this.groupBoxProductInformation.Name = "groupBoxProductInformation";
-            this.groupBoxProductInformation.Size = new System.Drawing.Size(408, 139);
+            this.groupBoxProductInformation.Size = new System.Drawing.Size(408, 144);
             this.groupBoxProductInformation.TabIndex = 8;
             this.groupBoxProductInformation.TabStop = false;
             this.groupBoxProductInformation.Text = "Order";
@@ -92,25 +88,6 @@
             this.dTP_Ordered.Name = "dTP_Ordered";
             this.dTP_Ordered.Size = new System.Drawing.Size(200, 27);
             this.dTP_Ordered.TabIndex = 8;
-            // 
-            // tbStock_Key
-            // 
-            this.tbStock_Key.Font = new System.Drawing.Font("Verdana", 11F);
-            this.tbStock_Key.Location = new System.Drawing.Point(194, 93);
-            this.tbStock_Key.Name = "tbStock_Key";
-            this.tbStock_Key.Size = new System.Drawing.Size(200, 25);
-            this.tbStock_Key.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(6, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 35);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Stock key";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblProductKey
             // 
@@ -137,7 +114,7 @@
             // groupBoxUnitInformation
             // 
             this.groupBoxUnitInformation.Controls.Add(this.tbPrice_per_Unit);
-            this.groupBoxUnitInformation.Controls.Add(this.tbPrice_per_Kg);
+            this.groupBoxUnitInformation.Controls.Add(this.tbPrice_per_KG);
             this.groupBoxUnitInformation.Controls.Add(this.tbQty_Ordered);
             this.groupBoxUnitInformation.Controls.Add(this.lblWeightPerUnit);
             this.groupBoxUnitInformation.Controls.Add(this.lblPricePerKg);
@@ -154,38 +131,32 @@
             // tbPrice_per_Unit
             // 
             this.tbPrice_per_Unit.Font = new System.Drawing.Font("Verdana", 11F);
-            this.tbPrice_per_Unit.Location = new System.Drawing.Point(211, 93);
+            this.tbPrice_per_Unit.Location = new System.Drawing.Point(193, 90);
             this.tbPrice_per_Unit.Name = "tbPrice_per_Unit";
-            this.tbPrice_per_Unit.Size = new System.Drawing.Size(182, 25);
-            this.tbPrice_per_Unit.TabIndex = 5;
-            this.tbPrice_per_Unit.Text = "0";
-            this.tbPrice_per_Unit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbPrice_per_Unit.Size = new System.Drawing.Size(200, 25);
+            this.tbPrice_per_Unit.TabIndex = 10;
             // 
-            // tbPrice_per_Kg
+            // tbPrice_per_KG
             // 
-            this.tbPrice_per_Kg.Font = new System.Drawing.Font("Verdana", 11F);
-            this.tbPrice_per_Kg.Location = new System.Drawing.Point(212, 58);
-            this.tbPrice_per_Kg.Name = "tbPrice_per_Kg";
-            this.tbPrice_per_Kg.Size = new System.Drawing.Size(181, 25);
-            this.tbPrice_per_Kg.TabIndex = 4;
-            this.tbPrice_per_Kg.Text = "0";
-            this.tbPrice_per_Kg.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbPrice_per_KG.Font = new System.Drawing.Font("Verdana", 11F);
+            this.tbPrice_per_KG.Location = new System.Drawing.Point(193, 59);
+            this.tbPrice_per_KG.Name = "tbPrice_per_KG";
+            this.tbPrice_per_KG.Size = new System.Drawing.Size(200, 25);
+            this.tbPrice_per_KG.TabIndex = 9;
             // 
             // tbQty_Ordered
             // 
             this.tbQty_Ordered.Font = new System.Drawing.Font("Verdana", 11F);
-            this.tbQty_Ordered.Location = new System.Drawing.Point(212, 23);
+            this.tbQty_Ordered.Location = new System.Drawing.Point(193, 28);
             this.tbQty_Ordered.Name = "tbQty_Ordered";
-            this.tbQty_Ordered.Size = new System.Drawing.Size(181, 25);
-            this.tbQty_Ordered.TabIndex = 3;
-            this.tbQty_Ordered.Text = "0";
-            this.tbQty_Ordered.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbQty_Ordered.Size = new System.Drawing.Size(200, 25);
+            this.tbQty_Ordered.TabIndex = 8;
             // 
             // lblWeightPerUnit
             // 
             this.lblWeightPerUnit.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold);
             this.lblWeightPerUnit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblWeightPerUnit.Location = new System.Drawing.Point(6, 18);
+            this.lblWeightPerUnit.Location = new System.Drawing.Point(6, 23);
             this.lblWeightPerUnit.Name = "lblWeightPerUnit";
             this.lblWeightPerUnit.Size = new System.Drawing.Size(200, 35);
             this.lblWeightPerUnit.TabIndex = 0;
@@ -200,7 +171,7 @@
             this.lblPricePerKg.Name = "lblPricePerKg";
             this.lblPricePerKg.Size = new System.Drawing.Size(200, 35);
             this.lblPricePerKg.TabIndex = 1;
-            this.lblPricePerKg.Text = "Price per KG";
+            this.lblPricePerKg.Text = "Price per KG:";
             this.lblPricePerKg.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblPricePerUnit
@@ -211,7 +182,7 @@
             this.lblPricePerUnit.Name = "lblPricePerUnit";
             this.lblPricePerUnit.Size = new System.Drawing.Size(200, 35);
             this.lblPricePerUnit.TabIndex = 2;
-            this.lblPricePerUnit.Text = "Price per unit:";
+            this.lblPricePerUnit.Text = "Price per Unit:";
             this.lblPricePerUnit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnC
@@ -229,6 +200,7 @@
             this.btnC.TabIndex = 11;
             this.btnC.Text = "CANCEL";
             this.btnC.UseVisualStyleBackColor = true;
+            this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
             // btnU
             // 
@@ -245,6 +217,7 @@
             this.btnU.TabIndex = 12;
             this.btnU.Text = "UPDATE";
             this.btnU.UseVisualStyleBackColor = true;
+            this.btnU.Click += new System.EventHandler(this.btnU_Click);
             // 
             // lbView1
             // 
@@ -298,13 +271,13 @@
             this.label3.Text = "Order_ID";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // listBox1
+            // lbView2
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 157);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(807, 43);
-            this.listBox1.TabIndex = 29;
+            this.lbView2.FormattingEnabled = true;
+            this.lbView2.Location = new System.Drawing.Point(12, 157);
+            this.lbView2.Name = "lbView2";
+            this.lbView2.Size = new System.Drawing.Size(807, 43);
+            this.lbView2.TabIndex = 29;
             // 
             // label14
             // 
@@ -314,7 +287,7 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(113, 19);
             this.label14.TabIndex = 36;
-            this.label14.Text = "Price_per_Kg";
+            this.label14.Text = "Price_per_Unit";
             this.label14.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label11
@@ -325,7 +298,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(113, 19);
             this.label11.TabIndex = 35;
-            this.label11.Text = "Price_per_Unit";
+            this.label11.Text = "Price_per_Kg";
             this.label11.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label10
@@ -407,7 +380,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lbView2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -418,9 +391,10 @@
             this.Controls.Add(this.groupBoxUnitInformation);
             this.Controls.Add(this.groupBoxProductInformation);
             this.Name = "Order_Update";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Order_Update";
+            this.Load += new System.EventHandler(this.Order_Update_Load);
             this.groupBoxProductInformation.ResumeLayout(false);
-            this.groupBoxProductInformation.PerformLayout();
             this.groupBoxUnitInformation.ResumeLayout(false);
             this.groupBoxUnitInformation.PerformLayout();
             this.ResumeLayout(false);
@@ -430,27 +404,18 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBoxProductInformation;
-        private System.Windows.Forms.DateTimePicker dTP_Received;
-        private System.Windows.Forms.DateTimePicker dTP_Ordered;
-        private System.Windows.Forms.TextBox tbStock_Key;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblProductKey;
         private System.Windows.Forms.Label lblProductType;
         private System.Windows.Forms.GroupBox groupBoxUnitInformation;
-        private System.Windows.Forms.TextBox tbPrice_per_Unit;
-        private System.Windows.Forms.TextBox tbPrice_per_Kg;
-        private System.Windows.Forms.TextBox tbQty_Ordered;
         private System.Windows.Forms.Label lblWeightPerUnit;
         private System.Windows.Forms.Label lblPricePerKg;
         private System.Windows.Forms.Label lblPricePerUnit;
         private System.Windows.Forms.Button btnC;
         private System.Windows.Forms.Button btnU;
-        private System.Windows.Forms.ListBox lbView1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -459,5 +424,12 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label12;
+        public System.Windows.Forms.ListBox lbView1;
+        public System.Windows.Forms.ListBox lbView2;
+        public System.Windows.Forms.DateTimePicker dTP_Received;
+        public System.Windows.Forms.DateTimePicker dTP_Ordered;
+        public System.Windows.Forms.TextBox tbPrice_per_Unit;
+        public System.Windows.Forms.TextBox tbPrice_per_KG;
+        public System.Windows.Forms.TextBox tbQty_Ordered;
     }
 }

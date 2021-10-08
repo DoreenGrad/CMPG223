@@ -350,6 +350,7 @@
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.groupBox5);
             this.Name = "Order_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Order";
             this.Load += new System.EventHandler(this.Order_Form1_Load);
             this.groupBox5.ResumeLayout(false);
@@ -366,7 +367,6 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.TextBox tbOrderDetailsID;
-        private System.Windows.Forms.TextBox tbOrderID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox lbView1;
@@ -382,5 +382,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnMM;
+        public System.Windows.Forms.TextBox tbOrderID;
     }
 }

@@ -19,8 +19,9 @@ namespace GUI_Prototype02
             InitializeComponent();
         }
 
-        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Lenovo User\Documents\2021\Sem 2\CMPG 223\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security=True");
-        
+        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\marce\Documents\GitHub\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security=True");
+        public static string oID;
+        public static string oIDD;
         public void funcViewORDERS()
         {
             sqlCon.Open();
@@ -57,13 +58,13 @@ namespace GUI_Prototype02
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            int userID = 0;
             int orderID = 0;
             int qty_on_hand = 0;
 
+            string sUsername = LoginForm01.sUsername;
+            string sPassword = LoginForm01.sPassword;
+
             this.Visible = false;
-            Authentication_Form auth = new Authentication_Form();
-            auth.ShowDialog();
             OrderInsertForm insert = new OrderInsertForm();
             insert.ShowDialog();
             this.Visible = true;
@@ -72,9 +73,9 @@ namespace GUI_Prototype02
 
             string query1 = "SELECT User_ID FROM USERS WHERE Username=@username and Password=@password";
             SqlCommand sqlCmd1 = new SqlCommand(query1, sqlCon);
-            sqlCmd1.Parameters.AddWithValue("@username", auth.sUsername); 
-            sqlCmd1.Parameters.AddWithValue("@password", auth.sPassword);
-            userID = Convert.ToInt32(sqlCmd1.ExecuteScalar());
+            sqlCmd1.Parameters.AddWithValue("@username", sUsername); 
+            sqlCmd1.Parameters.AddWithValue("@password", sPassword);
+            int userID = Convert.ToInt32(sqlCmd1.ExecuteScalar());
 
             string insertData1 = "INSERT INTO ORDERS(User_ID, Date_Ordered, Date_Received) VALUES(@ui, @d_o, @d_r)";
             SqlCommand sqlCom1 = new SqlCommand(insertData1, sqlCon);
@@ -305,48 +306,121 @@ namespace GUI_Prototype02
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            DateTime sDate_Ordered;
+            DateTime sDate_Received;
+            int iQty_Ordered;
+            double dPrice_per_Kg;
+            double dPrice_per_Unit;
+
+            DateTime NEWsDate_Ordered;
+            DateTime NEWsDate_Received;
+            int NEWiQty_Ordered;
+            double NEWdPrice_per_Kg;
+            double NEWdPrice_per_Unit;
+
+            string sUsername = LoginForm01.sUsername;
+            string sPassword = LoginForm01.sPassword;
+
             if (tbOrderDetailsID.Text.Length == 0)
             {
-                int userID = 0;
                 int orderID = 0;
                 int qty_on_hand1 = 0;
                 int qty_on_hand2 = 0;
                 int ans = 0;
 
+                sqlCon.Open();
+                string tempr = "SELECT Order_Detail_ID FROM ORDERS_DETAIL Where Order_ID = @id";
+                SqlCommand sqlTemp = new SqlCommand(tempr, sqlCon);
+                sqlTemp.Parameters.AddWithValue("@id", tbOrderID.Text);
+                string temp = sqlTemp.ExecuteScalar().ToString();
+                sqlCon.Close();
+
+                oID = tbOrderID.Text;
+                oIDD = temp;
+
                 this.Visible = false;
-                Authentication_Form auth = new Authentication_Form();
-                auth.ShowDialog();
-                OrderInsertForm insert = new OrderInsertForm();
+                Order_Update insert = new Order_Update();
                 insert.ShowDialog();
                 this.Visible = true;
 
                 sqlCon.Open();
 
+                string stock1 = "SELECT Stock_ID FROM ORDERS_DETAIL WHERE Order_ID = '" + tbOrderID.Text + "'";
+                SqlCommand sqlCmdS1 = new SqlCommand(stock1, sqlCon);
+                int stockID = Convert.ToInt32(sqlCmdS1.ExecuteScalar());
+
+                string stock2 = "SELECT Stock_Key FROM STOCK WHERE Stock_ID = '"+stockID+"'";
+                SqlCommand sqlCmdS2 = new SqlCommand(stock2, sqlCon);
+                string stockKey = sqlCmdS2.ExecuteScalar().ToString();
+
                 string querySTPOCK = "SELECT COUNT(1) FROM STOCK WHERE Stock_Key = @sk";
                 SqlCommand sqlCmdS = new SqlCommand(querySTPOCK, sqlCon);
-                sqlCmdS.Parameters.AddWithValue("@sk", insert.sStock_Key); //trim is for white spaces
+                sqlCmdS.Parameters.AddWithValue("@sk", stockKey); //trim is for white spaces
                 int count = Convert.ToInt32(sqlCmdS.ExecuteScalar().ToString()); //return 1 or 0, 1 is valid, 0 is invalid    
 
                 if (count == 1)
-                {                  
+                {
                     string query1 = "SELECT User_ID FROM USERS WHERE Username=@username and Password=@password";
                     SqlCommand sqlCmd1 = new SqlCommand(query1, sqlCon);
-                    sqlCmd1.Parameters.AddWithValue("@username", auth.sUsername);
-                    sqlCmd1.Parameters.AddWithValue("@password", auth.sPassword);
-                    userID = Convert.ToInt32(sqlCmd1.ExecuteScalar());
+                    sqlCmd1.Parameters.AddWithValue("@username", sUsername);
+                    sqlCmd1.Parameters.AddWithValue("@password", sPassword);
+                    int userID = int.Parse(sqlCmd1.ExecuteScalar().ToString());
 
-                    string updateDate1 = "UPDATE ORDERS SET User_ID = @ui, Date_Ordered = @d_o, Date_Received = @d_r WHERE Order_ID = '"+tbOrderID.Text+"'";
+                    string ssDate_Ordered = "SELECT Date_Ordered FROM ORDERS WHERE Order_ID = '" + tbOrderID.Text + "'";
+                    SqlCommand ssDate_Orderedcmd = new SqlCommand(ssDate_Ordered, sqlCon);
+                    sDate_Ordered = DateTime.Parse(ssDate_Orderedcmd.ExecuteScalar().ToString());
+
+                    string ssDate_Received = "SELECT Date_Received FROM ORDERS WHERE Order_ID = '" + tbOrderID.Text + "'";
+                    SqlCommand ssDate_Receivedcmd = new SqlCommand(ssDate_Received, sqlCon);
+                    sDate_Received = DateTime.Parse(ssDate_Receivedcmd.ExecuteScalar().ToString());
+
+                    string iiQty_Ordered = "SELECT Qty_Ordered FROM ORDERS_DETAIL WHERE Order_ID = '" + tbOrderID.Text + "'";
+                    SqlCommand iiQty_Orderedcmd = new SqlCommand(iiQty_Ordered, sqlCon);
+                    iQty_Ordered = int.Parse(iiQty_Orderedcmd.ExecuteScalar().ToString());
+
+                    string ddPrice_per_Kg = "SELECT Price_per_KG FROM ORDERS_DETAIL WHERE Order_ID = '" + tbOrderID.Text + "'";
+                    SqlCommand ddPrice_per_Kgcmd = new SqlCommand(ddPrice_per_Kg, sqlCon);
+                    dPrice_per_Kg = double.Parse(ddPrice_per_Kgcmd.ExecuteScalar().ToString());
+
+                    string ddPrice_per_Unit = "SELECT Price_per_KG FROM ORDERS_DETAIL WHERE Order_ID = '" + tbOrderID.Text + "'";
+                    SqlCommand ddPrice_per_Unitcmd = new SqlCommand(ddPrice_per_Unit, sqlCon);
+                    dPrice_per_Unit = double.Parse(ddPrice_per_Unitcmd.ExecuteScalar().ToString());
+
+
+                    if (Order_Update.sDate_Ordered.ToString().Length != 0)
+                        NEWsDate_Ordered = Order_Update.sDate_Ordered;
+                    else
+                        NEWsDate_Ordered = sDate_Ordered;
+
+                    if (Order_Update.sDate_Received.ToString().Length != 0)
+                        NEWsDate_Received = Order_Update.sDate_Received;
+                    else
+                        NEWsDate_Received = sDate_Received;
+
+
+
+                    if (insert.tbPrice_per_KG.Text.Length!=0)
+                        NEWdPrice_per_Kg = Order_Update.dPrice_per_Kg;
+                    else
+                        NEWdPrice_per_Kg = dPrice_per_Kg;
+
+                    if (insert.tbPrice_per_Unit.Text.Length != 0)
+                        NEWdPrice_per_Unit = Order_Update.dPrice_per_Unit;
+                    else
+                        NEWdPrice_per_Unit = dPrice_per_Unit;
+
+                    string updateDate1 = "UPDATE ORDERS SET User_ID = @ui, Date_Ordered = @d_o, Date_Received = @d_r WHERE Order_ID = '" + tbOrderID.Text + "'";
                     SqlCommand sqlCom1 = new SqlCommand(updateDate1, sqlCon);
                     sqlCom1.Parameters.AddWithValue("@ui", userID);
-                    sqlCom1.Parameters.AddWithValue("@d_o", insert.sDate_Ordered);
-                    sqlCom1.Parameters.AddWithValue("@d_r", insert.sDate_Received);
+                    sqlCom1.Parameters.AddWithValue("@d_o", NEWsDate_Ordered);
+                    sqlCom1.Parameters.AddWithValue("@d_r", NEWsDate_Received);
                     sqlCom1.ExecuteNonQuery();
 
                     string query2 = "SELECT Order_ID FROM ORDERS WHERE Order_ID = '" + tbOrderID.Text + "'";
                     SqlCommand sqlCmd2 = new SqlCommand(query2, sqlCon);
                     orderID = Convert.ToInt32(sqlCmd2.ExecuteScalar());
-                
-                    string qty1 = "SELECT Qty_on_Hand FROM STOCK WHERE Stock_Key = '" + insert.sStock_Key + "'";
+
+                    string qty1 = "SELECT Qty_on_Hand FROM STOCK WHERE Stock_Key = '" + stockKey + "'";
                     SqlCommand sqlCmdQ1 = new SqlCommand(qty1, sqlCon);
                     qty_on_hand1 = Convert.ToInt32(sqlCmdQ1.ExecuteScalar());
 
@@ -354,34 +428,35 @@ namespace GUI_Prototype02
                     SqlCommand sqlCmdQ2 = new SqlCommand(qty2, sqlCon);
                     qty_on_hand2 = Convert.ToInt32(sqlCmdQ2.ExecuteScalar());
 
-                    if (qty_on_hand2 >= insert.iQty_Ordered)
-                    {
-                        ans = qty_on_hand2 - insert.iQty_Ordered;
-                        qty_on_hand1 = qty_on_hand1 - ans;
+                    if (insert.tbQty_Ordered.Text.Length != 0) { 
+                        NEWiQty_Ordered = Order_Update.iQty_Ordered;
+                        if (qty_on_hand2 >= NEWiQty_Ordered)
+                        {
+                            ans = qty_on_hand2 - Order_Update.iQty_Ordered;
+                            qty_on_hand1 = qty_on_hand1 - ans;
+                        }
+                        else
+                        {
+                            ans = Order_Update.iQty_Ordered - qty_on_hand2;
+                            qty_on_hand1 = qty_on_hand1 + ans;
+                        }
                     }
                     else
-                    {
-                        ans = insert.iQty_Ordered - qty_on_hand2;
-                        qty_on_hand1 = qty_on_hand1 + ans;
-                    }
-                        
+                        NEWiQty_Ordered = iQty_Ordered;
 
-                    string upd = "UPDATE STOCK SET Qty_on_Hand = @qoh WHERE Stock_Key = '" + insert.sStock_Key + "'";
+                    
+                    string upd = "UPDATE STOCK SET Qty_on_Hand = @qoh WHERE Stock_Key = '" + stockKey + "'";
                     SqlCommand sqlComSt = new SqlCommand(upd, sqlCon);
                     sqlComSt.Parameters.AddWithValue("@qoh", qty_on_hand1);
                     sqlComSt.ExecuteNonQuery();
-
-                    string stock = "SELECT Stock_ID FROM STOCK WHERE Stock_Key = '" + insert.sStock_Key + "'";
-                    SqlCommand sqlCmdSI = new SqlCommand(stock, sqlCon);
-                    int stockID = Convert.ToInt32(sqlCmdSI.ExecuteScalar());
 
                     string updateDate2 = "UPDATE ORDERS_DETAIL SET Order_ID = @oi, Stock_ID = @si, Qty_Ordered = @qo, Price_per_KG = @ppk, Price_per_Unit = @ppu WHERE Order_ID = '" + tbOrderID.Text + "'";
                     SqlCommand sqlCom2 = new SqlCommand(updateDate2, sqlCon);
                     sqlCom2.Parameters.AddWithValue("@oi", orderID);
                     sqlCom2.Parameters.AddWithValue("@si", stockID);
-                    sqlCom2.Parameters.AddWithValue("@qo", insert.iQty_Ordered);
-                    sqlCom2.Parameters.AddWithValue("@ppk", insert.dPrice_per_Kg);
-                    sqlCom2.Parameters.AddWithValue("@ppu", insert.dPrice_per_Unit);
+                    sqlCom2.Parameters.AddWithValue("@qo", NEWiQty_Ordered);
+                    sqlCom2.Parameters.AddWithValue("@ppk", NEWdPrice_per_Kg);
+                    sqlCom2.Parameters.AddWithValue("@ppu", NEWdPrice_per_Unit);
                     sqlCom2.ExecuteNonQuery();                   
                 }
                 else
@@ -396,84 +471,138 @@ namespace GUI_Prototype02
             }
 
             if (tbOrderID.Text.Length == 0)
-            {
-                int userID = 0;
+            {               
                 int orderID = 0;
                 int qty_on_hand1 = 0;
                 int qty_on_hand2 = 0;
                 int ans = 0;
 
+                sqlCon.Open();
+                string tempr = "SELECT Order_ID FROM ORDERS_DETAIL Where Order_Detail_ID = @id";
+                SqlCommand sqlTemp = new SqlCommand(tempr, sqlCon);
+                sqlTemp.Parameters.AddWithValue("@id", tbOrderDetailsID.Text);
+                string temp = sqlTemp.ExecuteScalar().ToString();
+                sqlCon.Close();
+
+                oID = temp;
+                oIDD = tbOrderDetailsID.Text;
+
                 this.Visible = false;
-                Authentication_Form auth = new Authentication_Form();
-                auth.ShowDialog();
-                OrderInsertForm insert = new OrderInsertForm();
+                Order_Update insert = new Order_Update();
                 insert.ShowDialog();
                 this.Visible = true;
 
                 sqlCon.Open();
 
+                string stock1 = "SELECT Stock_ID FROM ORDERS_DETAIL WHERE Order_ID = '" + temp + "'";
+                SqlCommand sqlCmdS1 = new SqlCommand(stock1, sqlCon);
+                int stockID = Convert.ToInt32(sqlCmdS1.ExecuteScalar());
+
+                string stock2 = "SELECT Stock_Key FROM STOCK WHERE Stock_ID = '" + stockID + "'";
+                SqlCommand sqlCmdS2 = new SqlCommand(stock2, sqlCon);
+                string stockKey = sqlCmdS2.ExecuteScalar().ToString();
+
                 string querySTPOCK = "SELECT COUNT(1) FROM STOCK WHERE Stock_Key = @sk";
                 SqlCommand sqlCmdS = new SqlCommand(querySTPOCK, sqlCon);
-                sqlCmdS.Parameters.AddWithValue("@sk", insert.sStock_Key); //trim is for white spaces
+                sqlCmdS.Parameters.AddWithValue("@sk", stockKey); //trim is for white spaces
                 int count = Convert.ToInt32(sqlCmdS.ExecuteScalar().ToString()); //return 1 or 0, 1 is valid, 0 is invalid    
 
                 if (count == 1)
                 {
-
-                    string tempr = "SELECT Order_ID FROM ORDERS_DETAIL Where Order_Detail_ID = @id";
-                    SqlCommand sqlTemp = new SqlCommand(tempr, sqlCon);
-                    sqlTemp.Parameters.AddWithValue("@id", tbOrderDetailsID.Text);
-                    string temp = sqlTemp.ExecuteScalar().ToString();
-
                     string query1 = "SELECT User_ID FROM USERS WHERE Username=@username and Password=@password";
                     SqlCommand sqlCmd1 = new SqlCommand(query1, sqlCon);
-                    sqlCmd1.Parameters.AddWithValue("@username", auth.sUsername);
-                    sqlCmd1.Parameters.AddWithValue("@password", auth.sPassword);
-                    userID = Convert.ToInt32(sqlCmd1.ExecuteScalar());
+                    sqlCmd1.Parameters.AddWithValue("@username", sUsername);
+                    sqlCmd1.Parameters.AddWithValue("@password", sPassword);
+                    int userID = int.Parse(sqlCmd1.ExecuteScalar().ToString());
 
-                    string updateDate1 = "UPDATE ORDERS SET User_ID = @ui, Date_Ordered = @d_o, Date_Received = @d_r WHERE Order_ID = '"+temp+"'";
+                    string ssDate_Ordered = "SELECT Date_Ordered FROM ORDERS WHERE Order_ID = '" +temp+ "'";
+                    SqlCommand ssDate_Orderedcmd = new SqlCommand(ssDate_Ordered, sqlCon);
+                    sDate_Ordered = DateTime.Parse(ssDate_Orderedcmd.ExecuteScalar().ToString());
+
+                    string ssDate_Received = "SELECT Date_Received FROM ORDERS WHERE Order_ID = '" + temp + "'";
+                    SqlCommand ssDate_Receivedcmd = new SqlCommand(ssDate_Received, sqlCon);
+                    sDate_Received = DateTime.Parse(ssDate_Receivedcmd.ExecuteScalar().ToString());
+
+                    string iiQty_Ordered = "SELECT Qty_Ordered FROM ORDERS_DETAIL WHERE Order_ID = '" + temp + "'";
+                    SqlCommand iiQty_Orderedcmd = new SqlCommand(iiQty_Ordered, sqlCon);
+                    iQty_Ordered = int.Parse(iiQty_Orderedcmd.ExecuteScalar().ToString());
+
+                    string ddPrice_per_Kg = "SELECT Price_per_KG FROM ORDERS_DETAIL WHERE Order_ID = '" + temp + "'";
+                    SqlCommand ddPrice_per_Kgcmd = new SqlCommand(ddPrice_per_Kg, sqlCon);
+                    dPrice_per_Kg = double.Parse(ddPrice_per_Kgcmd.ExecuteScalar().ToString());
+
+                    string ddPrice_per_Unit = "SELECT Price_per_KG FROM ORDERS_DETAIL WHERE Order_ID = '" + temp + "'";
+                    SqlCommand ddPrice_per_Unitcmd = new SqlCommand(ddPrice_per_Unit, sqlCon);
+                    dPrice_per_Unit = double.Parse(ddPrice_per_Unitcmd.ExecuteScalar().ToString());
+
+
+                    if (Order_Update.sDate_Ordered.ToString().Length != 0)
+                        NEWsDate_Ordered = Order_Update.sDate_Ordered;
+                    else
+                        NEWsDate_Ordered = sDate_Ordered;
+
+                    if (Order_Update.sDate_Received.ToString().Length != 0)
+                        NEWsDate_Received = Order_Update.sDate_Received;
+                    else
+                        NEWsDate_Received = sDate_Received;
+
+
+
+                    if (insert.tbPrice_per_KG.Text.Length != 0)
+                        NEWdPrice_per_Kg = Order_Update.dPrice_per_Kg;
+                    else
+                        NEWdPrice_per_Kg = dPrice_per_Kg;
+
+                    if (insert.tbPrice_per_Unit.Text.Length != 0)
+                        NEWdPrice_per_Unit = Order_Update.dPrice_per_Unit;
+                    else
+                        NEWdPrice_per_Unit = dPrice_per_Unit;
+
+                    string updateDate1 = "UPDATE ORDERS SET User_ID = @ui, Date_Ordered = @d_o, Date_Received = @d_r WHERE Order_ID = '" + temp + "'";
                     SqlCommand sqlCom1 = new SqlCommand(updateDate1, sqlCon);
                     sqlCom1.Parameters.AddWithValue("@ui", userID);
-                    sqlCom1.Parameters.AddWithValue("@d_o", insert.sDate_Ordered);
-                    sqlCom1.Parameters.AddWithValue("@d_r", insert.sDate_Received);
+                    sqlCom1.Parameters.AddWithValue("@d_o", NEWsDate_Ordered);
+                    sqlCom1.Parameters.AddWithValue("@d_r", NEWsDate_Received);
                     sqlCom1.ExecuteNonQuery();
 
-                    string qty1 = "SELECT Qty_on_Hand FROM STOCK WHERE Stock_Key = '" + insert.sStock_Key + "'";
+                    string qty1 = "SELECT Qty_on_Hand FROM STOCK WHERE Stock_Key = '" + stockKey + "'";
                     SqlCommand sqlCmdQ1 = new SqlCommand(qty1, sqlCon);
                     qty_on_hand1 = Convert.ToInt32(sqlCmdQ1.ExecuteScalar());
 
-                    string qty2 = "SELECT Qty_Ordered FROM ORDERS_DETAIL WHERE Order_ID = '" +temp+ "'";
+                    string qty2 = "SELECT Qty_Ordered FROM ORDERS_DETAIL WHERE Order_ID = '" + temp + "'";
                     SqlCommand sqlCmdQ2 = new SqlCommand(qty2, sqlCon);
                     qty_on_hand2 = Convert.ToInt32(sqlCmdQ2.ExecuteScalar());
 
-                    if (qty_on_hand2 >= insert.iQty_Ordered)
+                    if (insert.tbQty_Ordered.Text.Length != 0)
                     {
-                        ans = qty_on_hand2 - insert.iQty_Ordered;
-                        qty_on_hand1 = qty_on_hand1 - ans;
+                        NEWiQty_Ordered = Order_Update.iQty_Ordered;
+                        if (qty_on_hand2 >= NEWiQty_Ordered)
+                        {
+                            ans = qty_on_hand2 - Order_Update.iQty_Ordered;
+                            qty_on_hand1 = qty_on_hand1 - ans;
+                        }
+                        else
+                        {
+                            ans = Order_Update.iQty_Ordered - qty_on_hand2;
+                            qty_on_hand1 = qty_on_hand1 + ans;
+                        }
                     }
                     else
-                    {
-                        ans = insert.iQty_Ordered - qty_on_hand2;
-                        qty_on_hand1 = qty_on_hand1 + ans;
-                    }
+                        NEWiQty_Ordered = iQty_Ordered;
 
 
-                    string upd = "UPDATE STOCK SET Qty_on_Hand = @qoh WHERE Stock_Key = '" + insert.sStock_Key + "'";
+                    string upd = "UPDATE STOCK SET Qty_on_Hand = @qoh WHERE Stock_Key = '" + stockKey + "'";
                     SqlCommand sqlComSt = new SqlCommand(upd, sqlCon);
                     sqlComSt.Parameters.AddWithValue("@qoh", qty_on_hand1);
                     sqlComSt.ExecuteNonQuery();
-
-                    string stock = "SELECT Stock_ID FROM STOCK WHERE Stock_Key = '" + insert.sStock_Key + "'";
-                    SqlCommand sqlCmdSI = new SqlCommand(stock, sqlCon);
-                    int stockID = Convert.ToInt32(sqlCmdSI.ExecuteScalar());
 
                     string updateDate2 = "UPDATE ORDERS_DETAIL SET Order_ID = @oi, Stock_ID = @si, Qty_Ordered = @qo, Price_per_KG = @ppk, Price_per_Unit = @ppu WHERE Order_Detail_ID = '" + tbOrderDetailsID.Text + "'";
                     SqlCommand sqlCom2 = new SqlCommand(updateDate2, sqlCon);
                     sqlCom2.Parameters.AddWithValue("@oi", temp);
                     sqlCom2.Parameters.AddWithValue("@si", stockID);
-                    sqlCom2.Parameters.AddWithValue("@qo", insert.iQty_Ordered);
-                    sqlCom2.Parameters.AddWithValue("@ppk", insert.dPrice_per_Kg);
-                    sqlCom2.Parameters.AddWithValue("@ppu", insert.dPrice_per_Unit);
+                    sqlCom2.Parameters.AddWithValue("@qo", NEWiQty_Ordered);
+                    sqlCom2.Parameters.AddWithValue("@ppk", NEWdPrice_per_Kg);
+                    sqlCom2.Parameters.AddWithValue("@ppu", NEWdPrice_per_Unit);
                     sqlCom2.ExecuteNonQuery();
                 }
                 else
@@ -493,7 +622,7 @@ namespace GUI_Prototype02
             Visible = false;
             MainMenuForm myMainMenu = new MainMenuForm();
             myMainMenu.ShowDialog();
-            Close();
+            this.Close();
         }
     }
 }

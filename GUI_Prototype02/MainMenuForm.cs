@@ -28,9 +28,7 @@ namespace GUI_Prototype02
 
             salesForm mySales = new salesForm();
             mySales.ShowDialog();
-
-
-            this.Visible = true;
+            this.Close();
         }
 
         private void reportTool_Click(object sender, EventArgs e)
@@ -40,7 +38,7 @@ namespace GUI_Prototype02
             ReportForm myReport = new ReportForm();
             myReport.ShowDialog();
 
-            this.Visible = true;
+            this.Close();
         }
 
         private void helpTool_Click(object sender, EventArgs e)
@@ -50,7 +48,7 @@ namespace GUI_Prototype02
             HelpForm myHelp = new HelpForm();
             myHelp.ShowDialog();
 
-            this.Visible = true;
+            this.Close();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
