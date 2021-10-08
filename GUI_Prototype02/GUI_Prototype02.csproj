@@ -106,6 +106,12 @@
     <Compile Include="Order Insert.Designer.cs">
       <DependentUpon>Order Insert.cs</DependentUpon>
     </Compile>
+    <Compile Include="Order Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order Update.Designer.cs">
+      <DependentUpon>Order Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Request Report.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,12 @@
     </Compile>
     <Compile Include="Sale Form.Designer.cs">
       <DependentUpon>Sale Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale Update.Designer.cs">
+      <DependentUpon>Sale Update.cs</DependentUpon>
     </Compile>
     <Compile Include="Stock Insert.cs">
       <SubType>Form</SubType>
@@ -144,6 +156,12 @@
     <Compile Include="ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Stock Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock Update.Designer.cs">
+      <DependentUpon>Stock Update.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Authentication Form.resx">
       <DependentUpon>Authentication Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,11 +180,17 @@
     <EmbeddedResource Include="Order Insert.resx">
       <DependentUpon>Order Insert.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Order Update.resx">
+      <DependentUpon>Order Update.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sale Insert.resx">
       <DependentUpon>Sale Insert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sale Form.resx">
       <DependentUpon>Sale Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale Update.resx">
+      <DependentUpon>Sale Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stock Insert.resx">
       <DependentUpon>Stock Insert.cs</DependentUpon>
@@ -186,6 +210,9 @@
     </Compile>
     <EmbeddedResource Include="ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock Update.resx">
+      <DependentUpon>Stock Update.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

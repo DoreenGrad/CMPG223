@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace GUI_Prototype02
 {
-    public partial class OrderInsertUpdateForm : Form
+    public partial class OrderInsertForm : Form
     {
-        public OrderInsertUpdateForm()
+        public OrderInsertForm()
         {
             InitializeComponent();
         }
