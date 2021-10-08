@@ -17,6 +17,9 @@ namespace GUI_Prototype02
             InitializeComponent();
         }
 
+        bool firstClick = true;
+        bool firstclickST = true;
+        bool firstclickS = true;
         private void btnBack_Click(object sender, EventArgs e)
         {
             Visible = false;
@@ -27,31 +30,47 @@ namespace GUI_Prototype02
 
         private void label1_Click(object sender, EventArgs e)
         {
-            pnlOrders.Visible = true;
-            
+            if (firstClick == true)
+            {
+                pnlOrders.Visible = true;
+                firstClick = false;
+            }
+            else
+                 if (firstclickS == false)
+            {
+                pnlOrders.Visible = false;
+                firstClick = true;
+            }
         }
 
         private void label1_Click_1(object sender, EventArgs e)
         {
-            this.Visible = false;
-            Stock_Form myMainMenu = new Stock_Form();
-            myMainMenu.ShowDialog();
-            this.Close();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-            if (lblErrors.Text == "Hide common Errors")
+            if (firstClick == true)
             {
-                rtxErrors.Visible = false;
-                lblErrors.Text = "Show common Errors";
+                pnlStock.Visible = true;
+                firstclickST = false;
             }
             else
+                 if (firstclickS == false)
             {
-                rtxErrors.Visible = true;
-                lblErrors.Text = "Hide common Errors";
+                pnlStock.Visible = false;
+                firstclickST = true;
             }
-           
+        }
+
+        private void lblSales_Click(object sender, EventArgs e)
+        {
+            if (firstclickS == true)
+            {
+                pnlSales.Visible = true;
+                firstclickS = false;
+            }
+            else
+                if (firstclickS == false)
+            {
+                pnlSales.Visible = false;
+                firstclickS = true;
+            }
         }
     }
 }

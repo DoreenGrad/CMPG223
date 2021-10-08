@@ -32,15 +32,10 @@ namespace GUI_Prototype02
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HelpForm));
             this.btnBack = new System.Windows.Forms.Button();
             this.lblOrder = new System.Windows.Forms.Label();
-            this.rtbOrder = new System.Windows.Forms.RichTextBox();
             this.lblStock = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.lblSales = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.lblReport = new System.Windows.Forms.Label();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.rtxErrors = new System.Windows.Forms.RichTextBox();
-            this.lblErrors = new System.Windows.Forms.Label();
             this.pnlOrders = new System.Windows.Forms.Panel();
             this.lblViewOr = new System.Windows.Forms.Label();
             this.richTextBox7 = new System.Windows.Forms.RichTextBox();
@@ -50,7 +45,29 @@ namespace GUI_Prototype02
             this.richTextBox5 = new System.Windows.Forms.RichTextBox();
             this.lblCreateOr = new System.Windows.Forms.Label();
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.pnlStock = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.richTextBox8 = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.richTextBox10 = new System.Windows.Forms.RichTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.richTextBox11 = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.pnlSales = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.richTextBox9 = new System.Windows.Forms.RichTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.richTextBox12 = new System.Windows.Forms.RichTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.richTextBox13 = new System.Windows.Forms.RichTextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.richTextBox14 = new System.Windows.Forms.RichTextBox();
             this.pnlOrders.SuspendLayout();
+            this.pnlStock.SuspendLayout();
+            this.pnlSales.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnBack
@@ -81,59 +98,27 @@ namespace GUI_Prototype02
             this.lblOrder.Text = "Orders button";
             this.lblOrder.Click += new System.EventHandler(this.label1_Click);
             // 
-            // rtbOrder
-            // 
-            this.rtbOrder.BackColor = System.Drawing.SystemColors.Menu;
-            this.rtbOrder.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbOrder.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
-            this.rtbOrder.Location = new System.Drawing.Point(15, 33);
-            this.rtbOrder.Name = "rtbOrder";
-            this.rtbOrder.Size = new System.Drawing.Size(670, 130);
-            this.rtbOrder.TabIndex = 6;
-            this.rtbOrder.Text = resources.GetString("rtbOrder.Text");
-            // 
             // lblStock
             // 
             this.lblStock.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStock.ForeColor = System.Drawing.Color.Blue;
-            this.lblStock.Location = new System.Drawing.Point(12, 156);
+            this.lblStock.Location = new System.Drawing.Point(12, 41);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(203, 22);
             this.lblStock.TabIndex = 8;
             this.lblStock.Text = "Stock button";
             this.lblStock.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.Menu;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
-            this.richTextBox1.Location = new System.Drawing.Point(15, 181);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(670, 99);
-            this.richTextBox1.TabIndex = 9;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
-            // 
             // lblSales
             // 
             this.lblSales.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSales.ForeColor = System.Drawing.Color.Blue;
-            this.lblSales.Location = new System.Drawing.Point(12, 268);
+            this.lblSales.Location = new System.Drawing.Point(12, 77);
             this.lblSales.Name = "lblSales";
             this.lblSales.Size = new System.Drawing.Size(203, 22);
             this.lblSales.TabIndex = 10;
             this.lblSales.Text = "Sale button";
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.BackColor = System.Drawing.SystemColors.Menu;
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
-            this.richTextBox2.Location = new System.Drawing.Point(15, 293);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(670, 99);
-            this.richTextBox2.TabIndex = 11;
-            this.richTextBox2.Text = resources.GetString("richTextBox2.Text");
+            this.lblSales.Click += new System.EventHandler(this.lblSales_Click);
             // 
             // lblReport
             // 
@@ -156,31 +141,10 @@ namespace GUI_Prototype02
             this.richTextBox3.TabIndex = 13;
             this.richTextBox3.Text = resources.GetString("richTextBox3.Text");
             // 
-            // rtxErrors
-            // 
-            this.rtxErrors.BackColor = System.Drawing.SystemColors.Menu;
-            this.rtxErrors.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtxErrors.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
-            this.rtxErrors.Location = new System.Drawing.Point(802, 101);
-            this.rtxErrors.Name = "rtxErrors";
-            this.rtxErrors.Size = new System.Drawing.Size(570, 374);
-            this.rtxErrors.TabIndex = 15;
-            this.rtxErrors.Text = resources.GetString("rtxErrors.Text");
-            this.rtxErrors.Visible = false;
-            // 
-            // lblErrors
-            // 
-            this.lblErrors.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrors.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblErrors.Location = new System.Drawing.Point(799, 76);
-            this.lblErrors.Name = "lblErrors";
-            this.lblErrors.Size = new System.Drawing.Size(203, 22);
-            this.lblErrors.TabIndex = 17;
-            this.lblErrors.Text = "Show common errors";
-            this.lblErrors.Click += new System.EventHandler(this.label2_Click);
-            // 
             // pnlOrders
             // 
+            this.pnlOrders.Controls.Add(this.label2);
+            this.pnlOrders.Controls.Add(this.richTextBox1);
             this.pnlOrders.Controls.Add(this.lblViewOr);
             this.pnlOrders.Controls.Add(this.richTextBox7);
             this.pnlOrders.Controls.Add(this.lblDeleteOr);
@@ -189,9 +153,9 @@ namespace GUI_Prototype02
             this.pnlOrders.Controls.Add(this.richTextBox5);
             this.pnlOrders.Controls.Add(this.lblCreateOr);
             this.pnlOrders.Controls.Add(this.richTextBox4);
-            this.pnlOrders.Location = new System.Drawing.Point(15, 33);
+            this.pnlOrders.Location = new System.Drawing.Point(282, 16);
             this.pnlOrders.Name = "pnlOrders";
-            this.pnlOrders.Size = new System.Drawing.Size(671, 614);
+            this.pnlOrders.Size = new System.Drawing.Size(671, 644);
             this.pnlOrders.TabIndex = 18;
             this.pnlOrders.Visible = false;
             // 
@@ -279,27 +243,247 @@ namespace GUI_Prototype02
             this.richTextBox4.TabIndex = 20;
             this.richTextBox4.Text = resources.GetString("richTextBox4.Text");
             // 
+            // pnlStock
+            // 
+            this.pnlStock.Controls.Add(this.label5);
+            this.pnlStock.Controls.Add(this.richTextBox2);
+            this.pnlStock.Controls.Add(this.label1);
+            this.pnlStock.Controls.Add(this.richTextBox8);
+            this.pnlStock.Controls.Add(this.label3);
+            this.pnlStock.Controls.Add(this.richTextBox10);
+            this.pnlStock.Controls.Add(this.label4);
+            this.pnlStock.Controls.Add(this.richTextBox11);
+            this.pnlStock.Location = new System.Drawing.Point(692, 95);
+            this.pnlStock.Name = "pnlStock";
+            this.pnlStock.Size = new System.Drawing.Size(671, 528);
+            this.pnlStock.TabIndex = 19;
+            this.pnlStock.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label1.Location = new System.Drawing.Point(3, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(200, 21);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "View Stock";
+            // 
+            // richTextBox8
+            // 
+            this.richTextBox8.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox8.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
+            this.richTextBox8.Location = new System.Drawing.Point(6, 32);
+            this.richTextBox8.Name = "richTextBox8";
+            this.richTextBox8.Size = new System.Drawing.Size(638, 99);
+            this.richTextBox8.TabIndex = 26;
+            this.richTextBox8.Text = resources.GetString("richTextBox8.Text");
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label3.Location = new System.Drawing.Point(3, 280);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(171, 20);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Update Stock";
+            // 
+            // richTextBox10
+            // 
+            this.richTextBox10.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox10.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
+            this.richTextBox10.Location = new System.Drawing.Point(6, 305);
+            this.richTextBox10.Name = "richTextBox10";
+            this.richTextBox10.Size = new System.Drawing.Size(638, 161);
+            this.richTextBox10.TabIndex = 22;
+            this.richTextBox10.Text = resources.GetString("richTextBox10.Text");
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label4.Location = new System.Drawing.Point(3, 134);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(200, 24);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Add stock";
+            // 
+            // richTextBox11
+            // 
+            this.richTextBox11.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox11.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
+            this.richTextBox11.Location = new System.Drawing.Point(6, 161);
+            this.richTextBox11.Name = "richTextBox11";
+            this.richTextBox11.Size = new System.Drawing.Size(638, 116);
+            this.richTextBox11.TabIndex = 20;
+            this.richTextBox11.Text = resources.GetString("richTextBox11.Text");
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label2.Location = new System.Drawing.Point(3, 576);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(182, 24);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Return to main menu";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
+            this.richTextBox1.Location = new System.Drawing.Point(6, 606);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(638, 29);
+            this.richTextBox1.TabIndex = 28;
+            this.richTextBox1.Text = "Click the main menu buton on the order page\n";
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label5.Location = new System.Drawing.Point(3, 458);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(182, 24);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Return to main menu";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox2.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
+            this.richTextBox2.Location = new System.Drawing.Point(6, 488);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(638, 29);
+            this.richTextBox2.TabIndex = 30;
+            this.richTextBox2.Text = "Click the main menu buton on the order page\n";
+            // 
+            // pnlSales
+            // 
+            this.pnlSales.Controls.Add(this.label6);
+            this.pnlSales.Controls.Add(this.richTextBox9);
+            this.pnlSales.Controls.Add(this.label7);
+            this.pnlSales.Controls.Add(this.richTextBox12);
+            this.pnlSales.Controls.Add(this.label8);
+            this.pnlSales.Controls.Add(this.richTextBox13);
+            this.pnlSales.Controls.Add(this.label9);
+            this.pnlSales.Controls.Add(this.richTextBox14);
+            this.pnlSales.Location = new System.Drawing.Point(30, 194);
+            this.pnlSales.Name = "pnlSales";
+            this.pnlSales.Size = new System.Drawing.Size(671, 528);
+            this.pnlSales.TabIndex = 31;
+            this.pnlSales.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label6.Location = new System.Drawing.Point(3, 458);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(182, 24);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Return to main menu";
+            // 
+            // richTextBox9
+            // 
+            this.richTextBox9.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox9.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
+            this.richTextBox9.Location = new System.Drawing.Point(6, 488);
+            this.richTextBox9.Name = "richTextBox9";
+            this.richTextBox9.Size = new System.Drawing.Size(638, 29);
+            this.richTextBox9.TabIndex = 30;
+            this.richTextBox9.Text = "Click the main menu buton on the order page\n";
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label7.Location = new System.Drawing.Point(3, 8);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(200, 21);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "View Sales";
+            // 
+            // richTextBox12
+            // 
+            this.richTextBox12.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox12.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
+            this.richTextBox12.Location = new System.Drawing.Point(6, 32);
+            this.richTextBox12.Name = "richTextBox12";
+            this.richTextBox12.Size = new System.Drawing.Size(638, 99);
+            this.richTextBox12.TabIndex = 26;
+            this.richTextBox12.Text = resources.GetString("richTextBox12.Text");
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label8.Location = new System.Drawing.Point(3, 280);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(171, 20);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Update Sales";
+            // 
+            // richTextBox13
+            // 
+            this.richTextBox13.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox13.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
+            this.richTextBox13.Location = new System.Drawing.Point(6, 305);
+            this.richTextBox13.Name = "richTextBox13";
+            this.richTextBox13.Size = new System.Drawing.Size(638, 161);
+            this.richTextBox13.TabIndex = 22;
+            this.richTextBox13.Text = resources.GetString("richTextBox13.Text");
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label9.Location = new System.Drawing.Point(3, 134);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(200, 24);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Add Sales";
+            // 
+            // richTextBox14
+            // 
+            this.richTextBox14.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox14.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
+            this.richTextBox14.Location = new System.Drawing.Point(6, 161);
+            this.richTextBox14.Name = "richTextBox14";
+            this.richTextBox14.Size = new System.Drawing.Size(638, 116);
+            this.richTextBox14.TabIndex = 20;
+            this.richTextBox14.Text = resources.GetString("richTextBox14.Text");
+            // 
             // HelpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1384, 786);
+            this.Controls.Add(this.pnlSales);
+            this.Controls.Add(this.pnlStock);
             this.Controls.Add(this.pnlOrders);
-            this.Controls.Add(this.lblErrors);
-            this.Controls.Add(this.rtxErrors);
             this.Controls.Add(this.lblReport);
             this.Controls.Add(this.richTextBox3);
             this.Controls.Add(this.lblSales);
-            this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.lblStock);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.lblOrder);
-            this.Controls.Add(this.rtbOrder);
             this.Controls.Add(this.btnBack);
             this.Name = "HelpForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Help";
             this.pnlOrders.ResumeLayout(false);
+            this.pnlStock.ResumeLayout(false);
+            this.pnlSales.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -308,15 +492,10 @@ namespace GUI_Prototype02
 
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblOrder;
-        private System.Windows.Forms.RichTextBox rtbOrder;
         private System.Windows.Forms.Label lblStock;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label lblSales;
-        private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.Label lblReport;
         private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.RichTextBox rtxErrors;
-        private System.Windows.Forms.Label lblErrors;
         private System.Windows.Forms.Panel pnlOrders;
         private System.Windows.Forms.Label lblCreateOr;
         private System.Windows.Forms.RichTextBox richTextBox4;
@@ -326,5 +505,25 @@ namespace GUI_Prototype02
         private System.Windows.Forms.RichTextBox richTextBox7;
         private System.Windows.Forms.Label lblDeleteOr;
         private System.Windows.Forms.RichTextBox richTextBox6;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Panel pnlStock;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RichTextBox richTextBox8;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RichTextBox richTextBox10;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RichTextBox richTextBox11;
+        private System.Windows.Forms.Panel pnlSales;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.RichTextBox richTextBox9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.RichTextBox richTextBox12;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.RichTextBox richTextBox13;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.RichTextBox richTextBox14;
     }
 }
