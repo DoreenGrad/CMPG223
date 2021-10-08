@@ -19,7 +19,7 @@ namespace GUI_Prototype02
         }
 
 
-        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\marce\Documents\GitHub\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security=True");
+        SqlConnection sqlCon = new SqlConnection(LoginForm01.ConnectionString);
 
         public void funcViewSALE()
         {

@@ -72,7 +72,6 @@
             this.tbPrice_per_Unit.Name = "tbPrice_per_Unit";
             this.tbPrice_per_Unit.Size = new System.Drawing.Size(182, 25);
             this.tbPrice_per_Unit.TabIndex = 5;
-            this.tbPrice_per_Unit.Text = "0";
             this.tbPrice_per_Unit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tbPrice_per_Kg
@@ -82,7 +81,6 @@
             this.tbPrice_per_Kg.Name = "tbPrice_per_Kg";
             this.tbPrice_per_Kg.Size = new System.Drawing.Size(181, 25);
             this.tbPrice_per_Kg.TabIndex = 4;
-            this.tbPrice_per_Kg.Text = "0";
             this.tbPrice_per_Kg.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tbQty_Ordered
@@ -92,7 +90,6 @@
             this.tbQty_Ordered.Name = "tbQty_Ordered";
             this.tbQty_Ordered.Size = new System.Drawing.Size(181, 25);
             this.tbQty_Ordered.TabIndex = 3;
-            this.tbQty_Ordered.Text = "0";
             this.tbQty_Ordered.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lblWeightPerUnit

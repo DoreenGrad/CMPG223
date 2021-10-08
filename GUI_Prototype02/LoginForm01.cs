@@ -13,8 +13,15 @@ namespace GUI_Prototype02
 {
     public partial class LoginForm01 : Form
     {
-        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\marce\Documents\GitHub\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security=True");
+        //<<<<<<<<<<<<<<<INSERT YOUR DATABASE CONNECTION STRING BETWEEN THE QUOTES IN THE LINE BELOW>>>>>>>>>>>>>>>>
+        public static string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\marce\Documents\GitHub\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security=True";
+        //<<<<<<<<<<<<<<<INSERT YOUR DATABASE CONNECTION STRING BETWEEN THE QUOTES IN THE LINE ABOVE>>>>>>>>>>>>>>>>
 
+
+
+
+
+        SqlConnection sqlCon = new SqlConnection(ConnectionString);
         public static string sUsername;
         public static string sPassword;
 
@@ -48,7 +55,7 @@ namespace GUI_Prototype02
             int count = Convert.ToInt32(sqlCmd.ExecuteScalar().ToString()); //return 1 or 0, 1 is valid, 0 is invalid     
 
             if (count == 1)
-            {
+            {               
                 this.Visible = false;          
                 MainMenuForm myMainMenu = new MainMenuForm();
                 myMainMenu.ShowDialog();
@@ -56,6 +63,7 @@ namespace GUI_Prototype02
             }
             else
             {
+                sqlCon.Close();
                 DialogResult result = MessageBox.Show("Login Error", "Incorrect Username or Password.", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 txtBUsername.Text = "Enter Username";
