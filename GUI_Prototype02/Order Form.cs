@@ -270,10 +270,10 @@ namespace GUI_Prototype02
 
                 if (count == 1)
                 {
-                    string deleteData2 = "DELETE FROM ORDERS WHERE Order_ID LIKE @id";
+                    /*string deleteData2 = "DELETE FROM ORDERS WHERE Order_ID LIKE @id";
                     SqlCommand sqlCom1 = new SqlCommand(deleteData2, sqlCon);
                     sqlCom1.Parameters.AddWithValue("@id", temp0);
-                    sqlCom1.ExecuteNonQuery();
+                    sqlCom1.ExecuteNonQuery();*/
 
                     string qty1 = "SELECT Qty_Ordered FROM ORDERS_DETAIL WHERE Order_Detail_ID = '" + tbOrderDetailsID.Text + "'";
                     SqlCommand sqlCmdQ1 = new SqlCommand(qty1, sqlCon);

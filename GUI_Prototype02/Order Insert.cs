@@ -35,24 +35,10 @@ namespace GUI_Prototype02
                 {
                     if (double.TryParse(tbPrice_per_Unit.Text, out dPrice_per_Unit))
                     {
-                        if (DateTime.TryParse(tbDate_Ordered.Text, out sDate_Ordered))
-                        {
-                            if (DateTime.TryParse(tbDate_Received.Text, out sDate_Received))
-                            {
-                                sStock_Key = tbStock_Key.Text;
-                                this.Close();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Date received must be a date");
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Date ordered must be a date");
-                        
-                        }
-                        
+                        sDate_Ordered = dTP_Ordered.Value.Date;
+                        sDate_Received = dTP_Received.Value.Date;
+                        sStock_Key = tbStock_Key.Text;
+                        this.Close();  
                     }
                     else
                     {

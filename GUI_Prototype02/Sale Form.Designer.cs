@@ -38,7 +38,6 @@
             this.lbView2 = new System.Windows.Forms.ListBox();
             this.lbView1 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnDel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
             this.tbSaleDetailID = new System.Windows.Forms.TextBox();
@@ -155,23 +154,6 @@
             this.label1.Text = "Sales:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // btnDel
-            // 
-            this.btnDel.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
-            this.btnDel.FlatAppearance.BorderSize = 2;
-            this.btnDel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.ForeColor = System.Drawing.Color.Purple;
-            this.btnDel.Location = new System.Drawing.Point(501, 535);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(200, 50);
-            this.btnDel.TabIndex = 35;
-            this.btnDel.Text = "DELETE";
-            this.btnDel.UseVisualStyleBackColor = true;
-            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
-            // 
             // btnUpdate
             // 
             this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
@@ -181,7 +163,7 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.Purple;
-            this.btnUpdate.Location = new System.Drawing.Point(256, 535);
+            this.btnUpdate.Location = new System.Drawing.Point(375, 535);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(200, 50);
             this.btnUpdate.TabIndex = 34;
@@ -198,7 +180,7 @@
             this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsert.ForeColor = System.Drawing.Color.Purple;
-            this.btnInsert.Location = new System.Drawing.Point(28, 535);
+            this.btnInsert.Location = new System.Drawing.Point(126, 535);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(200, 50);
             this.btnInsert.TabIndex = 33;
@@ -305,7 +287,6 @@
             this.Controls.Add(this.lbView2);
             this.Controls.Add(this.lbView1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnDel);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.label2);
@@ -330,7 +311,6 @@
         private System.Windows.Forms.ListBox lbView2;
         private System.Windows.Forms.ListBox lbView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.TextBox tbSaleDetailID;

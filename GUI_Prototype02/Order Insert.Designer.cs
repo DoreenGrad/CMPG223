@@ -37,15 +37,13 @@
             this.lblPricePerUnit = new System.Windows.Forms.Label();
             this.btnInsert = new System.Windows.Forms.Button();
             this.groupBoxProductInformation = new System.Windows.Forms.GroupBox();
+            this.dTP_Received = new System.Windows.Forms.DateTimePicker();
+            this.dTP_Ordered = new System.Windows.Forms.DateTimePicker();
             this.tbStock_Key = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbDate_Ordered = new System.Windows.Forms.TextBox();
-            this.tbDate_Received = new System.Windows.Forms.TextBox();
             this.lblProductKey = new System.Windows.Forms.Label();
             this.lblProductType = new System.Windows.Forms.Label();
             this.btnC = new System.Windows.Forms.Button();
-            this.dTP_Ordered = new System.Windows.Forms.DateTimePicker();
-            this.dTP_Received = new System.Windows.Forms.DateTimePicker();
             this.groupBoxUnitInformation.SuspendLayout();
             this.groupBoxProductInformation.SuspendLayout();
             this.SuspendLayout();
@@ -153,8 +151,6 @@
             this.groupBoxProductInformation.Controls.Add(this.dTP_Ordered);
             this.groupBoxProductInformation.Controls.Add(this.tbStock_Key);
             this.groupBoxProductInformation.Controls.Add(this.label1);
-            this.groupBoxProductInformation.Controls.Add(this.tbDate_Ordered);
-            this.groupBoxProductInformation.Controls.Add(this.tbDate_Received);
             this.groupBoxProductInformation.Controls.Add(this.lblProductKey);
             this.groupBoxProductInformation.Controls.Add(this.lblProductType);
             this.groupBoxProductInformation.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
@@ -165,6 +161,20 @@
             this.groupBoxProductInformation.TabIndex = 7;
             this.groupBoxProductInformation.TabStop = false;
             this.groupBoxProductInformation.Text = "Order";
+            // 
+            // dTP_Received
+            // 
+            this.dTP_Received.Location = new System.Drawing.Point(202, 63);
+            this.dTP_Received.Name = "dTP_Received";
+            this.dTP_Received.Size = new System.Drawing.Size(200, 27);
+            this.dTP_Received.TabIndex = 9;
+            // 
+            // dTP_Ordered
+            // 
+            this.dTP_Ordered.Location = new System.Drawing.Point(202, 28);
+            this.dTP_Ordered.Name = "dTP_Ordered";
+            this.dTP_Ordered.Size = new System.Drawing.Size(200, 27);
+            this.dTP_Ordered.TabIndex = 8;
             // 
             // tbStock_Key
             // 
@@ -184,22 +194,6 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Stock key";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tbDate_Ordered
-            // 
-            this.tbDate_Ordered.Font = new System.Drawing.Font("Verdana", 11F);
-            this.tbDate_Ordered.Location = new System.Drawing.Point(212, 26);
-            this.tbDate_Ordered.Name = "tbDate_Ordered";
-            this.tbDate_Ordered.Size = new System.Drawing.Size(182, 25);
-            this.tbDate_Ordered.TabIndex = 5;
-            // 
-            // tbDate_Received
-            // 
-            this.tbDate_Received.Font = new System.Drawing.Font("Verdana", 11F);
-            this.tbDate_Received.Location = new System.Drawing.Point(212, 58);
-            this.tbDate_Received.Name = "tbDate_Received";
-            this.tbDate_Received.Size = new System.Drawing.Size(182, 25);
-            this.tbDate_Received.TabIndex = 4;
             // 
             // lblProductKey
             // 
@@ -240,20 +234,6 @@
             this.btnC.UseVisualStyleBackColor = true;
             this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
-            // dTP_Ordered
-            // 
-            this.dTP_Ordered.Location = new System.Drawing.Point(143, 26);
-            this.dTP_Ordered.Name = "dTP_Ordered";
-            this.dTP_Ordered.Size = new System.Drawing.Size(200, 27);
-            this.dTP_Ordered.TabIndex = 8;
-            // 
-            // dTP_Received
-            // 
-            this.dTP_Received.Location = new System.Drawing.Point(143, 61);
-            this.dTP_Received.Name = "dTP_Received";
-            this.dTP_Received.Size = new System.Drawing.Size(200, 27);
-            this.dTP_Received.TabIndex = 9;
-            // 
             // OrderInsertUpdateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -283,10 +263,8 @@
         private System.Windows.Forms.Label lblPricePerUnit;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.GroupBox groupBoxProductInformation;
-        private System.Windows.Forms.TextBox tbDate_Received;
         private System.Windows.Forms.Label lblProductKey;
         private System.Windows.Forms.Label lblProductType;
-        private System.Windows.Forms.TextBox tbDate_Ordered;
         private System.Windows.Forms.TextBox tbStock_Key;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnC;

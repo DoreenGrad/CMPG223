@@ -26,29 +26,23 @@ namespace GUI_Prototype02
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            if (DateTime.TryParse(tbSale_Date.Text, out dSale_Date))
-            {
-                if (double.TryParse(tbSale_Price_per_Unit.Text, out dSales_Price_per_Unit))
-                {                               
-                    if (int.TryParse(tb_Qty_Sold.Text, out dQty_Sold))
-                    {
-                        sStock_Key = tbStock_Key.Text;
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Quantity sold must be numeric");
-                    }
+            if (double.TryParse(tbSale_Price_per_Unit.Text, out dSales_Price_per_Unit))
+            {                               
+                if (int.TryParse(tb_Qty_Sold.Text, out dQty_Sold))
+                {
+                    dSale_Date = dTP_Saledate.Value.Date;
+                    sStock_Key = tbStock_Key.Text;
+                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Price per unit must be numeric");
+                    MessageBox.Show("Quantity sold must be numeric");
                 }
             }
             else
             {
-                MessageBox.Show("Date must be a date");
-            }
+                MessageBox.Show("Price per unit must be numeric");
+            }    
         }
 
         private void btnC_Click(object sender, EventArgs e)

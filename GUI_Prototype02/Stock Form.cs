@@ -112,39 +112,6 @@ namespace GUI_Prototype02
             sqlCon.Close();
         }
 
-        private void btnDel_Click(object sender, EventArgs e)
-        {
-            if (tbStockKey.Text.Length == 0)
-            {
-                sqlCon.Open();
-
-                string deleteData1 = "DELETE FROM STOCK WHERE Stock_ID LIKE @id";
-
-                SqlCommand sqlCom1 = new SqlCommand(deleteData1, sqlCon);
-                sqlCom1.Parameters.AddWithValue("@id", tbStockID.Text);
-                sqlCom1.ExecuteNonQuery();
-
-                sqlCon.Close();
-
-                funcViewStock();
-            }
-
-            if (tbStockID.Text.Length == 0)
-            {
-                sqlCon.Open();
-
-                string deleteData1 = "DELETE FROM STOCK WHERE Stock_Key LIKE @id";
-
-                SqlCommand sqlCom1 = new SqlCommand(deleteData1, sqlCon);
-                sqlCom1.Parameters.AddWithValue("@id", tbStockKey.Text);
-                sqlCom1.ExecuteNonQuery();
-
-                sqlCon.Close();
-
-                funcViewStock();
-            }
-        }
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (tbStockKey.Text.Length == 0)

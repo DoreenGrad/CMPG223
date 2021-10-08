@@ -34,7 +34,6 @@ namespace GUI_Prototype02
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbView1 = new System.Windows.Forms.ListBox();
-            this.btnDel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
             this.tbStockKey = new System.Windows.Forms.TextBox();
@@ -99,23 +98,6 @@ namespace GUI_Prototype02
             this.lbView1.Size = new System.Drawing.Size(720, 303);
             this.lbView1.TabIndex = 38;
             // 
-            // btnDel
-            // 
-            this.btnDel.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
-            this.btnDel.FlatAppearance.BorderSize = 2;
-            this.btnDel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.ForeColor = System.Drawing.Color.Purple;
-            this.btnDel.Location = new System.Drawing.Point(477, 503);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(200, 50);
-            this.btnDel.TabIndex = 35;
-            this.btnDel.Text = "DELETE";
-            this.btnDel.UseVisualStyleBackColor = true;
-            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
-            // 
             // btnUpdate
             // 
             this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
@@ -125,7 +107,7 @@ namespace GUI_Prototype02
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.Purple;
-            this.btnUpdate.Location = new System.Drawing.Point(258, 503);
+            this.btnUpdate.Location = new System.Drawing.Point(350, 503);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(200, 50);
             this.btnUpdate.TabIndex = 34;
@@ -142,7 +124,7 @@ namespace GUI_Prototype02
             this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsert.ForeColor = System.Drawing.Color.Purple;
-            this.btnInsert.Location = new System.Drawing.Point(22, 503);
+            this.btnInsert.Location = new System.Drawing.Point(103, 503);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(200, 50);
             this.btnInsert.TabIndex = 33;
@@ -246,7 +228,6 @@ namespace GUI_Prototype02
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lbView1);
-            this.Controls.Add(this.btnDel);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.groupBox5);
@@ -322,7 +303,6 @@ namespace GUI_Prototype02
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox lbView1;
-        private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.TextBox tbStockKey;

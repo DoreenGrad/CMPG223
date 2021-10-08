@@ -37,10 +37,9 @@
             this.lblQuantitySold = new System.Windows.Forms.Label();
             this.btnInsert = new System.Windows.Forms.Button();
             this.groupBoxProductInformation = new System.Windows.Forms.GroupBox();
-            this.tbSale_Date = new System.Windows.Forms.TextBox();
+            this.dTP_Saledate = new System.Windows.Forms.DateTimePicker();
             this.lblSaleDate = new System.Windows.Forms.Label();
             this.btnC = new System.Windows.Forms.Button();
-            this.dTP_Saledate = new System.Windows.Forms.DateTimePicker();
             this.groupBoxUnitInformation.SuspendLayout();
             this.groupBoxProductInformation.SuspendLayout();
             this.SuspendLayout();
@@ -143,7 +142,6 @@
             // groupBoxProductInformation
             // 
             this.groupBoxProductInformation.Controls.Add(this.dTP_Saledate);
-            this.groupBoxProductInformation.Controls.Add(this.tbSale_Date);
             this.groupBoxProductInformation.Controls.Add(this.lblSaleDate);
             this.groupBoxProductInformation.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
             this.groupBoxProductInformation.ForeColor = System.Drawing.Color.Purple;
@@ -154,15 +152,12 @@
             this.groupBoxProductInformation.TabStop = false;
             this.groupBoxProductInformation.Text = "Sale";
             // 
-            // tbSale_Date
+            // dTP_Saledate
             // 
-            this.tbSale_Date.Font = new System.Drawing.Font("Verdana", 11F);
-            this.tbSale_Date.Location = new System.Drawing.Point(212, 42);
-            this.tbSale_Date.Name = "tbSale_Date";
-            this.tbSale_Date.Size = new System.Drawing.Size(157, 25);
-            this.tbSale_Date.TabIndex = 4;
-            this.tbSale_Date.Text = "0";
-            this.tbSale_Date.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.dTP_Saledate.Location = new System.Drawing.Point(192, 42);
+            this.dTP_Saledate.Name = "dTP_Saledate";
+            this.dTP_Saledate.Size = new System.Drawing.Size(200, 27);
+            this.dTP_Saledate.TabIndex = 5;
             // 
             // lblSaleDate
             // 
@@ -192,13 +187,6 @@
             this.btnC.UseVisualStyleBackColor = true;
             this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
-            // dTP_Saledate
-            // 
-            this.dTP_Saledate.Location = new System.Drawing.Point(128, 39);
-            this.dTP_Saledate.Name = "dTP_Saledate";
-            this.dTP_Saledate.Size = new System.Drawing.Size(200, 27);
-            this.dTP_Saledate.TabIndex = 5;
-            // 
             // insertSaleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,7 +201,6 @@
             this.groupBoxUnitInformation.ResumeLayout(false);
             this.groupBoxUnitInformation.PerformLayout();
             this.groupBoxProductInformation.ResumeLayout(false);
-            this.groupBoxProductInformation.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -228,7 +215,6 @@
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.GroupBox groupBoxProductInformation;
         private System.Windows.Forms.Label lblSaleDate;
-        private System.Windows.Forms.TextBox tbSale_Date;
         private System.Windows.Forms.TextBox tbStock_Key;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnC;
