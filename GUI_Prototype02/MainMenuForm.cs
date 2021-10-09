@@ -50,22 +50,7 @@ namespace GUI_Prototype02
         private void btnExit_Click(object sender, EventArgs e)
         {
             Close();//Testing
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-        
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-          
-        }
+        }     
 
         private void saleToolStripMenuItem_Click(object sender, EventArgs e)
         {

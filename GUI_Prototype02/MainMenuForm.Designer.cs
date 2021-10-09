@@ -29,16 +29,18 @@ namespace GUI_Prototype02
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenuForm));
             this.menuStripMainMenu = new System.Windows.Forms.MenuStrip();
             this.productsTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnExit = new System.Windows.Forms.Button();
             this.ordersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnExit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.menuStripMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +69,33 @@ namespace GUI_Prototype02
             this.productsTool.Size = new System.Drawing.Size(98, 22);
             this.productsTool.Text = "Products";
             this.productsTool.Click += new System.EventHandler(this.productsTool_Click);
+            // 
+            // ordersToolStripMenuItem
+            // 
+            this.ordersToolStripMenuItem.Name = "ordersToolStripMenuItem";
+            this.ordersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ordersToolStripMenuItem.Text = "Orders";
+            this.ordersToolStripMenuItem.ToolTipText = "Orders will take you to the order form \r\nwhere you will be able to insert new ord" +
+    "ers, \r\nupdate orders that exists and delete orders\r\nthat exists.";
+            this.ordersToolStripMenuItem.Click += new System.EventHandler(this.ordersToolStripMenuItem_Click);
+            // 
+            // stockToolStripMenuItem
+            // 
+            this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
+            this.stockToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stockToolStripMenuItem.Text = "Stock";
+            this.stockToolStripMenuItem.ToolTipText = "Stock will take you to the stock form \r\nwhere you will be able to insert new stoc" +
+    "k items\r\nand update stock items that exists.\r\n";
+            this.stockToolStripMenuItem.Click += new System.EventHandler(this.stockToolStripMenuItem_Click);
+            // 
+            // saleToolStripMenuItem
+            // 
+            this.saleToolStripMenuItem.Name = "saleToolStripMenuItem";
+            this.saleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saleToolStripMenuItem.Text = "Sale";
+            this.saleToolStripMenuItem.ToolTipText = "Sale will take you to the sale form \r\nwhere you will be able to insert new sales " +
+    "and\r\nupdate sales that exists.";
+            this.saleToolStripMenuItem.Click += new System.EventHandler(this.saleToolStripMenuItem_Click);
             // 
             // reportTool
             // 
@@ -100,27 +129,6 @@ namespace GUI_Prototype02
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // ordersToolStripMenuItem
-            // 
-            this.ordersToolStripMenuItem.Name = "ordersToolStripMenuItem";
-            this.ordersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ordersToolStripMenuItem.Text = "Orders";
-            this.ordersToolStripMenuItem.Click += new System.EventHandler(this.ordersToolStripMenuItem_Click);
-            // 
-            // stockToolStripMenuItem
-            // 
-            this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
-            this.stockToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.stockToolStripMenuItem.Text = "Stock";
-            this.stockToolStripMenuItem.Click += new System.EventHandler(this.stockToolStripMenuItem_Click);
-            // 
-            // saleToolStripMenuItem
-            // 
-            this.saleToolStripMenuItem.Name = "saleToolStripMenuItem";
-            this.saleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.saleToolStripMenuItem.Text = "Sale";
-            this.saleToolStripMenuItem.Click += new System.EventHandler(this.saleToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -164,5 +172,6 @@ namespace GUI_Prototype02
         private System.Windows.Forms.ToolStripMenuItem stockToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saleToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
