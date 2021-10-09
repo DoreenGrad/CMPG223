@@ -24,11 +24,7 @@ namespace GUI_Prototype02
 
         private void productsTool_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-
-            salesForm mySales = new salesForm();
-            mySales.ShowDialog();
-            this.Close();
+           
         }
 
         private void reportTool_Click(object sender, EventArgs e)
@@ -58,24 +54,41 @@ namespace GUI_Prototype02
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void saleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            this.Visible = false;
+
+            salesForm mySales = new salesForm();
+            mySales.ShowDialog();
+            this.Close();
+        }
+
+        private void ordersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             this.Visible = false;
             Order_Form myMainMenu = new Order_Form();
             myMainMenu.ShowDialog();
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void stockToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Visible = false;
             Stock_Form myMainMenu = new Stock_Form();
-            myMainMenu.ShowDialog();
-            this.Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            salesForm myMainMenu = new salesForm();
             myMainMenu.ShowDialog();
             this.Close();
         }
