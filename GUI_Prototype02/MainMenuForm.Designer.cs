@@ -41,6 +41,7 @@ namespace GUI_Prototype02
             this.btnExit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +52,8 @@ namespace GUI_Prototype02
             this.menuStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.productsTool,
             this.reportTool,
-            this.helpTool});
+            this.helpTool,
+            this.logoutToolStripMenuItem});
             this.menuStripMainMenu.Location = new System.Drawing.Point(0, 0);
             this.menuStripMainMenu.Name = "menuStripMainMenu";
             this.menuStripMainMenu.Size = new System.Drawing.Size(434, 26);
@@ -139,6 +141,15 @@ namespace GUI_Prototype02
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.logoutToolStripMenuItem.ForeColor = System.Drawing.Color.Purple;
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(81, 22);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
+            // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,5 +184,6 @@ namespace GUI_Prototype02
         private System.Windows.Forms.ToolStripMenuItem saleToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
     }
 }

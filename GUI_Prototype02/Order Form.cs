@@ -203,103 +203,111 @@ namespace GUI_Prototype02
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            if (tbOrderDetailsID.Text.Length == 0)
+            if (MessageBox.Show("Are you sure you want to delete this record?", "Message", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                sqlCon.Open();
-
-                string deleteData1 = "SELECT Stock_ID FROM ORDERS_DETAIL Where Order_ID = @id";
-                SqlCommand sqlCmd1 = new SqlCommand(deleteData1, sqlCon);
-                sqlCmd1.Parameters.AddWithValue("@id", tbOrderID.Text);
-                string temp = sqlCmd1.ExecuteScalar().ToString();
-
-                string querySTPOCK = "SELECT COUNT(1) FROM STOCK WHERE Stock_ID = @sk";
-                SqlCommand sqlCmdS = new SqlCommand(querySTPOCK, sqlCon);
-                sqlCmdS.Parameters.AddWithValue("@sk", temp); //trim is for white spaces
-                int count = Convert.ToInt32(sqlCmdS.ExecuteScalar().ToString()); //return 1 or 0, 1 is valid, 0 is invalid    
-
-                if (count == 1)
+                if (tbOrderDetailsID.Text.Length == 0)
                 {
-                    string deleteData2 = "DELETE FROM ORDERS WHERE Order_ID LIKE @id";
-                    SqlCommand sqlCom1 = new SqlCommand(deleteData2, sqlCon);
-                    sqlCom1.Parameters.AddWithValue("@id", tbOrderID.Text);
-                    sqlCom1.ExecuteNonQuery();
+                    sqlCon.Open();
 
-                    string qty1 = "SELECT Qty_Ordered FROM ORDERS_DETAIL WHERE Order_ID = '" + tbOrderID.Text + "'";
-                    SqlCommand sqlCmdQ1 = new SqlCommand(qty1, sqlCon);
-                    int qty_on_hand1 = Convert.ToInt32(sqlCmdQ1.ExecuteScalar());
+                    string deleteData1 = "SELECT Stock_ID FROM ORDERS_DETAIL Where Order_ID = @id";
+                    SqlCommand sqlCmd1 = new SqlCommand(deleteData1, sqlCon);
+                    sqlCmd1.Parameters.AddWithValue("@id", tbOrderID.Text);
+                    string temp = sqlCmd1.ExecuteScalar().ToString();
 
-                    string qty2 = "SELECT Qty_on_Hand FROM STOCK WHERE Stock_ID = '" + temp + "'";
-                    SqlCommand sqlCom3 = new SqlCommand(qty2, sqlCon);
-                    int qty_on_hand2 = Convert.ToInt32(sqlCom3.ExecuteScalar());
+                    string querySTPOCK = "SELECT COUNT(1) FROM STOCK WHERE Stock_ID = @sk";
+                    SqlCommand sqlCmdS = new SqlCommand(querySTPOCK, sqlCon);
+                    sqlCmdS.Parameters.AddWithValue("@sk", temp); //trim is for white spaces
+                    int count = Convert.ToInt32(sqlCmdS.ExecuteScalar().ToString()); //return 1 or 0, 1 is valid, 0 is invalid    
 
-                    int ans = qty_on_hand2 - qty_on_hand1;
+                    if (count == 1)
+                    {
+                        string deleteData2 = "DELETE FROM ORDERS WHERE Order_ID LIKE @id";
+                        SqlCommand sqlCom1 = new SqlCommand(deleteData2, sqlCon);
+                        sqlCom1.Parameters.AddWithValue("@id", tbOrderID.Text);
+                        sqlCom1.ExecuteNonQuery();
 
-                    string deleteData3 = "DELETE FROM ORDERS_DETAIL WHERE Order_ID LIKE @id";
-                    SqlCommand sqlCom2 = new SqlCommand(deleteData3, sqlCon);
-                    sqlCom2.Parameters.AddWithValue("@id", tbOrderID.Text);
-                    sqlCom2.ExecuteNonQuery();               
+                        string qty1 = "SELECT Qty_Ordered FROM ORDERS_DETAIL WHERE Order_ID = '" + tbOrderID.Text + "'";
+                        SqlCommand sqlCmdQ1 = new SqlCommand(qty1, sqlCon);
+                        int qty_on_hand1 = Convert.ToInt32(sqlCmdQ1.ExecuteScalar());
 
-                    string upd = "UPDATE STOCK SET Qty_on_Hand = @qoh WHERE Stock_ID = '" +temp+ "'";
-                    SqlCommand sqlComSt = new SqlCommand(upd, sqlCon);
-                    sqlComSt.Parameters.AddWithValue("@qoh", ans);
-                    sqlComSt.ExecuteNonQuery();
+                        string qty2 = "SELECT Qty_on_Hand FROM STOCK WHERE Stock_ID = '" + temp + "'";
+                        SqlCommand sqlCom3 = new SqlCommand(qty2, sqlCon);
+                        int qty_on_hand2 = Convert.ToInt32(sqlCom3.ExecuteScalar());
+
+                        int ans = qty_on_hand2 - qty_on_hand1;
+
+                        string deleteData3 = "DELETE FROM ORDERS_DETAIL WHERE Order_ID LIKE @id";
+                        SqlCommand sqlCom2 = new SqlCommand(deleteData3, sqlCon);
+                        sqlCom2.Parameters.AddWithValue("@id", tbOrderID.Text);
+                        sqlCom2.ExecuteNonQuery();
+
+                        string upd = "UPDATE STOCK SET Qty_on_Hand = @qoh WHERE Stock_ID = '" + temp + "'";
+                        SqlCommand sqlComSt = new SqlCommand(upd, sqlCon);
+                        sqlComSt.Parameters.AddWithValue("@qoh", ans);
+                        sqlComSt.ExecuteNonQuery();
+                    }
+
+                    sqlCon.Close();
+
+                    funcViewORDERS();
+                    funcViewORDERS_DETAILS();
                 }
 
-                sqlCon.Close();
+                if (tbOrderID.Text.Length == 0)
+                {
+                    sqlCon.Open();
 
-                funcViewORDERS();
-                funcViewORDERS_DETAILS();
+                    string deleteData0 = "SELECT Order_ID FROM ORDERS_DETAIL Where Order_Detail_ID = @id";
+                    SqlCommand sqlCmd0 = new SqlCommand(deleteData0, sqlCon);
+                    sqlCmd0.Parameters.AddWithValue("@id", tbOrderDetailsID.Text);
+                    string temp0 = sqlCmd0.ExecuteScalar().ToString();
+
+                    string deleteData1 = "SELECT Stock_ID FROM ORDERS_DETAIL Where Order_Detail_ID = @id";
+                    SqlCommand sqlCmd1 = new SqlCommand(deleteData1, sqlCon);
+                    sqlCmd1.Parameters.AddWithValue("@id", tbOrderDetailsID.Text);
+                    string temp = sqlCmd1.ExecuteScalar().ToString();
+
+                    string querySTPOCK = "SELECT COUNT(1) FROM STOCK WHERE Stock_ID = @sk";
+                    SqlCommand sqlCmdS = new SqlCommand(querySTPOCK, sqlCon);
+                    sqlCmdS.Parameters.AddWithValue("@sk", temp); //trim is for white spaces
+                    int count = Convert.ToInt32(sqlCmdS.ExecuteScalar().ToString()); //return 1 or 0, 1 is valid, 0 is invalid    
+
+                    if (count == 1)
+                    {
+                        /*string deleteData2 = "DELETE FROM ORDERS WHERE Order_ID LIKE @id";
+                        SqlCommand sqlCom1 = new SqlCommand(deleteData2, sqlCon);
+                        sqlCom1.Parameters.AddWithValue("@id", temp0);
+                        sqlCom1.ExecuteNonQuery();*/
+
+                        string qty1 = "SELECT Qty_Ordered FROM ORDERS_DETAIL WHERE Order_Detail_ID = '" + tbOrderDetailsID.Text + "'";
+                        SqlCommand sqlCmdQ1 = new SqlCommand(qty1, sqlCon);
+                        int qty_on_hand1 = Convert.ToInt32(sqlCmdQ1.ExecuteScalar());
+
+                        string qty2 = "SELECT Qty_on_Hand FROM STOCK WHERE Stock_ID = '" + temp + "'";
+                        SqlCommand sqlCom3 = new SqlCommand(qty2, sqlCon);
+                        int qty_on_hand2 = Convert.ToInt32(sqlCom3.ExecuteScalar());
+
+                        int ans = qty_on_hand2 - qty_on_hand1;
+
+                        string deleteData3 = "DELETE FROM ORDERS_DETAIL WHERE Order_Detail_ID LIKE @id";
+                        SqlCommand sqlCom2 = new SqlCommand(deleteData3, sqlCon);
+                        sqlCom2.Parameters.AddWithValue("@id", tbOrderDetailsID.Text);
+                        sqlCom2.ExecuteNonQuery();
+
+                        string upd = "UPDATE STOCK SET Qty_on_Hand = @qoh WHERE Stock_ID = '" + temp + "'";
+                        SqlCommand sqlComSt = new SqlCommand(upd, sqlCon);
+                        sqlComSt.Parameters.AddWithValue("@qoh", ans);
+                        sqlComSt.ExecuteNonQuery();
+                    }
+
+                    sqlCon.Close();
+
+                    funcViewORDERS();
+                    funcViewORDERS_DETAILS();
+                }
             }
-        
-            if (tbOrderID.Text.Length == 0)
+            else
             {
-                sqlCon.Open();
-
-                string deleteData0 = "SELECT Order_ID FROM ORDERS_DETAIL Where Order_Detail_ID = @id";
-                SqlCommand sqlCmd0 = new SqlCommand(deleteData0, sqlCon);
-                sqlCmd0.Parameters.AddWithValue("@id", tbOrderDetailsID.Text);
-                string temp0 = sqlCmd0.ExecuteScalar().ToString();
-
-                string deleteData1 = "SELECT Stock_ID FROM ORDERS_DETAIL Where Order_Detail_ID = @id";
-                SqlCommand sqlCmd1 = new SqlCommand(deleteData1, sqlCon);
-                sqlCmd1.Parameters.AddWithValue("@id", tbOrderDetailsID.Text);
-                string temp = sqlCmd1.ExecuteScalar().ToString();
-
-                string querySTPOCK = "SELECT COUNT(1) FROM STOCK WHERE Stock_ID = @sk";
-                SqlCommand sqlCmdS = new SqlCommand(querySTPOCK, sqlCon);
-                sqlCmdS.Parameters.AddWithValue("@sk", temp); //trim is for white spaces
-                int count = Convert.ToInt32(sqlCmdS.ExecuteScalar().ToString()); //return 1 or 0, 1 is valid, 0 is invalid    
-
-                if (count == 1)
-                {
-                    /*string deleteData2 = "DELETE FROM ORDERS WHERE Order_ID LIKE @id";
-                    SqlCommand sqlCom1 = new SqlCommand(deleteData2, sqlCon);
-                    sqlCom1.Parameters.AddWithValue("@id", temp0);
-                    sqlCom1.ExecuteNonQuery();*/
-
-                    string qty1 = "SELECT Qty_Ordered FROM ORDERS_DETAIL WHERE Order_Detail_ID = '" + tbOrderDetailsID.Text + "'";
-                    SqlCommand sqlCmdQ1 = new SqlCommand(qty1, sqlCon);
-                    int qty_on_hand1 = Convert.ToInt32(sqlCmdQ1.ExecuteScalar());
-
-                    string qty2 = "SELECT Qty_on_Hand FROM STOCK WHERE Stock_ID = '" + temp + "'";
-                    SqlCommand sqlCom3 = new SqlCommand(qty2, sqlCon);
-                    int qty_on_hand2 = Convert.ToInt32(sqlCom3.ExecuteScalar());
-
-                    int ans = qty_on_hand2 - qty_on_hand1;
-
-                    string deleteData3 = "DELETE FROM ORDERS_DETAIL WHERE Order_Detail_ID LIKE @id";
-                    SqlCommand sqlCom2 = new SqlCommand(deleteData3, sqlCon);
-                    sqlCom2.Parameters.AddWithValue("@id", tbOrderDetailsID.Text);
-                    sqlCom2.ExecuteNonQuery();
-
-                    string upd = "UPDATE STOCK SET Qty_on_Hand = @qoh WHERE Stock_ID = '" + temp + "'";
-                    SqlCommand sqlComSt = new SqlCommand(upd, sqlCon);
-                    sqlComSt.Parameters.AddWithValue("@qoh", ans);
-                    sqlComSt.ExecuteNonQuery();
-                }
-
-                sqlCon.Close();
-
                 funcViewORDERS();
                 funcViewORDERS_DETAILS();
             }

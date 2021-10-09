@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace GUI_Prototype02
 {
@@ -17,8 +18,20 @@ namespace GUI_Prototype02
             InitializeComponent();
         }
 
+        SqlConnection sqlCon = new SqlConnection(LoginForm01.ConnectionString);
+
         private void MainMenuForm_Load(object sender, EventArgs e)
         {
+            sqlCon.Open();
+            string user = "SELECT Description FROM USERS WHERE Username = '"+LoginForm01.sUsername+ "' AND Password ='" + LoginForm01.sPassword + "'";
+            SqlCommand usercmd = new SqlCommand(user, sqlCon);
+            string desc = usercmd.ExecuteScalar().ToString();
+            sqlCon.Close();
+
+            if(desc == "Clerk")
+            {
+                stockToolStripMenuItem.Enabled = false;
+            }
 
         }
 
@@ -75,6 +88,26 @@ namespace GUI_Prototype02
             this.Visible = false;
             Stock_Form myMainMenu = new Stock_Form();
             myMainMenu.ShowDialog();
+            this.Close();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+
+            LoginForm01 log = new LoginForm01();
+            log.ShowDialog();
+
+            this.Close();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+
+            LoginForm01 log = new LoginForm01();
+            log.ShowDialog();
+
             this.Close();
         }
     }
