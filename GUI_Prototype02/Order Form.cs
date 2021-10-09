@@ -72,6 +72,9 @@ namespace GUI_Prototype02
 
             sqlCon.Open();
 
+            //Store User_ID primary key from the users table
+            //in the Order table as a foreign key to establish
+            //a relationship between the two tables
             string query1 = "SELECT User_ID FROM USERS WHERE Username=@username and Password=@password";
             SqlCommand sqlCmd1 = new SqlCommand(query1, sqlCon);
             sqlCmd1.Parameters.AddWithValue("@username", sUsername); 
@@ -85,14 +88,18 @@ namespace GUI_Prototype02
             sqlCom1.Parameters.AddWithValue("@d_r", insert.sDate_Received);
             sqlCom1.ExecuteNonQuery();
 
+            //Store Order_ID primary key from the order table
+            //in the order_detail table as a foreign key to establish
+            //a relationship between the two tables
+            //part 1
             string query2 = "SELECT TOP 1 Order_ID FROM ORDERS ORDER BY Order_ID DESC";
             SqlCommand sqlCmd2 = new SqlCommand(query2, sqlCon);
             orderID = Convert.ToInt32(sqlCmd2.ExecuteScalar());
 
             string querySTPOCK = "SELECT COUNT(1) FROM STOCK WHERE Stock_Key = @sk";
             SqlCommand sqlCmdS = new SqlCommand(querySTPOCK, sqlCon);
-            sqlCmdS.Parameters.AddWithValue("@sk", insert.sStock_Key); //trim is for white spaces
-            int count = Convert.ToInt32(sqlCmdS.ExecuteScalar().ToString()); //return 1 or 0, 1 is valid, 0 is invalid     
+            sqlCmdS.Parameters.AddWithValue("@sk", insert.sStock_Key);
+            int count = Convert.ToInt32(sqlCmdS.ExecuteScalar().ToString()); 
 
             if (count == 1)
             {
@@ -109,6 +116,7 @@ namespace GUI_Prototype02
                 SqlCommand sqlCmdSI = new SqlCommand(stock, sqlCon);
                 int stockID = Convert.ToInt32(sqlCmdSI.ExecuteScalar());
 
+                //part 2
                 string insertData2 = "INSERT INTO ORDERS_DETAIL(Order_ID, Stock_ID, Qty_Ordered, Price_per_KG, Price_per_Unit) VALUES(@oi, @si, @qo, @ppk, @ppu)";
                 SqlCommand sqlCom2 = new SqlCommand(insertData2, sqlCon);
                 sqlCom2.Parameters.AddWithValue("@oi", orderID);
@@ -133,6 +141,9 @@ namespace GUI_Prototype02
                 sqlComSt.Parameters.AddWithValue("@qoh", qty_on_hand + insert.iQty_Ordered);
                 sqlComSt.ExecuteNonQuery();
 
+                //Store Stock_ID primary key from the stock table
+                //in the Orders_detail as a foreign key to establish
+                //a relationship between the two tables
                 string stock = "SELECT Stock_ID FROM STOCK WHERE Stock_Key = '" + insert.sStock_Key + "'";
                 SqlCommand sqlCmdSI = new SqlCommand(stock, sqlCon);
                 int stockID = Convert.ToInt32(sqlCmdSI.ExecuteScalar());
