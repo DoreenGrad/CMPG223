@@ -64,7 +64,7 @@ namespace GUI_Prototype02
             dSale_Date = dTP_Saledate.Value.Date;
 
             if (tbSale_Price.Text.Length != 0)
-                dSales_Price_per_Unit = int.Parse(tbSale_Price.Text);
+                dSales_Price_per_Unit = double.Parse(tbSale_Price.Text);
 
             if (tbQty_Sold.Text.Length != 0)
                 dQty_Sold = int.Parse(tbQty_Sold.Text);
