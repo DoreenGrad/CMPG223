@@ -14,7 +14,7 @@ namespace GUI_Prototype02
     public partial class LoginForm01 : Form
     {
         //<<<<<<<<<<<<<<<INSERT YOUR DATABASE CONNECTION STRING BETWEEN THE QUOTES IN THE LINE BELOW>>>>>>>>>>>>>>>>
-        public static string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\marce\Documents\GitHub\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security=True";
+        public static string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Lenovo User\Documents\2021\Sem 2\CMPG 223\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security=True";
         //<<<<<<<<<<<<<<<INSERT YOUR DATABASE CONNECTION STRING BETWEEN THE QUOTES IN THE LINE ABOVE>>>>>>>>>>>>>>>>
 
 
