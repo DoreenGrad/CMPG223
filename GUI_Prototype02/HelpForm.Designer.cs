@@ -129,6 +129,7 @@ namespace GUI_Prototype02
             this.lblReport.Size = new System.Drawing.Size(203, 22);
             this.lblReport.TabIndex = 12;
             this.lblReport.Text = "Report button";
+            this.lblReport.Visible = false;
             // 
             // richTextBox3
             // 
@@ -140,6 +141,7 @@ namespace GUI_Prototype02
             this.richTextBox3.Size = new System.Drawing.Size(670, 68);
             this.richTextBox3.TabIndex = 13;
             this.richTextBox3.Text = resources.GetString("richTextBox3.Text");
+            this.richTextBox3.Visible = false;
             // 
             // pnlOrders
             // 
