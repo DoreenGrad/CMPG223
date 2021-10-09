@@ -153,7 +153,7 @@ namespace GUI_Prototype02
             this.pnlOrders.Controls.Add(this.richTextBox5);
             this.pnlOrders.Controls.Add(this.lblCreateOr);
             this.pnlOrders.Controls.Add(this.richTextBox4);
-            this.pnlOrders.Location = new System.Drawing.Point(257, 32);
+            this.pnlOrders.Location = new System.Drawing.Point(15, 33);
             this.pnlOrders.Name = "pnlOrders";
             this.pnlOrders.Size = new System.Drawing.Size(671, 644);
             this.pnlOrders.TabIndex = 18;
