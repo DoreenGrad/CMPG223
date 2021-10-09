@@ -153,7 +153,7 @@ namespace GUI_Prototype02
             this.pnlOrders.Controls.Add(this.richTextBox5);
             this.pnlOrders.Controls.Add(this.lblCreateOr);
             this.pnlOrders.Controls.Add(this.richTextBox4);
-            this.pnlOrders.Location = new System.Drawing.Point(15, 41);
+            this.pnlOrders.Location = new System.Drawing.Point(257, 32);
             this.pnlOrders.Name = "pnlOrders";
             this.pnlOrders.Size = new System.Drawing.Size(671, 644);
             this.pnlOrders.TabIndex = 18;
@@ -171,12 +171,12 @@ namespace GUI_Prototype02
             // 
             // richTextBox1
             // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
             this.richTextBox1.Location = new System.Drawing.Point(6, 606);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(638, 29);
+            this.richTextBox1.Size = new System.Drawing.Size(638, 35);
             this.richTextBox1.TabIndex = 28;
             this.richTextBox1.Text = "Click the main menu buton on the order page\n";
             // 
@@ -192,7 +192,7 @@ namespace GUI_Prototype02
             // 
             // richTextBox7
             // 
-            this.richTextBox7.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox7.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.richTextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox7.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
             this.richTextBox7.Location = new System.Drawing.Point(6, 32);
@@ -213,7 +213,7 @@ namespace GUI_Prototype02
             // 
             // richTextBox6
             // 
-            this.richTextBox6.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox6.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.richTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox6.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
             this.richTextBox6.Location = new System.Drawing.Point(6, 496);
@@ -234,7 +234,7 @@ namespace GUI_Prototype02
             // 
             // richTextBox5
             // 
-            this.richTextBox5.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox5.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.richTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox5.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
             this.richTextBox5.Location = new System.Drawing.Point(6, 305);
@@ -255,7 +255,7 @@ namespace GUI_Prototype02
             // 
             // richTextBox4
             // 
-            this.richTextBox4.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox4.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox4.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
             this.richTextBox4.Location = new System.Drawing.Point(6, 161);
@@ -292,12 +292,12 @@ namespace GUI_Prototype02
             // 
             // richTextBox2
             // 
-            this.richTextBox2.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox2.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
             this.richTextBox2.Location = new System.Drawing.Point(6, 488);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(638, 29);
+            this.richTextBox2.Size = new System.Drawing.Size(638, 37);
             this.richTextBox2.TabIndex = 30;
             this.richTextBox2.Text = "Click the main menu buton on the order page\n";
             // 
@@ -313,7 +313,7 @@ namespace GUI_Prototype02
             // 
             // richTextBox8
             // 
-            this.richTextBox8.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox8.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.richTextBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox8.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
             this.richTextBox8.Location = new System.Drawing.Point(6, 32);
@@ -334,7 +334,7 @@ namespace GUI_Prototype02
             // 
             // richTextBox10
             // 
-            this.richTextBox10.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox10.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.richTextBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox10.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
             this.richTextBox10.Location = new System.Drawing.Point(6, 305);
@@ -355,7 +355,7 @@ namespace GUI_Prototype02
             // 
             // richTextBox11
             // 
-            this.richTextBox11.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox11.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.richTextBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox11.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
             this.richTextBox11.Location = new System.Drawing.Point(6, 161);
@@ -374,7 +374,7 @@ namespace GUI_Prototype02
             this.pnlSales.Controls.Add(this.richTextBox13);
             this.pnlSales.Controls.Add(this.label9);
             this.pnlSales.Controls.Add(this.richTextBox14);
-            this.pnlSales.Location = new System.Drawing.Point(15, 102);
+            this.pnlSales.Location = new System.Drawing.Point(15, 96);
             this.pnlSales.Name = "pnlSales";
             this.pnlSales.Size = new System.Drawing.Size(671, 528);
             this.pnlSales.TabIndex = 31;
@@ -392,12 +392,12 @@ namespace GUI_Prototype02
             // 
             // richTextBox9
             // 
-            this.richTextBox9.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox9.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.richTextBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox9.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
             this.richTextBox9.Location = new System.Drawing.Point(6, 488);
             this.richTextBox9.Name = "richTextBox9";
-            this.richTextBox9.Size = new System.Drawing.Size(638, 29);
+            this.richTextBox9.Size = new System.Drawing.Size(638, 37);
             this.richTextBox9.TabIndex = 30;
             this.richTextBox9.Text = "Click the main menu buton on the order page\n";
             // 
@@ -413,7 +413,7 @@ namespace GUI_Prototype02
             // 
             // richTextBox12
             // 
-            this.richTextBox12.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox12.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.richTextBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox12.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
             this.richTextBox12.Location = new System.Drawing.Point(6, 32);
@@ -434,7 +434,7 @@ namespace GUI_Prototype02
             // 
             // richTextBox13
             // 
-            this.richTextBox13.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox13.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.richTextBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox13.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
             this.richTextBox13.Location = new System.Drawing.Point(6, 305);
@@ -455,7 +455,7 @@ namespace GUI_Prototype02
             // 
             // richTextBox14
             // 
-            this.richTextBox14.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox14.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.richTextBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox14.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
             this.richTextBox14.Location = new System.Drawing.Point(6, 161);

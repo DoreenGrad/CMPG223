@@ -36,7 +36,7 @@ namespace GUI_Prototype02
                 firstClick = false;
             }
             else
-                 if (firstclickS == false)
+                 if (firstClick == false)
             {
                 pnlOrders.Visible = false;
                 firstClick = true;
@@ -45,13 +45,13 @@ namespace GUI_Prototype02
 
         private void label1_Click_1(object sender, EventArgs e)
         {
-            if (firstClick == true)
+            if (firstclickST == true)
             {
                 pnlStock.Visible = true;
                 firstclickST = false;
             }
             else
-                 if (firstclickS == false)
+                 if (firstclickST == false)
             {
                 pnlStock.Visible = false;
                 firstclickST = true;
