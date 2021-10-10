@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBoxUnitInformation = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tb_Qty_Sold = new System.Windows.Forms.TextBox();
             this.tbSale_Price_per_Unit = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@
             this.dTP_Saledate = new System.Windows.Forms.DateTimePicker();
             this.lblSaleDate = new System.Windows.Forms.Label();
             this.btnC = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBoxUnitInformation.SuspendLayout();
             this.groupBoxProductInformation.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +60,14 @@
             this.groupBoxUnitInformation.TabIndex = 11;
             this.groupBoxUnitInformation.TabStop = false;
             this.groupBoxUnitInformation.Text = "Sale Detail";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(231, 113);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 26);
+            this.comboBox1.TabIndex = 14;
             // 
             // label1
             // 
@@ -177,14 +185,6 @@
             this.btnC.UseVisualStyleBackColor = true;
             this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(231, 113);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 26);
-            this.comboBox1.TabIndex = 14;
-            // 
             // insertSaleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,7 +197,7 @@
             this.Controls.Add(this.groupBoxProductInformation);
             this.Name = "insertSaleForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "INSERT SALES";
+            this.Text = "Insert Sale";
             this.Load += new System.EventHandler(this.insertSaleForm_Load);
             this.groupBoxUnitInformation.ResumeLayout(false);
             this.groupBoxUnitInformation.PerformLayout();

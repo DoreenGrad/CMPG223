@@ -393,7 +393,7 @@
             this.Controls.Add(this.groupBoxProductInformation);
             this.Name = "Order_Update";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Order_Update";
+            this.Text = "Update Order";
             this.Load += new System.EventHandler(this.Order_Update_Load);
             this.groupBoxProductInformation.ResumeLayout(false);
             this.groupBoxUnitInformation.ResumeLayout(false);

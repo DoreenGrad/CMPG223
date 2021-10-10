@@ -243,7 +243,7 @@
             this.Controls.Add(this.groupBoxProductInformation);
             this.Name = "OrderInsertForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Order Insert/Update";
+            this.Text = "Insert Order";
             this.Load += new System.EventHandler(this.OrderInsertForm_Load);
             this.groupBoxUnitInformation.ResumeLayout(false);
             this.groupBoxUnitInformation.PerformLayout();

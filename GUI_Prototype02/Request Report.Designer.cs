@@ -38,7 +38,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "Request_Report";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Request_Report";
+            this.Text = "Request Report";
             this.ResumeLayout(false);
 
         }
