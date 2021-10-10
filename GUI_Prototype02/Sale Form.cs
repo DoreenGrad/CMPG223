@@ -23,10 +23,10 @@ namespace GUI_Prototype02
         public static string sID;
         public static string sIDD;
 
-        public void funcViewSALE()
+        public void funcView()
         {
             sqlCon.Open();
-            string viewData = "SELECT * FROM SALE";
+            string viewData = "SELECT S.Sale_ID, S.Sale_Date, D.Sale_Detail_ID, D.Sale_ID, D.Stock_ID, D.Sales_Price_per_Unit, D.Qty_Sold FROM SALE S, SALE_DETAIL D WHERE S.Sale_ID = D.Sale_ID";
             SqlCommand sqlCom = new SqlCommand(viewData, sqlCon);
 
             SqlDataReader read = sqlCom.ExecuteReader();
@@ -34,24 +34,7 @@ namespace GUI_Prototype02
             lbView1.Items.Clear();
             while (read.Read())
             {
-                lbView1.Items.Add(read.GetValue(0) + "\t\t" + read.GetValue(1));
-            }
-
-            sqlCon.Close();
-        }
-
-        public void funcViewSALE_DETAIL()
-        {
-            sqlCon.Open();
-            string viewData = "SELECT * FROM SALE_DETAIL";
-            SqlCommand sqlCom = new SqlCommand(viewData, sqlCon);
-
-            SqlDataReader read = sqlCom.ExecuteReader();
-
-            lbView2.Items.Clear();
-            while (read.Read())
-            {
-                lbView2.Items.Add(read.GetValue(0) + "\t\t\t" + read.GetValue(1) + "\t\t" + read.GetValue(2) + "\t\t" + read.GetValue(3) + "\t\t\t" + read.GetValue(4));
+                lbView1.Items.Add(read.GetValue(0) + "\t\t" + read.GetValue(2) + "\t\t\t" + read.GetValue(4) + "\t\t" + read.GetValue(1) + "\t" + read.GetValue(5) + "\t\t\t\t" + read.GetValue(6));
             }
 
             sqlCon.Close();
@@ -59,8 +42,7 @@ namespace GUI_Prototype02
 
         private void Sale_Products_Form_Load(object sender, EventArgs e)
         {
-            funcViewSALE();
-            funcViewSALE_DETAIL();
+            funcView();
         }
 
         private void btnInsert_Click_1(object sender, EventArgs e)
@@ -131,25 +113,21 @@ namespace GUI_Prototype02
             }
 
             sqlCon.Close();
-            funcViewSALE();
-            funcViewSALE_DETAIL();
+            funcView();
         }
 
         private void tbOrderID_TextChanged(object sender, EventArgs e)
         {
             sqlCon.Open();
-
-            string viewData = "SELECT * FROM SALE WHERE Sale_ID LIKE @id";
+            string viewData = "SELECT S.Sale_ID, S.Sale_Date, D.Sale_Detail_ID, D.Sale_ID, D.Stock_ID, D.Sales_Price_per_Unit, D.Qty_Sold FROM SALE S, SALE_DETAIL D WHERE S.Sale_ID = D.Sale_ID AND S.Sale_ID LIKE '%"+tbSaleID.Text+"%'";
             SqlCommand sqlCom = new SqlCommand(viewData, sqlCon);
-            sqlCom.Parameters.AddWithValue("@id", "%" + tbSaleID.Text + "%");
-            sqlCom.ExecuteNonQuery();
 
             SqlDataReader read = sqlCom.ExecuteReader();
 
             lbView1.Items.Clear();
             while (read.Read())
             {
-                lbView1.Items.Add(read.GetValue(0) + "\t\t" + read.GetValue(1));
+                lbView1.Items.Add(read.GetValue(0) + "\t\t" + read.GetValue(2) + "\t\t\t" + read.GetValue(4) + "\t\t" + read.GetValue(1) + "\t" + read.GetValue(5) + "\t\t\t\t" + read.GetValue(6));
             }
 
             sqlCon.Close();
@@ -158,18 +136,15 @@ namespace GUI_Prototype02
         private void tbSaleDetailID_TextChanged(object sender, EventArgs e)
         {
             sqlCon.Open();
-
-            string viewData = "SELECT * FROM SALE_DETAIL WHERE Sale_Detail_ID LIKE @id";
+            string viewData = "SELECT S.Sale_ID, S.Sale_Date, D.Sale_Detail_ID, D.Sale_ID, D.Stock_ID, D.Sales_Price_per_Unit, D.Qty_Sold FROM SALE S, SALE_DETAIL D WHERE S.Sale_ID = D.Sale_ID AND D.Sale_Detail_ID LIKE '%" + tbSaleDetailID.Text + "%'";
             SqlCommand sqlCom = new SqlCommand(viewData, sqlCon);
-            sqlCom.Parameters.AddWithValue("@id", "%" + tbSaleDetailID.Text + "%");
-            sqlCom.ExecuteNonQuery();
 
             SqlDataReader read = sqlCom.ExecuteReader();
 
-            lbView2.Items.Clear();
+            lbView1.Items.Clear();
             while (read.Read())
             {
-                lbView2.Items.Add(read.GetValue(0) + "\t\t\t" + read.GetValue(1) + "\t\t" + read.GetValue(2) + "\t\t" + read.GetValue(3) + "\t\t\t" + read.GetValue(4));
+                lbView1.Items.Add(read.GetValue(0) + "\t\t" + read.GetValue(2) + "\t\t\t" + read.GetValue(4) + "\t\t" + read.GetValue(1) + "\t" + read.GetValue(5) + "\t\t\t\t" + read.GetValue(6));
             }
 
             sqlCon.Close();
@@ -300,8 +275,7 @@ namespace GUI_Prototype02
 
                     sqlCon.Close();
                 }
-                funcViewSALE();
-                funcViewSALE_DETAIL();
+                funcView();
 
 
                 if (tbSaleID.Text.Length == 0)
@@ -412,8 +386,7 @@ namespace GUI_Prototype02
 
                     sqlCon.Close();
                 }
-                funcViewSALE();
-                funcViewSALE_DETAIL();
+                funcView();
             }
             else if ((tbSaleID.Text.Length == 0) && (tbSaleDetailID.Text.Length == 0))
             {

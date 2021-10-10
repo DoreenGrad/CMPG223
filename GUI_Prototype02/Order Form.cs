@@ -23,6 +23,7 @@ namespace GUI_Prototype02
 
         public static string oID;
         public static string oIDD;
+
         public void funcView()
         {
             sqlCon.Open();
@@ -34,8 +35,8 @@ namespace GUI_Prototype02
             lbView1.Items.Clear();
             while (read.Read())
             {
-                lbView1.Items.Add(read.GetValue(0) + "\t\t" + read.GetValue(1) + "\t\t" + read.GetValue(2) + "\t\t" + read.GetValue(3));
-            }A
+                lbView1.Items.Add(read.GetValue(0) + "\t\t" + read.GetValue(4) + "\t\t\t" + read.GetValue(1) + "\t\t" + read.GetValue(6) + "\t\t" + read.GetValue(2) + "\t" + read.GetValue(3) + "\t" + read.GetValue(7) + "\t\t" + read.GetValue(8) + "\t\t\t" + read.GetValue(9));
+            }
 
             sqlCon.Close();
         }
@@ -139,37 +140,29 @@ namespace GUI_Prototype02
                 sqlCom2.Parameters.AddWithValue("@ppk", insert.dPrice_per_Kg);
                 sqlCom2.Parameters.AddWithValue("@ppu", insert.dPrice_per_Unit);
                 sqlCom2.ExecuteNonQuery();
-            }
-           
-           
-
+            }                     
             sqlCon.Close();
 
-            funcViewORDERS();
-            funcViewORDERS_DETAILS();
+            funcView();
         }
 
         private void Order_Form1_Load(object sender, EventArgs e)
         {
-            funcViewORDERS();
-            funcViewORDERS_DETAILS();
+            funcView();
         }
 
         private void txtOrderID_TextChanged(object sender, EventArgs e)
         {
             sqlCon.Open();
-
-            string viewData = "SELECT * FROM ORDERS WHERE Order_ID LIKE @id";
+            string viewData = "SELECT O.Order_ID, O.User_ID, O.Date_Ordered, O.Date_Received, D.Order_Detail_ID, D.Order_ID, D.Stock_ID, D.Qty_Ordered, D.Price_per_KG, D.Price_per_Unit FROM ORDERS O, ORDERS_DETAIL D WHERE O.Order_ID = D.Order_ID AND O.Order_ID LIKE '%" + tbOrderID.Text + "%'";
             SqlCommand sqlCom = new SqlCommand(viewData, sqlCon);
-            sqlCom.Parameters.AddWithValue("@id", "%" + tbOrderID.Text + "%");
-            sqlCom.ExecuteNonQuery();
 
             SqlDataReader read = sqlCom.ExecuteReader();
 
             lbView1.Items.Clear();
             while (read.Read())
             {
-                lbView1.Items.Add(read.GetValue(0) + "\t\t" + read.GetValue(1) + "\t\t" + read.GetValue(2) + "\t\t" + read.GetValue(3));
+                lbView1.Items.Add(read.GetValue(0) + "\t\t" + read.GetValue(4) + "\t\t\t" + read.GetValue(1) + "\t\t" + read.GetValue(6) + "\t\t" + read.GetValue(2) + "\t" + read.GetValue(3) + "\t" + read.GetValue(7) + "\t\t" + read.GetValue(8) + "\t\t\t" + read.GetValue(9));
             }
 
             sqlCon.Close();
@@ -178,18 +171,15 @@ namespace GUI_Prototype02
         private void tbOrderDetailsID_TextChanged(object sender, EventArgs e)
         {
             sqlCon.Open();
-
-            string viewData = "SELECT * FROM ORDERS_DETAIL WHERE Order_Detail_ID LIKE @id";
+            string viewData = "SELECT O.Order_ID, O.User_ID, O.Date_Ordered, O.Date_Received, D.Order_Detail_ID, D.Order_ID, D.Stock_ID, D.Qty_Ordered, D.Price_per_KG, D.Price_per_Unit FROM ORDERS O, ORDERS_DETAIL D WHERE O.Order_ID = D.Order_ID AND D.Order_Detail_ID LIKE '%"+tbOrderDetailsID.Text+"%'";
             SqlCommand sqlCom = new SqlCommand(viewData, sqlCon);
-            sqlCom.Parameters.AddWithValue("@id", "%" + tbOrderDetailsID.Text + "%");
-            sqlCom.ExecuteNonQuery();
 
             SqlDataReader read = sqlCom.ExecuteReader();
 
-            lbView2.Items.Clear();
+            lbView1.Items.Clear();
             while (read.Read())
             {
-                lbView2.Items.Add(read.GetValue(0) + "\t\t\t" + read.GetValue(1) + "\t\t" + read.GetValue(2) + "\t\t" + read.GetValue(3) + "\t\t\t" + read.GetValue(4) + "\t\t\t" + read.GetValue(5));
+                lbView1.Items.Add(read.GetValue(0) + "\t\t" + read.GetValue(4) + "\t\t\t" + read.GetValue(1) + "\t\t" + read.GetValue(6) + "\t\t" + read.GetValue(2) + "\t" + read.GetValue(3) + "\t" + read.GetValue(7) + "\t\t" + read.GetValue(8) + "\t\t\t" + read.GetValue(9));
             }
 
             sqlCon.Close();
@@ -243,8 +233,7 @@ namespace GUI_Prototype02
 
                     sqlCon.Close();
 
-                    funcViewORDERS();
-                    funcViewORDERS_DETAILS();
+                    funcView();
                 }
 
                 if (tbOrderID.Text.Length == 0)
@@ -296,14 +285,12 @@ namespace GUI_Prototype02
 
                     sqlCon.Close();
 
-                    funcViewORDERS();
-                    funcViewORDERS_DETAILS();
+                    funcView();
                 }
             }
             else
             {
-                funcViewORDERS();
-                funcViewORDERS_DETAILS();
+                funcView();
             }
         }
 
@@ -472,8 +459,7 @@ namespace GUI_Prototype02
 
                     sqlCon.Close();
 
-                    funcViewORDERS();
-                    funcViewORDERS_DETAILS();
+                    funcView();
                 }
 
                 if (tbOrderID.Text.Length == 0)
@@ -618,8 +604,7 @@ namespace GUI_Prototype02
 
                     sqlCon.Close();
 
-                    funcViewORDERS();
-                    funcViewORDERS_DETAILS();
+                    funcView();
                 }
             }
             else if ((tbOrderID.Text.Length == 0) && (tbOrderDetailsID.Text.Length == 0))

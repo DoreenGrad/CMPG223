@@ -107,7 +107,7 @@ namespace GUI_Prototype02
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.Purple;
-            this.btnUpdate.Location = new System.Drawing.Point(350, 503);
+            this.btnUpdate.Location = new System.Drawing.Point(374, 476);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(200, 50);
             this.btnUpdate.TabIndex = 34;
@@ -124,7 +124,7 @@ namespace GUI_Prototype02
             this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsert.ForeColor = System.Drawing.Color.Purple;
-            this.btnInsert.Location = new System.Drawing.Point(103, 503);
+            this.btnInsert.Location = new System.Drawing.Point(168, 476);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(200, 50);
             this.btnInsert.TabIndex = 33;
@@ -220,7 +220,7 @@ namespace GUI_Prototype02
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(740, 594);
+            this.ClientSize = new System.Drawing.Size(740, 532);
             this.Controls.Add(this.btnMM);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);

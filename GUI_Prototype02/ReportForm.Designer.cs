@@ -51,7 +51,7 @@ namespace GUI_Prototype02
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.ForeColor = System.Drawing.Color.Purple;
-            this.btnPrint.Location = new System.Drawing.Point(1150, 604);
+            this.btnPrint.Location = new System.Drawing.Point(1158, 450);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(200, 50);
             this.btnPrint.TabIndex = 4;
@@ -62,9 +62,9 @@ namespace GUI_Prototype02
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 250);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 120);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1338, 324);
+            this.dataGridView1.Size = new System.Drawing.Size(1346, 324);
             this.dataGridView1.TabIndex = 5;
             // 
             // label1
@@ -108,7 +108,7 @@ namespace GUI_Prototype02
             this.btnMM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMM.ForeColor = System.Drawing.Color.Purple;
-            this.btnMM.Location = new System.Drawing.Point(1172, 12);
+            this.btnMM.Location = new System.Drawing.Point(1158, 12);
             this.btnMM.Name = "btnMM";
             this.btnMM.Size = new System.Drawing.Size(200, 50);
             this.btnMM.TabIndex = 46;
@@ -118,7 +118,7 @@ namespace GUI_Prototype02
             // 
             // btnReport
             // 
-            this.btnReport.Location = new System.Drawing.Point(190, 159);
+            this.btnReport.Location = new System.Drawing.Point(217, 91);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(108, 23);
             this.btnReport.TabIndex = 47;
@@ -132,7 +132,7 @@ namespace GUI_Prototype02
             this.cbxType.Items.AddRange(new object[] {
             "Sale details",
             "Order details"});
-            this.cbxType.Location = new System.Drawing.Point(217, 2);
+            this.cbxType.Location = new System.Drawing.Point(217, 12);
             this.cbxType.Name = "cbxType";
             this.cbxType.Size = new System.Drawing.Size(121, 21);
             this.cbxType.TabIndex = 48;
@@ -140,18 +140,18 @@ namespace GUI_Prototype02
             // lblReport
             // 
             this.lblReport.AutoSize = true;
-            this.lblReport.Location = new System.Drawing.Point(57, 12);
+            this.lblReport.Location = new System.Drawing.Point(54, 20);
             this.lblReport.Name = "lblReport";
-            this.lblReport.Size = new System.Drawing.Size(59, 13);
+            this.lblReport.Size = new System.Drawing.Size(65, 13);
             this.lblReport.TabIndex = 49;
-            this.lblReport.Text = "Reprt type:";
+            this.lblReport.Text = "Report type:";
             // 
             // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1370, 677);
+            this.ClientSize = new System.Drawing.Size(1364, 504);
             this.Controls.Add(this.lblReport);
             this.Controls.Add(this.cbxType);
             this.Controls.Add(this.btnReport);

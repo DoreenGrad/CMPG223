@@ -21,10 +21,10 @@ namespace GUI_Prototype02
 
         SqlConnection sqlCon = new SqlConnection(LoginForm01.ConnectionString);
 
-        public void funcViewSALE()
+        public void funcView()
         {
             sqlCon.Open();
-            string viewData = "SELECT * FROM SALE WHERE Sale_ID = '" + salesForm.sID + "'";
+            string viewData = "SELECT S.Sale_ID, S.Sale_Date, D.Sale_Detail_ID, D.Sale_ID, D.Stock_ID, D.Sales_Price_per_Unit, D.Qty_Sold FROM SALE S, SALE_DETAIL D WHERE (S.Sale_ID = D.Sale_ID) AND ((S.Sale_ID = '"+salesForm.sID+"') OR (D.Sale_Detail_ID = '"+salesForm.sIDD+"'))";
             SqlCommand sqlCom = new SqlCommand(viewData, sqlCon);
 
             SqlDataReader read = sqlCom.ExecuteReader();
@@ -32,24 +32,7 @@ namespace GUI_Prototype02
             lbView1.Items.Clear();
             while (read.Read())
             {
-                lbView1.Items.Add(read.GetValue(0) + "\t\t" + read.GetValue(1));
-            }
-
-            sqlCon.Close();
-        }
-
-        public void funcViewSALE_DETAIL()
-        {
-            sqlCon.Open();
-            string viewData = "SELECT * FROM SALE_DETAIL WHERE Sale_Detail_ID = '" + salesForm.sIDD + "'";
-            SqlCommand sqlCom = new SqlCommand(viewData, sqlCon);
-
-            SqlDataReader read = sqlCom.ExecuteReader();
-
-            lbView2.Items.Clear();
-            while (read.Read())
-            {
-                lbView2.Items.Add(read.GetValue(0) + "\t\t\t" + read.GetValue(1) + "\t\t" + read.GetValue(2) + "\t\t" + read.GetValue(3) + "\t\t\t" + read.GetValue(4));
+                lbView1.Items.Add(read.GetValue(0) + "\t\t" + read.GetValue(2) + "\t\t\t" + read.GetValue(4) + "\t\t" + read.GetValue(1) + "\t" + read.GetValue(5) + "\t\t\t\t" + read.GetValue(6));
             }
 
             sqlCon.Close();
@@ -81,8 +64,7 @@ namespace GUI_Prototype02
 
         private void Sale_Update_Load(object sender, EventArgs e)
         {
-            funcViewSALE();
-            funcViewSALE_DETAIL();
+            funcView();
         }
     }
 }

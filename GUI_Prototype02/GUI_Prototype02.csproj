@@ -106,12 +106,6 @@
     <Compile Include="Order Update.Designer.cs">
       <DependentUpon>Order Update.cs</DependentUpon>
     </Compile>
-    <Compile Include="Request Report.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Request Report.Designer.cs">
-      <DependentUpon>Request Report.cs</DependentUpon>
-    </Compile>
     <Compile Include="Sale Insert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,9 +167,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Order Update.resx">
       <DependentUpon>Order Update.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Request Report.resx">
-      <DependentUpon>Request Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sale Insert.resx">
       <DependentUpon>Sale Insert.cs</DependentUpon>

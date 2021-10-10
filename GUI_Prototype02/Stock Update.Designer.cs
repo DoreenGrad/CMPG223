@@ -215,7 +215,7 @@
             this.btnU.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnU.ForeColor = System.Drawing.Color.Purple;
-            this.btnU.Location = new System.Drawing.Point(103, 295);
+            this.btnU.Location = new System.Drawing.Point(135, 295);
             this.btnU.Name = "btnU";
             this.btnU.Size = new System.Drawing.Size(200, 50);
             this.btnU.TabIndex = 50;
@@ -232,7 +232,7 @@
             this.btnC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnC.ForeColor = System.Drawing.Color.Purple;
-            this.btnC.Location = new System.Drawing.Point(350, 295);
+            this.btnC.Location = new System.Drawing.Point(341, 295);
             this.btnC.Name = "btnC";
             this.btnC.Size = new System.Drawing.Size(200, 50);
             this.btnC.TabIndex = 51;
@@ -245,7 +245,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(674, 357);
+            this.ClientSize = new System.Drawing.Size(674, 346);
             this.Controls.Add(this.btnC);
             this.Controls.Add(this.btnU);
             this.Controls.Add(this.label3);

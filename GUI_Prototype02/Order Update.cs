@@ -20,10 +20,10 @@ namespace GUI_Prototype02
 
         SqlConnection sqlCon = new SqlConnection(LoginForm01.ConnectionString);
 
-        public void funcViewORDERS()
+        public void funcView()
         {
             sqlCon.Open();
-            string viewData = "SELECT * FROM ORDERS WHERE Order_ID = '"+Order_Form.oID+"'";
+            string viewData = "SELECT O.Order_ID, O.User_ID, O.Date_Ordered, O.Date_Received, D.Order_Detail_ID, D.Order_ID, D.Stock_ID, D.Qty_Ordered, D.Price_per_KG, D.Price_per_Unit FROM ORDERS O, ORDERS_DETAIL D WHERE (O.Order_ID = D.Order_ID) AND ((O.Order_ID = '"+Order_Form.oID+"') OR (D.Order_Detail_ID = '"+Order_Form.oIDD+"'))";
             SqlCommand sqlCom = new SqlCommand(viewData, sqlCon);
 
             SqlDataReader read = sqlCom.ExecuteReader();
@@ -31,24 +31,7 @@ namespace GUI_Prototype02
             lbView1.Items.Clear();
             while (read.Read())
             {
-                lbView1.Items.Add(read.GetValue(0) + "\t\t" + read.GetValue(1) + "\t\t" + read.GetValue(2) + "\t\t" + read.GetValue(3));
-            }
-
-            sqlCon.Close();
-        }
-
-        public void funcViewORDERS_DETAILS1()
-        {
-            sqlCon.Open();
-            string viewData = "SELECT * FROM ORDERS_DETAIL WHERE Order_ID = '" + Order_Form.oID + "'";
-            SqlCommand sqlCom = new SqlCommand(viewData, sqlCon);
-
-            SqlDataReader read = sqlCom.ExecuteReader();
-
-            lbView2.Items.Clear();
-            while (read.Read())
-            {
-                lbView2.Items.Add(read.GetValue(0) + "\t\t\t" + read.GetValue(1) + "\t\t" + read.GetValue(2) + "\t\t" + read.GetValue(3) + "\t\t\t" + read.GetValue(4) + "\t\t\t" + read.GetValue(5));
+                lbView1.Items.Add(read.GetValue(0) + "\t\t" + read.GetValue(4) + "\t\t\t" + read.GetValue(1) + "\t\t" + read.GetValue(6) + "\t\t" + read.GetValue(2) + "\t" + read.GetValue(3) + "\t" + read.GetValue(7) + "\t\t" + read.GetValue(8) + "\t\t\t" + read.GetValue(9));
             }
 
             sqlCon.Close();
@@ -62,13 +45,11 @@ namespace GUI_Prototype02
 
         private void Order_Update_Load(object sender, EventArgs e)
         {
-            funcViewORDERS();
-            funcViewORDERS_DETAILS1();
+            funcView();
         }
 
         private void btnU_Click(object sender, EventArgs e)
         {
-
             sDate_Ordered = dTP_Ordered.Value.Date;
             sDate_Received = dTP_Received.Value.Date;
 
