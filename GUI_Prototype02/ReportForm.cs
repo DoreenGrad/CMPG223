@@ -58,22 +58,31 @@ namespace GUI_Prototype02
             if (cbxType.SelectedIndex == 0)
             {
                 SQL = "SELECT S.Sale_ID, S.Sale_Date, D.Sale_Detail_ID, D.Sale_ID, D.Stock_ID, D.Sales_Price_per_Unit, D.Qty_Sold FROM SALE S, SALE_DETAIL D WHERE S.Sale_ID = D.Sale_ID AND S.Sale_Date BETWEEN '" + startDate + "' AND '" + endDate + "'";
-            }
-            //if order details selected
-            else if (cbxType.SelectedIndex == 1)
-            { 
-                SQL = "SELECT O.Order_ID, O.Date_Ordered, OD.Order_Detail_ID, OD.Order_ID, OD.Stock_ID, OD.Qty_Ordered, OD.Price_per_KG, OD.Price_per_Unit FROM ORDERS O, ORDERS_DETAIL OD WHERE O.Order_ID = OD.Order_ID AND O.Date_Ordered BETWEEN '" + startDate + "' AND '" + endDate + "'";
-            }
-            else
-            {
-                MessageBox.Show("Please select a report type.");
-            }
+
                 SqlCommand sqlCmd = new SqlCommand(SQL, sqlCon);
                 Adapt.SelectCommand = sqlCmd;
                 Adapt.Fill(ds, "SourceTbl");
                 dataGridView1.DataSource = ds;
                 dataGridView1.DataMember = "SourceTbl";
                 sqlCon.Close();
+            }
+            //if order details selected
+            else if (cbxType.SelectedIndex == 1)
+            { 
+                SQL = "SELECT O.Order_ID, O.User_ID, O.Date_Ordered, O.Date_Received, OD.Order_Detail_ID, OD.Order_ID, OD.Stock_ID, OD.Qty_Ordered, OD.Price_per_KG, OD.Price_per_Unit FROM ORDERS O, ORDERS_DETAIL OD WHERE O.Order_ID = OD.Order_ID AND O.Date_Ordered BETWEEN '" + startDate + "' AND '" + endDate + "'";
+
+                SqlCommand sqlCmd = new SqlCommand(SQL, sqlCon);
+                Adapt.SelectCommand = sqlCmd;
+                Adapt.Fill(ds, "SourceTbl");
+                dataGridView1.DataSource = ds;
+                dataGridView1.DataMember = "SourceTbl";
+                sqlCon.Close();
+            }
+            else
+            {
+                MessageBox.Show("Please select a report type.");
+                sqlCon.Close();
+            }           
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
