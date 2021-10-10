@@ -87,7 +87,14 @@ namespace GUI_Prototype02
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            //export to excel 
+            MessageBox.Show("1. Create a Blank worksheet and open it.\n" +
+                "2. On the Data tab, click the Get Data icon, select From Database > From SQL Server Database.\n" +
+                "3. Enter the name of your SQL Server in the text field and click OK.\n" +
+                "4. Select the appropriate option and click Connect.\n" +
+                "5. Click OK to proceed.\n" +
+                "6. In the Navigator window, select the database and then the table that you would like to import in Excel and click on Load.\n" +
+                "7. Next, click on Close & Load icon.");
+
         }
     }
 }

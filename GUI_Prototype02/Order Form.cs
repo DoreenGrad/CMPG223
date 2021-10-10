@@ -56,8 +56,8 @@ namespace GUI_Prototype02
 
             sqlCon.Open();
 
-            //Store User_ID primary key from the users table
-            //in the Order table as a foreign key to establish
+            //Store User_ID primary key from the USERS table
+            //in the ORDERS table as a foreign key to establish
             //a relationship between the two tables
             string query1 = "SELECT User_ID FROM USERS WHERE Username=@username and Password=@password";
             SqlCommand sqlCmd1 = new SqlCommand(query1, sqlCon);
@@ -72,8 +72,8 @@ namespace GUI_Prototype02
             sqlCom1.Parameters.AddWithValue("@d_r", insert.sDate_Received);
             sqlCom1.ExecuteNonQuery();
 
-            //Store Order_ID primary key from the order table
-            //in the order_detail table as a foreign key to establish
+            //Store Order_ID primary key from the ORDERS table
+            //in the ORDERS_DETAIL table as a foreign key to establish
             //a relationship between the two tables
             //part 1
             string query2 = "SELECT TOP 1 Order_ID FROM ORDERS ORDER BY Order_ID DESC";
@@ -125,8 +125,8 @@ namespace GUI_Prototype02
                 sqlComSt.Parameters.AddWithValue("@qoh", qty_on_hand + insert.iQty_Ordered);
                 sqlComSt.ExecuteNonQuery();
 
-                //Store Stock_ID primary key from the stock table
-                //in the Orders_detail as a foreign key to establish
+                //Store Stock_ID primary key from the STOCK table
+                //in the ORDERS_DETAIL table as a foreign key to establish
                 //a relationship between the two tables
                 string stock = "SELECT Stock_ID FROM STOCK WHERE Stock_Key = '" + insert.sStock_Key + "'";
                 SqlCommand sqlCmdSI = new SqlCommand(stock, sqlCon);
