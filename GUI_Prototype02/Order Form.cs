@@ -23,10 +23,10 @@ namespace GUI_Prototype02
 
         public static string oID;
         public static string oIDD;
-        public void funcViewORDERS()
+        public void funcView()
         {
             sqlCon.Open();
-            string viewData = "SELECT * FROM ORDERS";
+            string viewData = "SELECT O.Order_ID, O.User_ID, O.Date_Ordered, O.Date_Received, D.Order_Detail_ID, D.Order_ID, D.Stock_ID, D.Qty_Ordered, D.Price_per_KG, D.Price_per_Unit FROM ORDERS O, ORDERS_DETAIL D WHERE O.Order_ID = D.Order_ID";
             SqlCommand sqlCom = new SqlCommand(viewData, sqlCon);
 
             SqlDataReader read = sqlCom.ExecuteReader();
@@ -35,24 +35,7 @@ namespace GUI_Prototype02
             while (read.Read())
             {
                 lbView1.Items.Add(read.GetValue(0) + "\t\t" + read.GetValue(1) + "\t\t" + read.GetValue(2) + "\t\t" + read.GetValue(3));
-            }
-
-            sqlCon.Close();
-        }
-
-        public void funcViewORDERS_DETAILS()
-        {
-            sqlCon.Open();
-            string viewData = "SELECT * FROM ORDERS_DETAIL";
-            SqlCommand sqlCom = new SqlCommand(viewData, sqlCon);
-
-            SqlDataReader read = sqlCom.ExecuteReader();
-
-            lbView2.Items.Clear();
-            while (read.Read())
-            {
-                lbView2.Items.Add(read.GetValue(0) + "\t\t\t" + read.GetValue(1) + "\t\t" + read.GetValue(2) + "\t\t" + read.GetValue(3) + "\t\t\t" + read.GetValue(4) + "\t\t\t" + read.GetValue(5));
-            }
+            }A
 
             sqlCon.Close();
         }
