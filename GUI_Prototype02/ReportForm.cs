@@ -62,7 +62,7 @@ namespace GUI_Prototype02
             //if order details selected
             else if (cbxType.SelectedIndex == 1)
             { 
-                SQL = "SELECT O.Order_ID, O.Date_Ordered, OD.Order_Detail_ID, OD.Order_ID, OD.Stock_ID, OD.Qty_Ordered, OD.Price_per_KG, OD.Price_per_Unit FROM ORDERS O, ORDERS_DETAILS OD WHERE O.Order_ID = OD.Order_ID AND O.Date_Ordered BETWEEN '" + startDate + "' AND '" + endDate + "'";
+                SQL = "SELECT O.Order_ID, O.Date_Ordered, OD.Order_Detail_ID, OD.Order_ID, OD.Stock_ID, OD.Qty_Ordered, OD.Price_per_KG, OD.Price_per_Unit FROM ORDERS O, ORDERS_DETAIL OD WHERE O.Order_ID = OD.Order_ID AND O.Date_Ordered BETWEEN '" + startDate + "' AND '" + endDate + "'";
             }
             else
             {
