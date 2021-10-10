@@ -87,6 +87,10 @@ namespace GUI_Prototype02
                 sqlCom1.Parameters.AddWithValue("@sd", insert.dSale_Date);
                 sqlCom1.ExecuteNonQuery();
 
+                //Store Sale_ID primary key from the sale table
+                //and store Stock_ID primary key from the stock table
+                //in the Sale_Detail table as foreign keys to establish
+                //a relationship between the tables
                 string query2 = "SELECT TOP 1 Sale_ID FROM SALE ORDER BY Sale_ID DESC";
                 SqlCommand sqlCmd2 = new SqlCommand(query2, sqlCon);
                 saleID = Convert.ToInt32(sqlCmd2.ExecuteScalar());

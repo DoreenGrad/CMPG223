@@ -14,15 +14,8 @@ namespace GUI_Prototype02
 {
     public partial class LoginForm01 : Form
     {
-        //<<<<<<<<<<<<<<<INSERT YOUR DATABASE CONNECTION STRING BETWEEN THE QUOTES IN THE LINE BELOW>>>>>>>>>>>>>>>>
         static string dir = Directory.GetCurrentDirectory() + @"\projectQueries.mdf";
         public static string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + dir + ";Integrated Security=True";
-
-        //<<<<<<<<<<<<<<<INSERT YOUR DATABASE CONNECTION STRING BETWEEN THE QUOTES IN THE LINE ABOVE>>>>>>>>>>>>>>>>
-
-
-
-
 
         SqlConnection sqlCon = new SqlConnection(ConnectionString);
         public static string sUsername;
