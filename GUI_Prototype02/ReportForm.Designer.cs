@@ -36,6 +36,9 @@ namespace GUI_Prototype02
             this.dTP_Start = new System.Windows.Forms.DateTimePicker();
             this.dTP_End = new System.Windows.Forms.DateTimePicker();
             this.btnMM = new System.Windows.Forms.Button();
+            this.btnReport = new System.Windows.Forms.Button();
+            this.cbxType = new System.Windows.Forms.ComboBox();
+            this.lblReport = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +57,7 @@ namespace GUI_Prototype02
             this.btnPrint.TabIndex = 4;
             this.btnPrint.Text = "PRINT";
             this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // dataGridView1
             // 
@@ -112,12 +116,45 @@ namespace GUI_Prototype02
             this.btnMM.UseVisualStyleBackColor = true;
             this.btnMM.Click += new System.EventHandler(this.btnMM_Click);
             // 
+            // btnReport
+            // 
+            this.btnReport.Location = new System.Drawing.Point(190, 159);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(108, 23);
+            this.btnReport.TabIndex = 47;
+            this.btnReport.Text = "Request report";
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // cbxType
+            // 
+            this.cbxType.FormattingEnabled = true;
+            this.cbxType.Items.AddRange(new object[] {
+            "Sale details",
+            "Order details"});
+            this.cbxType.Location = new System.Drawing.Point(217, 2);
+            this.cbxType.Name = "cbxType";
+            this.cbxType.Size = new System.Drawing.Size(121, 21);
+            this.cbxType.TabIndex = 48;
+            // 
+            // lblReport
+            // 
+            this.lblReport.AutoSize = true;
+            this.lblReport.Location = new System.Drawing.Point(57, 12);
+            this.lblReport.Name = "lblReport";
+            this.lblReport.Size = new System.Drawing.Size(59, 13);
+            this.lblReport.TabIndex = 49;
+            this.lblReport.Text = "Reprt type:";
+            // 
             // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1384, 677);
+            this.ClientSize = new System.Drawing.Size(1370, 677);
+            this.Controls.Add(this.lblReport);
+            this.Controls.Add(this.cbxType);
+            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnMM);
             this.Controls.Add(this.dTP_End);
             this.Controls.Add(this.dTP_Start);
@@ -128,6 +165,7 @@ namespace GUI_Prototype02
             this.Name = "ReportForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Report";
+            this.Load += new System.EventHandler(this.ReportForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -143,5 +181,8 @@ namespace GUI_Prototype02
         private System.Windows.Forms.DateTimePicker dTP_Start;
         private System.Windows.Forms.DateTimePicker dTP_End;
         private System.Windows.Forms.Button btnMM;
+        private System.Windows.Forms.Button btnReport;
+        private System.Windows.Forms.ComboBox cbxType;
+        private System.Windows.Forms.Label lblReport;
     }
 }
