@@ -117,11 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="richTextBox3.Text" xml:space="preserve">
-    <value>This button takes you to the report page where you can generate a report based between two dates you choose on the calendar.
-The print button then prints you the desired report between those two dates.
-</value>
-  </data>
   <data name="richTextBox7.Text" xml:space="preserve">
     <value>To view an order navigate to the orders page, by clicking on the orders button(menu option under products) on the main menu. All orders will be shown on the order form.
 To search, enter the order ID in the order ID text box, or the Order Details ID in the Order details ID textbox and the specific order will be shown.
