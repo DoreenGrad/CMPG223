@@ -34,8 +34,6 @@ namespace GUI_Prototype02
             this.lblOrder = new System.Windows.Forms.Label();
             this.lblStock = new System.Windows.Forms.Label();
             this.lblSales = new System.Windows.Forms.Label();
-            this.lblReport = new System.Windows.Forms.Label();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.pnlOrders = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -79,7 +77,7 @@ namespace GUI_Prototype02
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.Purple;
-            this.btnBack.Location = new System.Drawing.Point(1172, 12);
+            this.btnBack.Location = new System.Drawing.Point(779, 13);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(200, 50);
             this.btnBack.TabIndex = 4;
@@ -119,29 +117,6 @@ namespace GUI_Prototype02
             this.lblSales.TabIndex = 10;
             this.lblSales.Text = "Sale button";
             this.lblSales.Click += new System.EventHandler(this.lblSales_Click);
-            // 
-            // lblReport
-            // 
-            this.lblReport.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReport.ForeColor = System.Drawing.Color.Blue;
-            this.lblReport.Location = new System.Drawing.Point(15, 680);
-            this.lblReport.Name = "lblReport";
-            this.lblReport.Size = new System.Drawing.Size(203, 22);
-            this.lblReport.TabIndex = 12;
-            this.lblReport.Text = "Report button";
-            this.lblReport.Visible = false;
-            // 
-            // richTextBox3
-            // 
-            this.richTextBox3.BackColor = System.Drawing.SystemColors.Menu;
-            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox3.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
-            this.richTextBox3.Location = new System.Drawing.Point(18, 705);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(670, 68);
-            this.richTextBox3.TabIndex = 13;
-            this.richTextBox3.Text = resources.GetString("richTextBox3.Text");
-            this.richTextBox3.Visible = false;
             // 
             // pnlOrders
             // 
@@ -471,12 +446,10 @@ namespace GUI_Prototype02
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1384, 786);
+            this.ClientSize = new System.Drawing.Size(991, 786);
             this.Controls.Add(this.pnlSales);
             this.Controls.Add(this.pnlStock);
             this.Controls.Add(this.pnlOrders);
-            this.Controls.Add(this.lblReport);
-            this.Controls.Add(this.richTextBox3);
             this.Controls.Add(this.lblSales);
             this.Controls.Add(this.lblStock);
             this.Controls.Add(this.lblOrder);
@@ -497,8 +470,6 @@ namespace GUI_Prototype02
         private System.Windows.Forms.Label lblOrder;
         private System.Windows.Forms.Label lblStock;
         private System.Windows.Forms.Label lblSales;
-        private System.Windows.Forms.Label lblReport;
-        private System.Windows.Forms.RichTextBox richTextBox3;
         private System.Windows.Forms.Panel pnlOrders;
         private System.Windows.Forms.Label lblCreateOr;
         private System.Windows.Forms.RichTextBox richTextBox4;
