@@ -15,10 +15,10 @@ namespace GUI_Prototype02
     public partial class LoginForm01 : Form
     {
         //IF YOU WANT TO ADJUST THE CODE OF THIS PROGRAM, YOU NEED TO REMOVE THE COMMENTARY SLASHES AND PUT YOUR DATABASE CONNECTION STRING IN THE QUOTES BELOW
-        public static string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\marce\Documents\GitHub\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security=True";
+        //public static string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\marce\Documents\GitHub\CMPG223\GUI_Prototype02\projectQueries.mdf;Integrated Security=True";
 
-        //static string dir = Directory.GetCurrentDirectory() + @"\projectQueries.mdf";
-        //public static string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + dir + ";Integrated Security=True";
+        static string dir = Directory.GetCurrentDirectory() + @"\projectQueries.mdf";
+        public static string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + dir + ";Integrated Security=True";
 
         SqlConnection sqlCon = new SqlConnection(ConnectionString);
         public static string sUsername;
